@@ -22,8 +22,8 @@ TaskPirates is a clone of TaskRabbit built on Rails and Backbone. Users can:
 * [View Wireframes][views]
 * [DB schema][schema]
 
-[views]: ./docs/views.md
-[schema]: ./docs/schema.md
+[views]: ./docs/wireframes
+[schema]: ./docs/schema.JPG
 
 ## Implementation Timeline
 

@@ -13,9 +13,9 @@ Flux-capacitr is a clone of Tumblr built on Rails and Backbone. Users can:
 - [x] Create sessions (log in)
 - [x] Create blogs
 - [x] Create blog posts
-- [ ] View blogs and posts
-- [ ] Subscribe to blogs
-- [ ] View a feed of subscribed blogs
+- [x] View blogs and posts
+- [x] Subscribe to blogs
+- [x] View a feed of subscribed blogs
 - [ ] Tag blog posts
 - [ ] Search for blogs by title
 - [ ] Search for posts by tag

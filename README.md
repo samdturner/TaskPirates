@@ -64,6 +64,7 @@ I will use bootstrap and existing CSS templates to make the user interface beaut
 
 ### Bonus Features (TBD)
 - [ ] Crew members respond immediately when they have been requested to join a crew
+- [ ] Can search through a list of all crew members and hire directly
 - [ ] History of old voyages
 - [ ] Start multiple voyages
 - [ ] Multiple sessions/session management

@@ -2,28 +2,33 @@
 
 ## Rails
 ### Models
+* crew_member
+* crew_assignment
+* voyage
 
 ### Controllers
-Api::BlogsController (create, destroy, index, show)
-Api::PostsController (create, destroy, show, update)
+Api::CrewMemberController (index, show, update)
+Api::CrewAssignments (index, create, delete)
+Api::Voyage (create, update)
 
 ### Views
-* blogs/show.json.jbuilder
+* crew_member/show.json.jbuilder
 
 ## Backbone
 ### Models
-* Blog (parses nested `posts` association)
-* Post
+* CrewMember
+* Voyage
+* CrewAssignment
 
 ### Collections
-* Blogs
-* Posts
+* CrewMembers
+* CrewAssignments
 
 ### Views
-* BlogForm
-* BlogShow (composite view, contains PostsIndex subview)
-* PostsIndex (composite view, contains PostsIndexItem subviews)
-* PostsIndexItem
-* PostShow
+* CrewMemberItem
+* CrewMemberIndex (composite view, contains crew member item)
+
+* CurrentCrew
 
 ## Gems/Libraries
+* Google Maps JavaScript API v3

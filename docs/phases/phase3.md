@@ -13,9 +13,6 @@
 ### Collections
 
 ### Views
-* PostForm
+* WorkDescView (contains the form)
 
 ## Gems/Libraries
-* Filepicker
-* Markdown-js
-* Bootstrap Markdown

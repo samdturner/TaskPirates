@@ -57,10 +57,11 @@ I’ll add a feature so that user’s can click on any crew member’s picture a
 ### Phase 5: Rate the Crew Members Post Voyage (~2 days)
 Following the “conclusion” of the voyage, users will be guided through a simple form to give a rating to each of their crew members.  They will also be able to close the rating form at any time.  This form will be implemented using html and backbone.  It will also update the database.
 
-### Phase 6: Polishing the User Interface (~1.5 days)
-I will use bootstrap and existing CSS templates to make the user interface beautiful and responsive.  I will also need to spend time creating seed data for crew members, reviews, etc.
 
 [Details][phase-five]
+
+### Phase 6: Polishing the User Interface (~1.5 days)
+I will use bootstrap and existing CSS templates to make the user interface beautiful and responsive.  I will also need to spend time creating seed data for crew members, reviews, etc.
 
 ### Bonus Features (TBD)
 - [ ] Crew members respond immediately when they have been requested to join a crew

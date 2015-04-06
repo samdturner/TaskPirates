@@ -2,7 +2,7 @@
 
 [Heroku link][heroku]
 
-[heroku]: http://flux-capacitr.herokuapp.com
+[heroku]
 
 ## Minimum Viable Product
 TaskPirates is a clone of TaskRabbit built on Rails and Backbone. Users can:
@@ -23,7 +23,7 @@ TaskPirates is a clone of TaskRabbit built on Rails and Backbone. Users can:
 * [DB schema][schema]
 
 [views]: ./docs/wireframes
-[schema]: ./docs/schema.JPG
+[schema]: ./docs/schema
 
 ## Implementation Timeline
 

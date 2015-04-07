@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fname: MyString
+  lname: MyString
+  swabbingDecks: 1
+  loadingCannons: 1
+  manningHelm: 1
+
+two:
+  fname: MyString
+  lname: MyString
+  swabbingDecks: 1
+  loadingCannons: 1
+  manningHelm: 1

@@ -1,4 +1,4 @@
-Phase 2: Booking Crew Members (~2 days)
+# Phase 2: Booking Crew Members (~2 days)
 
 ## Rails
 ### Models

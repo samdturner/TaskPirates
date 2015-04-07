@@ -6,10 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create(fname: "Jack", lname: "Sparrow", email: "jack@sparrow.com",
+jack = User.create(fname: "Jack", lname: "Sparrow", email: "jack@sparrow.com",
             password: "password")
 
-Voyage.create(user_id: 1, start_date: DateTime.new(1800,06,20),
+Voyage.create(user_id: jack.id, start_date: DateTime.new(1800,06,20),
               end_date: DateTime.new(1800,07,20), start_location: "Here",
               end_location: "Unknown")
 

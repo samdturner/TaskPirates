@@ -2,7 +2,7 @@
 
 [Heroku link][heroku]
 
-[heroku]
+[heroku] https://polar-springs-4473.herokuapp.com/
 
 ## Minimum Viable Product
 TaskPirates is a clone of TaskRabbit built on Rails and Backbone. Users can:
@@ -75,4 +75,3 @@ I will use bootstrap and existing CSS templates to make the user interface beaut
 [phase-three]: ./docs/phases/phase3.md
 [phase-four]: ./docs/phases/phase4.md
 [phase-five]: ./docs/phases/phase5.md
-

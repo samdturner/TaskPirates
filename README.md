@@ -2,7 +2,7 @@
 
 [Heroku link][heroku]
 
-[heroku] https://polar-springs-4473.herokuapp.com/
+[heroku]: https://polar-springs-4473.herokuapp.com/
 
 ## Minimum Viable Product
 TaskPirates is a clone of TaskRabbit built on Rails and Backbone. Users can:

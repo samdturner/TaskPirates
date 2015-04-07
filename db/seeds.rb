@@ -6,18 +6,29 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-jack = User.create(fname: "Jack", lname: "Sparrow", email: "jack@sparrow.com",
-            password: "password")
+ActiveRecord::Base.transaction do
 
-Voyage.create(user_id: jack.id, start_date: DateTime.new(1800,06,20),
-              end_date: DateTime.new(1800,07,20), start_location: "Here",
-              end_location: "Unknown")
+  jack = User.create!(fname: "Jack", lname: "Sparrow", email: "jack@sparrow.com",
+              password: "password")
 
-Sailor.create(name: "Pintel", swabbingDecks: 82, manningHelm: 59,
-              loadingCannons: 70)
+  voyage = Voyage.create!(user_id: jack.id, start_date: DateTime.new(1800,06,20),
+                end_date: DateTime.new(1800,07,20), start_location: "Here",
+                end_location: "Unknown")
 
-Sailor.create(name: "Ragetti", swabbingDecks: 75, manningHelm: 42,
-              loadingCannons: 65)
+  pintel = Sailor.create!(name: "Pintel", swabbingDecks: 82, manningHelm: 59,
+                loadingCannons: 70)
 
-Sailor.create(name: "Cotton", swabbingDecks: 90, manningHelm: 10,
-              loadingCannons: 87)
+  ragetti = Sailor.create!(name: "Ragetti", swabbingDecks: 75, manningHelm: 42,
+                loadingCannons: 65)
+
+  cotton = Sailor.create!(name: "Cotton", swabbingDecks: 90, manningHelm: 10,
+                loadingCannons: 87)
+
+  twigg = Sailor.create!(name: "Twigg", swabbingDecks: 35, manningHelm: 84,
+                loadingCannons: 56)
+
+  CrewAssignment.create!(sailor_id: pintel.id, voyage_id: voyage.id)
+  CrewAssignment.create!(sailor_id: ragetti.id, voyage_id: voyage.id)
+  CrewAssignment.create!(sailor_id: cotton.id, voyage_id: voyage.id)
+
+end

@@ -24,7 +24,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 gem 'newrelic_rpm'
-
+gem 'bootstrap-sass'
+gem 'font-awesome-rails'
+gem 'jquery-ui-rails'
+gem 'backbone-on-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

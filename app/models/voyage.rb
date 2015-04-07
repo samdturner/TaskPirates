@@ -8,6 +8,8 @@ class Voyage < ActiveRecord::Base
 
   belongs_to :user
 
+  has_many :sailors
+
   private
   def end_date_after_start_date?
     unless end_date > start_date

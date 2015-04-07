@@ -1,4 +1,4 @@
-Phase 3: Users Can Use a Form to Describe the Work Required (~2 days)
+# Phase 3: Users Can Use a Form to Describe the Work Required (~2 days)
 
 ## Rails
 ### Models

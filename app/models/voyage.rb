@@ -8,7 +8,7 @@ class Voyage < ActiveRecord::Base
 
   belongs_to :user
 
-  has_many :sailors
+  has_many :crew_assignments
 
   private
   def end_date_after_start_date?

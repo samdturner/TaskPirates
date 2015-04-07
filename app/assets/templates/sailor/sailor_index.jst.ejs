@@ -1,3 +1,4 @@
 <% _.each(sailors.models, function(sailor) { %>
-  <li><%= sailor.get('name') %></li>
+    <li class="sailor-name" data-id="<%= sailor.get('id') %>"><%= sailor.get('name') %></li>
+    <button type="button" class="btn btn-default hire-btn">Hire</button>
 <% }) %>

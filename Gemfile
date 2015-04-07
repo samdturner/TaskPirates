@@ -29,6 +29,7 @@ gem 'font-awesome-rails'
 gem 'jquery-ui-rails'
 gem 'backbone-on-rails'
 gem 'underscore-rails'
+gem 'rails_12factor'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

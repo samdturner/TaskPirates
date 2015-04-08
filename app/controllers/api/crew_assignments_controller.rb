@@ -15,6 +15,11 @@ module Api
       render json: @crew_assignments
     end
 
+    def destroy
+      crew_assignment = CrewAssignment.find_by(sailor_id: params[:sailor_id])
+      crew_assignment.destroy
+    end
+
     private
     def crew_assignment_params
       params.require(:crew_assignment).permit(:sailor_id)

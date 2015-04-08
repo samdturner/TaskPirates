@@ -1,6 +1,8 @@
 TaskPirates.Routers.Router = Backbone.Router.extend({
   initialize: function (options) {
-    this.sailors = options.sailors;
+    this.hiredSailors = options.hiredSailors;
+    this.availableSailors = options.availableSailors;
+    this.crewAssignments = options.crewAssignments;
     this.$rootEl = $('#main');
   },
 
@@ -9,9 +11,13 @@ TaskPirates.Routers.Router = Backbone.Router.extend({
   },
 
   sailorIndex: function () {
-    this.sailors.fetch();
+    debugger
+    this.hiredSailors.fetch();
+    this.availableSailors.fetch();
     var indexView = new TaskPirates.Views.SailorIndex({
-      collection: this.sailors
+      hiredSailors: this.hiredSailors,
+      availableSailors: this.availableSailors,
+      crewAssignments: this.crewAssignments
     });
     this._swapViews(indexView);
   },

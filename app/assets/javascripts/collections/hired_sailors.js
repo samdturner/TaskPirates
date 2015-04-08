@@ -1,5 +1,5 @@
-TaskPirates.Collections.Sailors = Backbone.Collection.extend({
-  url: 'api/sailors',
+TaskPirates.Collections.HiredSailors = Backbone.Collection.extend({
+  url: 'api/hired_sailors',
 
   model: TaskPirates.Models.Sailor,
 

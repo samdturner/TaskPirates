@@ -10,6 +10,22 @@ class Voyage < ActiveRecord::Base
 
   has_many :crew_assignments
 
+  def available_sailors
+    avail_sailors = []
+    sailors = Sailor.all
+    sailors.each do |sailor|
+      unless CrewAssignment.find_by(sailor_id: sailor.id)
+        avail_sailors << sailor
+      end
+    end
+
+    avail_sailors
+  end
+
+  def hired_sailors
+    Sailor.all - self.available_sailors
+  end
+
   private
   def end_date_after_start_date?
     unless end_date > start_date

@@ -1,10 +1,16 @@
 TaskPirates.Views.SailorIndex = Backbone.View.extend({
-  initialize: function () {
-    this.listenTo(this.collection, 'sync', this.render);
+  initialize: function (options) {
+    debugger
+    this.hiredSailors = options.hiredSailors;
+    this.availableSailors = options.availableSailors;
+    this.crewAssignments = options.crewAssignments;
+    this.listenTo(this.availableSailors, 'add sync remove', this.render);
+    this.listenTo(this.hiredSailors, 'add sync remove', this.render);
   },
 
   events: {
-    'click button.hire-btn' : 'hireSailor'
+    'click button.hire-btn' : 'hireSailor',
+    'click button.fire-btn' : 'fireSailor'
   },
 
   tagName: 'ul',
@@ -12,19 +18,50 @@ TaskPirates.Views.SailorIndex = Backbone.View.extend({
   template: JST['sailor/sailor_index'],
 
   render: function () {
-    var content = this.template({ sailors: this.collection });
+    var content = this.template({
+      availableSailors: this.availableSailors,
+      hiredSailors: this.hiredSailors
+    });
     this.$el.html(content);
     return this;
   },
 
-  hireSailor: function () {
+  hireSailor: function (event) {
     event.preventDefault();
 
-    var sailorId = $('li.sailor-name').attr('data-id');
+    debugger
+
+    var sailorId = $('button.hire-btn').attr('data-id');
     var params = {
       sailor_id: sailorId,
     };
     var newCrewAssign = new TaskPirates.Models.CrewAssignment(params);
-    newCrewAssign.save();
+    this.crewAssignments.add(newCrewAssign);
+    var sailor = this.availableSailors.get(sailorId);
+    newCrewAssign.save({}, {
+      success: function () {
+        this.availableSailors.remove(sailor);
+        this.hiredSailors.add(sailor)
+      }.bind(this)
+    });
+  },
+
+  fireSailor: function (event) {
+    debugger
+    event.preventDefault();
+
+    var sailorId = $('button.fire-id').attr('data-id');
+
+    var sailor = this.hiredSailors.get(sailorId);
+    var selectedCrewAssign = this.crewAssignments.find(function(model) {
+      return model.get('sailor_id') == sailorId;
+      })
+    selectedCrewAssign.destroy({
+      success: function () {
+        debugger
+        this.hiredSailors.remove(sailor);
+        this.availableSailors.add(sailor)
+      }.bind(this)
+    });
   }
 });

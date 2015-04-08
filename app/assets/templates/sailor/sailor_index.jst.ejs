@@ -1,4 +1,23 @@
-<% _.each(sailors.models, function(sailor) { %>
-    <li class="sailor-name" data-id="<%= sailor.get('id') %>"><%= sailor.get('name') %></li>
-    <button type="button" class="btn btn-default hire-btn">Hire</button>
-<% }) %>
+<h3>Available</h3>
+<div class="available-sailors">
+  <% _.each(availableSailors.models, function(sailor) { %>
+      <li class="sailor-name"><%= sailor.get('name') %></li>
+      <button type="button"
+              class="btn btn-default hire-btn"
+              data-id="<%= sailor.get('id') %>">
+              Hire
+      </button>
+  <% }) %>
+</div>
+
+<h3>Your Crew</h3>
+<div class="hired-sailors">
+  <% _.each(hiredSailors.models, function(sailor) { %>
+      <li class="sailor-name"><%= sailor.get('name') %></li>
+      <button type="button"
+              class="btn btn-danger fire-btn"
+              data-id="<%= sailor.get('id') %>">
+              Fire
+      </button>
+  <% }) %>
+</div>

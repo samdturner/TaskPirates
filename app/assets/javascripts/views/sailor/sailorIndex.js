@@ -1,6 +1,5 @@
 TaskPirates.Views.SailorIndex = Backbone.View.extend({
   initialize: function (options) {
-    debugger
     this.hiredSailors = options.hiredSailors;
     this.availableSailors = options.availableSailors;
     this.crewAssignments = options.crewAssignments;
@@ -29,9 +28,8 @@ TaskPirates.Views.SailorIndex = Backbone.View.extend({
   hireSailor: function (event) {
     event.preventDefault();
 
-    debugger
 
-    var sailorId = $('button.hire-btn').attr('data-id');
+    var sailorId = $(event.currentTarget).attr('data-id');
     var params = {
       sailor_id: sailorId,
     };
@@ -47,10 +45,9 @@ TaskPirates.Views.SailorIndex = Backbone.View.extend({
   },
 
   fireSailor: function (event) {
-    debugger
     event.preventDefault();
 
-    var sailorId = $('button.fire-id').attr('data-id');
+    var sailorId = $(event.currentTarget).data('id');
 
     var sailor = this.hiredSailors.get(sailorId);
     var selectedCrewAssign = this.crewAssignments.find(function(model) {
@@ -58,7 +55,6 @@ TaskPirates.Views.SailorIndex = Backbone.View.extend({
       })
     selectedCrewAssign.destroy({
       success: function () {
-        debugger
         this.hiredSailors.remove(sailor);
         this.availableSailors.add(sailor)
       }.bind(this)

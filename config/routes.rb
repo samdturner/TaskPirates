@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :sailors, only: [:index, :show, :update]
     get 'hired_sailors' => 'sailors#hired_sailors', :as => :hired_sailors
     get 'available_sailors' => 'sailors#available_sailors', :as => :available_sailors
-    resources :crew_assignments, only: [:create, :index]
+    resources :crew_assignments, only: [:create, :index, :destroy]
     resources :voyages, only: [:index]
   end
 end

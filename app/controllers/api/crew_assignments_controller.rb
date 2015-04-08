@@ -16,8 +16,9 @@ module Api
     end
 
     def destroy
-      crew_assignment = CrewAssignment.find_by(sailor_id: params[:sailor_id])
+      crew_assignment = CrewAssignment.find(params[:id])
       crew_assignment.destroy
+      render json: current_voyage.hired_sailors
     end
 
     private

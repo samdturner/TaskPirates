@@ -10,15 +10,15 @@ TaskPirates.Routers.Router = Backbone.Router.extend({
     '' : 'sailorIndex'
   },
 
-  sailorIndex: function () {
+  sailorIndex: function (id) {
     this.hiredSailors.fetch();
     this.availableSailors.fetch();
-    var indexView = new TaskPirates.Views.SailorIndex({
+    var sailorIndexView = new TaskPirates.Views.SailorIndex({
       hiredSailors: this.hiredSailors,
       availableSailors: this.availableSailors,
       crewAssignments: this.crewAssignments
     });
-    this._swapViews(indexView);
+    this._swapViews(sailorIndexView);
   },
 
   _swapViews: function (view) {

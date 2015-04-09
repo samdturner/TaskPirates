@@ -1,6 +1,4 @@
-TaskPirates.Collections.HiredSailors = Backbone.Collection.extend({
-  url: 'api/hired_sailors',
-
+TaskPirates.Collections.Sailors = Backbone.Collection.extend({
   model: TaskPirates.Models.Sailor,
 
   getOrFetch: function (id) {
@@ -19,4 +17,12 @@ TaskPirates.Collections.HiredSailors = Backbone.Collection.extend({
 
     return sailor;
   }
+});
+
+TaskPirates.Collections.AvailableSailors = TaskPirates.Collections.Sailors.extend({
+  url: 'api/available_sailors',
+});
+
+TaskPirates.Collections.HiredSailors = TaskPirates.Collections.Sailors.extend({
+  url: 'api/hired_sailors',
 });

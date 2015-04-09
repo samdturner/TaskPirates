@@ -5,8 +5,8 @@ TaskPirates.Views.SailorIndexItem = Backbone.View.extend({
   },
 
   events: {
-    'click button.fire-btn' : 'fireSailor',
-    'click button.hire-btn' : 'hireSailor'
+    'click .fire-btn' : 'fireSailor',
+    'click .hire-btn' : 'hireSailor'
   },
 
   tagName: 'ul',

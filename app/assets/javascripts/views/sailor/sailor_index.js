@@ -7,11 +7,13 @@ TaskPirates.Views.SailorIndex = Backbone.CompositeView.extend({
     this.availableSailors = options.availableSailors;
     this.hiredSailors = options.hiredSailors;
     this.crewAssignments = options.crewAssignments;
-    this.listenTo(this.availableSailors, 'add', this.addSailor);
-    this.listenTo(this.hiredSailors, 'add', this.addSailor);
+    this.listenTo(this.availableSailors, 'add', this.addAvailableSailor);
+    this.listenTo(this.hiredSailors, 'add', this.addHiredSailor);
+    this.listenTo(this.availableSailors, 'remove', this.removeAvailableSailor);
+    this.listenTo(this.hiredSailors, 'remove', this.removeHiredSailor);
 
     var sailorsArr = [this.availableSailors, this.hiredSailors];
-    var available = true
+    var available = true;
     _.each(sailorsArr, function (sailors) {
       _.each(sailors.models, function (sailor) {
         view.addSailor(sailor, available);
@@ -20,12 +22,37 @@ TaskPirates.Views.SailorIndex = Backbone.CompositeView.extend({
     });
   },
 
-  addSailor: function (sailor, available) {
+  addSailor: function (sailor, available, selector) {
     var sailorItemView = new TaskPirates.Views.SailorIndexItem({
       available: available,
-      model: sailor
+      model: sailor,
+      parentView: this
     });
-    this.addSubview('.sailors', sailorItemView);
+    this.addSubview(selector, sailorItemView);
+  },
+
+  addAvailableSailor: function (sailor) {
+    this.addSailor(sailor, true, '.sailors-available');
+  },
+
+  addHiredSailor: function (sailor) {
+    this.addSailor(sailor, false, '.sailors-hired');
+  },
+
+  removeSailor: function (selector, sailor) {
+    this.subviews(selector).forEach( function (sailorIndexItem) {
+      if(sailor.get('id') === sailorIndexItem.model.get('id')) {
+        this.removeSubview(selector, sailorIndexItem);
+      }
+    }.bind(this));
+  },
+
+  removeAvailableSailor: function (sailor) {
+    this.removeSailor('.sailors-available', sailor)
+  },
+
+  removeHiredSailor: function (sailor) {
+    this.removeSailor('.sailors-hired', sailor)
   },
 
   render: function () {
@@ -43,7 +70,7 @@ TaskPirates.Views.SailorIndex = Backbone.CompositeView.extend({
     selectedCrewAssign.destroy({
       success: function () {
         this.hiredSailors.remove(sailor);
-        this.availableSailors.add(sailor)
+        this.availableSailors.add(sailor);
       }.bind(this)
     });
   },

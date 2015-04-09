@@ -9,21 +9,10 @@ class Voyage < ActiveRecord::Base
   belongs_to :user
 
   has_many :crew_assignments
+  has_many :hired_sailors, through: :crew_assignments, source: :sailor
 
   def available_sailors
-    avail_sailors = []
-    sailors = Sailor.all
-    sailors.each do |sailor|
-      unless CrewAssignment.find_by(sailor_id: sailor.id)
-        avail_sailors << sailor
-      end
-    end
-
-    avail_sailors
-  end
-
-  def hired_sailors
-    Sailor.all - self.available_sailors
+    Sailor.all - self.hired_sailors
   end
 
   private

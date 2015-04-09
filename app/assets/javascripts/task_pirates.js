@@ -4,19 +4,12 @@ window.TaskPirates = {
   Views: {},
   Routers: {},
   initialize: function() {
-    var voyage = new TaskPirates.Models.Voyage();
-    voyage.fetch();
-
-    var hiredSailors = new TaskPirates.Collections.HiredSailors();
-    var availableSailors = new TaskPirates.Collections.AvailableSailors();
-
-    var crewAssignments = new TaskPirates.Collections.CrewAssignments();
-    crewAssignments.fetch();
+    var sailors = new TaskPirates.Collections.Sailors();
+    var voyages = new TaskPirates.Collections.Voyages();
 
     var router = new TaskPirates.Routers.Router({
-      hiredSailors: hiredSailors,
-      availableSailors: availableSailors,
-      crewAssignments: crewAssignments
+      sailors: sailors,
+      voyages: voyages
     });
     Backbone.history.start();
   }

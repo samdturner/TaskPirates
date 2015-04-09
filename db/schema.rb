@@ -11,20 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150407183503) do
+ActiveRecord::Schema.define(version: 20150407045539) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "crew_assignments", force: :cascade do |t|
-    t.integer  "sailor_id",  null: false
-    t.integer  "voyage_id",  null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "crew_assignments", ["sailor_id"], name: "index_crew_assignments_on_sailor_id", using: :btree
-  add_index "crew_assignments", ["voyage_id"], name: "index_crew_assignments_on_voyage_id", using: :btree
 
   create_table "sailors", force: :cascade do |t|
     t.string   "name",           null: false
@@ -48,18 +38,21 @@ ActiveRecord::Schema.define(version: 20150407183503) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
   create_table "voyages", force: :cascade do |t|
-    t.integer  "user_id",        null: false
-    t.date     "start_date",     null: false
-    t.date     "end_date",       null: false
-    t.string   "start_location", null: false
-    t.string   "end_location",   null: false
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.integer  "user_id",                    null: false
+    t.integer  "sailor_id",                  null: false
+    t.string   "name"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.boolean  "completed",  default: false
+    t.integer  "rating"
+    t.text     "comment"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
+  add_index "voyages", ["sailor_id"], name: "index_voyages_on_sailor_id", using: :btree
   add_index "voyages", ["user_id"], name: "index_voyages_on_user_id", using: :btree
 
-  add_foreign_key "crew_assignments", "sailors"
-  add_foreign_key "crew_assignments", "voyages"
+  add_foreign_key "voyages", "sailors"
   add_foreign_key "voyages", "users"
 end

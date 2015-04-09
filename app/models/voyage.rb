@@ -1,19 +1,11 @@
 class Voyage < ActiveRecord::Base
-  validates :user_id, presence: true
+  validates :user_id, :sailor_id, presence: true
 
-  validate :end_date_after_start_date?
-
-  validates :start_location, :end_location, presence: true,
-            length: { maximum: 40 }
+  # validate :end_date_after_start_date?
 
   belongs_to :user
 
-  has_many :crew_assignments
-  has_many :hired_sailors, through: :crew_assignments, source: :sailor
-
-  def available_sailors
-    Sailor.all - self.hired_sailors
-  end
+  belongs_to :sailor
 
   private
   def end_date_after_start_date?

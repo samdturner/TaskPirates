@@ -1,27 +1,27 @@
-TaskPirates.Views.SailorIndexItem = Backbone.View.extend({
+TaskPirates.Views.VoyageIndexItem = Backbone.View.extend({
   initialize: function (options) {
     this.parentView = options.parentView
   },
 
   events: {
-    'click .hire-btn' : 'hireSailor'
+    'click .cancel-btn' : 'cancelVoyage',
   },
 
   tagName: 'ul',
 
-  template: JST['sailor/sailors_index'],
+  template: JST['voyage/voyages_index'],
 
   render: function () {
     var content = this.template({
-      sailor: this.model
+      voyage: this.model
     });
 
     this.$el.html(content);
     return this;
   },
 
-  hireSailor: function (event) {
+  cancelVoyage: function (event) {
     event.preventDefault();
-    this.parentView.hireSailor(this.model);
-  }
+    this.parentView.cancelVoyage(this.model);
+  },
 });

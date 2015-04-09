@@ -11,10 +11,6 @@ ActiveRecord::Base.transaction do
   jack = User.create!(fname: "Jack", lname: "Sparrow", email: "jack@sparrow.com",
               password: "password")
 
-  voyage = Voyage.create!(user_id: jack.id, start_date: DateTime.new(1800,06,20),
-                end_date: DateTime.new(1800,07,20), start_location: "Here",
-                end_location: "Unknown")
-
   pintel = Sailor.create!(name: "Pintel", swabbingDecks: 82, manningHelm: 59,
                 loadingCannons: 70)
 
@@ -27,8 +23,7 @@ ActiveRecord::Base.transaction do
   twigg = Sailor.create!(name: "Twigg", swabbingDecks: 35, manningHelm: 84,
                 loadingCannons: 56)
 
-  CrewAssignment.create!(sailor_id: pintel.id, voyage_id: voyage.id)
-  CrewAssignment.create!(sailor_id: ragetti.id, voyage_id: voyage.id)
-  CrewAssignment.create!(sailor_id: cotton.id, voyage_id: voyage.id)
-
+  voyage1 = Voyage.create!(user_id: jack.id, sailor_id: pintel.id, name: "Gold Quest")
+  voyage2 = Voyage.create!(user_id: jack.id, sailor_id: ragetti.id, name: "Search for Black Pearl")
+  voyage3 = Voyage.create!(user_id: jack.id, sailor_id: cotton.id, name: "Kidnap Will Turner")
 end

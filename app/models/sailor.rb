@@ -6,13 +6,5 @@ class Sailor < ActiveRecord::Base
                             greater_than_or_equal_to: 0,
                             less_than_or_equal_to: 100
 
-  has_many :crew_assignments
-
-  private
-
-    def is_valid_date?
-      if !mydate.is_a?(Date)
-        errors.add(:mydate, 'must be a valid date')
-      end
-    end
+  has_many :voyages
 end

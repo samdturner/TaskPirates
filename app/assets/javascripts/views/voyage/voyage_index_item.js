@@ -4,7 +4,7 @@ TaskPirates.Views.VoyageIndexItem = Backbone.View.extend({
   },
 
   events: {
-    'click .cancel-btn' : 'cancelVoyage',
+    'click .cancel-btn' : 'cancelVoyage'
   },
 
   tagName: 'ul',
@@ -23,5 +23,5 @@ TaskPirates.Views.VoyageIndexItem = Backbone.View.extend({
   cancelVoyage: function (event) {
     event.preventDefault();
     this.parentView.cancelVoyage(this.model);
-  },
+  }
 });

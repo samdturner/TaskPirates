@@ -10,6 +10,14 @@ TaskPirates.Views.SailorIndex = Backbone.CompositeView.extend({
     this.listenTo(this.sailors, 'add', this.addSailor);
     this.listenTo(this.voyages, 'add', this.addVoyage);
     this.listenTo(this.voyages, 'remove', this.removeVoyage);
+
+    this.sailors.each(function (sailor) {
+      this.addSailor(sailor);
+    });
+
+    this.voyages.each(function (voyage) {
+      this.addVoyage(voyage);
+    });
   },
 
   addSailor: function (sailor) {

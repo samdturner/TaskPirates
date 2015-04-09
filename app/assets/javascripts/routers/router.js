@@ -21,11 +21,12 @@ TaskPirates.Routers.Router = Backbone.Router.extend({
   },
 
   voyageNew: function () {
+    debugger
     var newVoyage = new TaskPirates.Models.Voyage();
-    var voyageNewView = new TaskPirates.Views.VoyageNew({
-      newVoyage = newVoyage;
+    var voyageNewView = new TaskPirates.Views.VoyageNewForm({
+      model: newVoyage
     });
-    this._swapViews(sailorIndexView);
+    this._swapViews(voyageNewView);
   },
 
   _swapViews: function (view) {

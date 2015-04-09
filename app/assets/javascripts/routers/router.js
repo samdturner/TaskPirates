@@ -6,7 +6,8 @@ TaskPirates.Routers.Router = Backbone.Router.extend({
   },
 
   routes: {
-    '' : 'sailorIndex'
+    '' : 'sailorIndex',
+    'voyages/new' : 'voyageNew'
   },
 
   sailorIndex: function (id) {
@@ -15,6 +16,14 @@ TaskPirates.Routers.Router = Backbone.Router.extend({
     var sailorIndexView = new TaskPirates.Views.SailorIndex({
       sailors: this.sailors,
       voyages: this.voyages
+    });
+    this._swapViews(sailorIndexView);
+  },
+
+  voyageNew: function () {
+    var newVoyage = new TaskPirates.Models.Voyage();
+    var voyageNewView = new TaskPirates.Views.VoyageNew({
+      newVoyage = newVoyage;
     });
     this._swapViews(sailorIndexView);
   },

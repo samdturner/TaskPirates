@@ -343,26 +343,3 @@ a, .link {
   margin: 0 auto;
   position: relative;
 }
-
-@media (min-width: 501px)
-.panel.is-focused {
-  margin-left: -0.375em;
-  margin-right: -0.375em;
-}
-
-@media (min-width: 501px)
-.form-container-inner {
-  padding-left: 2%;
-  padding-right: 2%;
-}
-
-@media (min-width: 501px)
-.panel.is-focused {
-  margin-left: -0.375em;
-  margin-right: -0.375em;
-}
-
-@media (min-width: 501px)
-.job-form-fields {
-  width: 83.33333%;
-}

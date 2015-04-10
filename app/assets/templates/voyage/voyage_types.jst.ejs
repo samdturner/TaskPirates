@@ -2,7 +2,11 @@
   <% tasks.forEach( function (task) { %>
     <div class="task-box">
       <label>
-        <%= task %>
+        <button class="btn btn-info btn-new-voyage"
+          type="submit"
+          data-task-type="<%= task %>">
+          <%= task %>
+        </button>
       </label>
     </div>
   <% }) %>

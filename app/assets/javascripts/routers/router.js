@@ -7,8 +7,17 @@ TaskPirates.Routers.Router = Backbone.Router.extend({
 
   routes: {
     '' : 'sailorIndex',
-    'voyages/new' : 'voyageNew',
-    'voyages/:id/hire' : 'voyageHire'
+    'voyages/:id/edit' : 'voyageForm',
+    'voyages/:id/hire' : 'voyageHire',
+    'sailors/:id' :'sailorProfile'
+  },
+
+  sailorProfile: function (id) {
+    var sailor = this.sailors.getOrFetch(id);
+    var sailorProfileView = new TaskPirates.Views.SailorProfile({
+      model: sailor
+    });
+    this._swapViews(sailorProfileView);
   },
 
   sailorIndex: function (id) {
@@ -21,8 +30,8 @@ TaskPirates.Routers.Router = Backbone.Router.extend({
     this._swapViews(sailorIndexView);
   },
 
-  voyageNew: function () {
-    var newVoyage = new TaskPirates.Models.Voyage();
+  voyageForm: function (id) {
+    var newVoyage = this.voyages.getOrFetch(id);
     var voyageNewView = new TaskPirates.Views.VoyageNewForm({
       model: newVoyage,
       collection: this.voyages
@@ -31,13 +40,11 @@ TaskPirates.Routers.Router = Backbone.Router.extend({
   },
 
   voyageHire: function (id) {
-    debugger;
     var hireVoyage = this.voyages.getOrFetch(id);
-    var matchSailors = new TaskPirates.Collections.Sailors();
-    matchSailors.fetch();
+    hireVoyage.matchingSailors().fetch();
     var hireVoyageView = new TaskPirates.Views.VoyageHire({
       model: hireVoyage,
-      matchSailors: matchSailors,
+      matchingSailors: hireVoyage.matchingSailors(),
     });
     this._swapViews(hireVoyageView);
   },

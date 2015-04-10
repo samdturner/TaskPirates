@@ -7,6 +7,10 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 ActiveRecord::Base.transaction do
+  Voyage.destroy_all
+  User.destroy_all
+  Sailor.destroy_all
+
 
   jack = User.create!(fname: "Jack", lname: "Sparrow", email: "jack@sparrow.com",
               password: "password")
@@ -24,11 +28,21 @@ ActiveRecord::Base.transaction do
                 loadingCannons: 56, task_requirement: "none")
 
   voyage1 = Voyage.create!(user_id: jack.id, sailor_id: pintel.id,
-                          name: "Gold Quest", task_requirement: "car")
+                          name: "Gold Quest", task_requirement: "car",
+                          start_date: Date.new(2015, 04, 11),
+                          end_date: Date.new(2015, 04, 13))
   voyage2 = Voyage.create!(user_id: jack.id, sailor_id: ragetti.id,
                             name: "Search for Black Pearl",
                             task_requirement: "truck")
   voyage3 = Voyage.create!(user_id: jack.id, sailor_id: cotton.id,
                             name: "Kidnap Will Turner",
                             task_requirement: "none")
+  voyage4 = Voyage.create!(user_id: jack.id, sailor_id: pintel.id,
+                          name: "Gold Quest", task_requirement: "car",
+                          start_date: Date.new(2015, 04, 10),
+                          end_date: Date.new(2015, 04, 12))
+  voyage5 = Voyage.create!(user_id: jack.id, sailor_id: pintel.id,
+                          name: "Gold Quest", task_requirement: "car",
+                          start_date: Date.new(2015, 04, 14),
+                          end_date: Date.new(2015, 04, 16))
 end

@@ -35,9 +35,15 @@ class Api::VoyagesController < ApplicationController
     end
   end
 
+  def matching_sailors
+    voyage = Voyage.find(params[:id])
+    render json: voyage.matching_sailors
+  end
+
   private
   def voyage_params
     params.require(:voyage).permit(:sailor_id, :task_requirement,
-                                  :task_description, :start_date, :end_date)
+                                  :task_description, :start_date, :end_date,
+                                  :task_type)
   end
 end

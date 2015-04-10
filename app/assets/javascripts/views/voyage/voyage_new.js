@@ -19,11 +19,7 @@ TaskPirates.Views.VoyageNewForm = Backbone.View.extend({
     var attrs = this.$(':input').serializeJSON();
 
     this.model.set(attrs);
-    this.model.save({}, {
-      success: function () {
-        this.collection.add(this.collection);
-      }.bind(this)
-    });
+    this.model.save();
   },
 
   findSailors: function (event) {

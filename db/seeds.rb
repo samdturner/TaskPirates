@@ -12,18 +12,23 @@ ActiveRecord::Base.transaction do
               password: "password")
 
   pintel = Sailor.create!(name: "Pintel", swabbingDecks: 82, manningHelm: 59,
-                loadingCannons: 70)
+                loadingCannons: 70, task_requirement: "car")
 
   ragetti = Sailor.create!(name: "Ragetti", swabbingDecks: 75, manningHelm: 42,
-                loadingCannons: 65)
+                loadingCannons: 65, task_requirement: "truck")
 
   cotton = Sailor.create!(name: "Cotton", swabbingDecks: 90, manningHelm: 10,
-                loadingCannons: 87)
+                loadingCannons: 87, task_requirement: "none")
 
   twigg = Sailor.create!(name: "Twigg", swabbingDecks: 35, manningHelm: 84,
-                loadingCannons: 56)
+                loadingCannons: 56, task_requirement: "none")
 
-  voyage1 = Voyage.create!(user_id: jack.id, sailor_id: pintel.id, name: "Gold Quest")
-  voyage2 = Voyage.create!(user_id: jack.id, sailor_id: ragetti.id, name: "Search for Black Pearl")
-  voyage3 = Voyage.create!(user_id: jack.id, sailor_id: cotton.id, name: "Kidnap Will Turner")
+  voyage1 = Voyage.create!(user_id: jack.id, sailor_id: pintel.id,
+                          name: "Gold Quest", task_requirement: "car")
+  voyage2 = Voyage.create!(user_id: jack.id, sailor_id: ragetti.id,
+                            name: "Search for Black Pearl",
+                            task_requirement: "truck")
+  voyage3 = Voyage.create!(user_id: jack.id, sailor_id: cotton.id,
+                            name: "Kidnap Will Turner",
+                            task_requirement: "none")
 end

@@ -1,8 +1,8 @@
 class CreateVoyages < ActiveRecord::Migration
   def change
     create_table :voyages do |t|
-      t.integer :user_id, null: false
-      t.integer :sailor_id, null: false
+      t.integer :user_id
+      t.integer :sailor_id
       t.string :name
       t.date :start_date
       t.date :end_date

@@ -7,6 +7,6 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :sailors, only: [:index, :show]
-    resources :voyages, only: [:index, :create, :destroy]
+    resources :voyages, only: [:index, :create, :destroy, :update, :show]
   end
 end

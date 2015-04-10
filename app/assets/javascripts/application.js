@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.serializejson.min
 //= require jquery_ujs
 //= require bootstrap
 //= require turbolinks

@@ -17,22 +17,22 @@
                   <fieldset class="js-error-target job-form__option-container field-focus-container job-form__category-input-fields" data-key="vehicle_requirement">
                     <h4 class="category-input-fields__title">Will the task require a vehicle?</h4>
                     <fieldset class="fieldset-radio">
-                      <input id="vehicle_none" name="vehicle_requirement" type="radio" value="none">
+                      <input id="vehicle_none" name="voyage[task_requirement]" type="radio" value="none">
                       <label for="vehicle_none">No vehicle required</label>
                     </fieldset>
 
                     <fieldset class="fieldset-radio">
-                      <input id="vehicle_car" name="vehicle_requirement" type="radio" value="car">
+                      <input id="vehicle_car" name="voyage[task_requirement]" type="radio" value="car">
                       <label for="vehicle_car">Needs a <strong>car</strong></label>
                     </fieldset>
 
                     <fieldset class="fieldset-radio">
-                      <input id="vehicle_truck" name="vehicle_requirement" type="radio" value="truck">
+                      <input id="vehicle_truck" name="voyage[task_requirement]" type="radio" value="truck">
                       <label for="vehicle_truck">Needs a <strong>truck</strong></label>
                     </fieldset>
 
                     <fieldset class="fieldset-radio">
-                      <input id="vehicle_car_or_truck" name="vehicle_requirement" type="radio" value="car_or_truck">
+                      <input id="vehicle_car_or_truck" name="voyage[task_requirement]" type="radio" value="car_or_truck">
                       <label for="vehicle_car_or_truck">Needs a <strong>car or truck</strong></label>
                     </fieldset>
 
@@ -61,7 +61,7 @@
                   <div class="field-focus-container">
 
                     <fieldset class="js-error-target" data-key="description">
-                      <textarea class="field-textarea form--block-input" name="description" placeholder="EXAMPLE: There’s a restaurant on 3rd St. that I really want to try, but the line is terrible. Can you go to the restaurant at 4pm on Saturday and save my space in line until 7:30pm?" rows="8">dfsdaf</textarea>
+                      <textarea class="field-textarea form--block-input" name="voyage[task_description]" placeholder="EXAMPLE: There’s a restaurant on 3rd St. that I really want to try, but the line is terrible. Can you go to the restaurant at 4pm on Saturday and save my space in line until 7:30pm?" rows="8"></textarea>
                     </fieldset>
                   </div>
                 </div>
@@ -91,7 +91,7 @@
               <div class="date-picker__date-list-container js-date-list-container">
                 <div class="date-picker__date-list js-date-list" style="left: -3200px;"><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-04-09" name="date" type="radio" value="2015-04-09">
+                  <input class="date-picker__date-input" id="date-2015-04-09" name="voyage[start_date]" type="radio" value="2015-04-09">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-04-09">
                     <div class="date-item__month u-light">Apr</div>
@@ -104,7 +104,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-04-10" name="date" type="radio" value="2015-04-10">
+                  <input class="date-picker__date-input" id="date-2015-04-10" name="voyage[start_date]" type="radio" value="2015-04-10">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-04-10">
                     <div class="date-item__month u-light">Apr</div>
@@ -117,7 +117,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-04-11" name="date" type="radio" value="2015-04-11">
+                  <input class="date-picker__date-input" id="date-2015-04-11" name="voyage[start_date]" type="radio" value="2015-04-11">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-04-11">
                     <div class="date-item__month u-light">Apr</div>
@@ -130,7 +130,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-04-12" name="date" type="radio" value="2015-04-12">
+                  <input class="date-picker__date-input" id="date-2015-04-12" name="voyage[start_date]" type="radio" value="2015-04-12">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-04-12">
                     <div class="date-item__month u-light">Apr</div>
@@ -143,7 +143,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-04-13" name="date" type="radio" value="2015-04-13">
+                  <input class="date-picker__date-input" id="date-2015-04-13" name="voyage[start_date]" type="radio" value="2015-04-13">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-04-13">
                     <div class="date-item__month u-light">Apr</div>
@@ -157,7 +157,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-04-14" name="date" type="radio" value="2015-04-14">
+                  <input class="date-picker__date-input" id="date-2015-04-14" name="voyage[start_date]" type="radio" value="2015-04-14">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-04-14">
                     <div class="date-item__month u-light">Apr</div>
@@ -170,7 +170,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-04-15" name="date" type="radio" value="2015-04-15">
+                  <input class="date-picker__date-input" id="date-2015-04-15" name="voyage[start_date]" type="radio" value="2015-04-15">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-04-15">
                     <div class="date-item__month u-light">Apr</div>
@@ -183,7 +183,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-04-16" name="date" type="radio" value="2015-04-16">
+                  <input class="date-picker__date-input" id="date-2015-04-16" name="voyage[start_date]" type="radio" value="2015-04-16">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-04-16">
                     <div class="date-item__month u-light">Apr</div>
@@ -196,7 +196,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-04-17" name="date" type="radio" value="2015-04-17">
+                  <input class="date-picker__date-input" id="date-2015-04-17" name="voyage[start_date]" type="radio" value="2015-04-17">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-04-17">
                     <div class="date-item__month u-light">Apr</div>
@@ -209,7 +209,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-04-18" name="date" type="radio" value="2015-04-18">
+                  <input class="date-picker__date-input" id="date-2015-04-18" name="voyage[start_date]" type="radio" value="2015-04-18">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-04-18">
                     <div class="date-item__month u-light">Apr</div>
@@ -227,7 +227,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-04-19" name="date" type="radio" value="2015-04-19">
+                  <input class="date-picker__date-input" id="date-2015-04-19" name="voyage[start_date]" type="radio" value="2015-04-19">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-04-19">
                     <div class="date-item__month u-light">Apr</div>
@@ -240,7 +240,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-04-20" name="date" type="radio" value="2015-04-20">
+                  <input class="date-picker__date-input" id="date-2015-04-20" name="voyage[start_date]" type="radio" value="2015-04-20">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-04-20">
                     <div class="date-item__month u-light">Apr</div>
@@ -253,7 +253,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-04-21" name="date" type="radio" value="2015-04-21">
+                  <input class="date-picker__date-input" id="date-2015-04-21" name="voyage[start_date]" type="radio" value="2015-04-21">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-04-21">
                     <div class="date-item__month u-light">Apr</div>
@@ -266,7 +266,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-04-22" name="date" type="radio" value="2015-04-22">
+                  <input class="date-picker__date-input" id="date-2015-04-22" name="voyage[start_date]" type="radio" value="2015-04-22">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-04-22">
                     <div class="date-item__month u-light">Apr</div>
@@ -279,7 +279,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-04-23" name="date" type="radio" value="2015-04-23">
+                  <input class="date-picker__date-input" id="date-2015-04-23" name="voyage[start_date]" type="radio" value="2015-04-23">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-04-23">
                     <div class="date-item__month u-light">Apr</div>
@@ -292,7 +292,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-04-24" name="date" type="radio" value="2015-04-24">
+                  <input class="date-picker__date-input" id="date-2015-04-24" name="voyage[start_date]" type="radio" value="2015-04-24">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-04-24">
                     <div class="date-item__month u-light">Apr</div>
@@ -305,7 +305,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-04-25" name="date" type="radio" value="2015-04-25">
+                  <input class="date-picker__date-input" id="date-2015-04-25" name="voyage[start_date]" type="radio" value="2015-04-25">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-04-25">
                     <div class="date-item__month u-light">Apr</div>
@@ -318,7 +318,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-04-26" name="date" type="radio" value="2015-04-26">
+                  <input class="date-picker__date-input" id="date-2015-04-26" name="voyage[start_date]" type="radio" value="2015-04-26">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-04-26">
                     <div class="date-item__month u-light">Apr</div>
@@ -331,7 +331,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-04-27" name="date" type="radio" value="2015-04-27">
+                  <input class="date-picker__date-input" id="date-2015-04-27" name="voyage[start_date]" type="radio" value="2015-04-27">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-04-27">
                     <div class="date-item__month u-light">Apr</div>
@@ -344,7 +344,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-04-28" name="date" type="radio" value="2015-04-28">
+                  <input class="date-picker__date-input" id="date-2015-04-28" name="voyage[start_date]" type="radio" value="2015-04-28">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-04-28">
                     <div class="date-item__month u-light">Apr</div>
@@ -357,7 +357,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-04-29" name="date" type="radio" value="2015-04-29">
+                  <input class="date-picker__date-input" id="date-2015-04-29" name="voyage[start_date]" type="radio" value="2015-04-29">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-04-29">
                     <div class="date-item__month u-light">Apr</div>
@@ -370,7 +370,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-04-30" name="date" type="radio" value="2015-04-30">
+                  <input class="date-picker__date-input" id="date-2015-04-30" name="voyage[start_date]" type="radio" value="2015-04-30">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-04-30">
                     <div class="date-item__month u-light">Apr</div>
@@ -383,7 +383,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-05-01" name="date" type="radio" value="2015-05-01">
+                  <input class="date-picker__date-input" id="date-2015-05-01" name="voyage[start_date]" type="radio" value="2015-05-01">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-05-01">
                     <div class="date-item__month u-light">May</div>
@@ -396,7 +396,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-05-02" name="date" type="radio" value="2015-05-02">
+                  <input class="date-picker__date-input" id="date-2015-05-02" name="voyage[start_date]" type="radio" value="2015-05-02">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-05-02">
                     <div class="date-item__month u-light">May</div>
@@ -409,7 +409,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-05-03" name="date" type="radio" value="2015-05-03">
+                  <input class="date-picker__date-input" id="date-2015-05-03" name="voyage[start_date]" type="radio" value="2015-05-03">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-05-03">
                     <div class="date-item__month u-light">May</div>
@@ -422,7 +422,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-05-04" name="date" type="radio" value="2015-05-04">
+                  <input class="date-picker__date-input" id="date-2015-05-04" name="voyage[start_date]" type="radio" value="2015-05-04">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-05-04">
                     <div class="date-item__month u-light">May</div>
@@ -435,7 +435,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-05-05" name="date" type="radio" value="2015-05-05">
+                  <input class="date-picker__date-input" id="date-2015-05-05" name="voyage[start_date]" type="radio" value="2015-05-05">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-05-05">
                     <div class="date-item__month u-light">May</div>
@@ -448,7 +448,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-05-06" name="date" type="radio" value="2015-05-06">
+                  <input class="date-picker__date-input" id="date-2015-05-06" name="voyage[start_date]" type="radio" value="2015-05-06">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-05-06">
                     <div class="date-item__month u-light">May</div>
@@ -461,7 +461,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-05-07" name="date" type="radio" value="2015-05-07">
+                  <input class="date-picker__date-input" id="date-2015-05-07" name="voyage[start_date]" type="radio" value="2015-05-07">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-05-07">
                     <div class="date-item__month u-light">May</div>
@@ -474,7 +474,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-05-08" name="date" type="radio" value="2015-05-08">
+                  <input class="date-picker__date-input" id="date-2015-05-08" name="voyage[start_date]" type="radio" value="2015-05-08">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-05-08">
                     <div class="date-item__month u-light">May</div>
@@ -487,7 +487,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-05-09" name="date" type="radio" value="2015-05-09">
+                  <input class="date-picker__date-input" id="date-2015-05-09" name="voyage[start_date]" type="radio" value="2015-05-09">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-05-09">
                     <div class="date-item__month u-light">May</div>
@@ -500,7 +500,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-05-10" name="date" type="radio" value="2015-05-10">
+                  <input class="date-picker__date-input" id="date-2015-05-10" name="voyage[start_date]" type="radio" value="2015-05-10">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-05-10">
                     <div class="date-item__month u-light">May</div>
@@ -513,7 +513,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-05-11" name="date" type="radio" value="2015-05-11">
+                  <input class="date-picker__date-input" id="date-2015-05-11" name="voyage[start_date]" type="radio" value="2015-05-11">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-05-11">
                     <div class="date-item__month u-light">May</div>
@@ -526,7 +526,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-05-12" name="date" type="radio" value="2015-05-12">
+                  <input class="date-picker__date-input" id="date-2015-05-12" name="voyage[start_date]" type="radio" value="2015-05-12">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-05-12">
                     <div class="date-item__month u-light">May</div>
@@ -539,7 +539,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-05-13" name="date" type="radio" value="2015-05-13">
+                  <input class="date-picker__date-input" id="date-2015-05-13" name="voyage[start_date]" type="radio" value="2015-05-13">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-05-13">
                     <div class="date-item__month u-light">May</div>
@@ -552,7 +552,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-05-14" name="date" type="radio" value="2015-05-14">
+                  <input class="date-picker__date-input" id="date-2015-05-14" name="voyage[start_date]" type="radio" value="2015-05-14">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-05-14">
                     <div class="date-item__month u-light">May</div>
@@ -565,7 +565,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-05-15" name="date" type="radio" value="2015-05-15">
+                  <input class="date-picker__date-input" id="date-2015-05-15" name="voyage[start_date]" type="radio" value="2015-05-15">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-05-15">
                     <div class="date-item__month u-light">May</div>
@@ -578,7 +578,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-05-16" name="date" type="radio" value="2015-05-16">
+                  <input class="date-picker__date-input" id="date-2015-05-16" name="voyage[start_date]" type="radio" value="2015-05-16">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-05-16">
                     <div class="date-item__month u-light">May</div>
@@ -591,7 +591,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-05-17" name="date" type="radio" value="2015-05-17">
+                  <input class="date-picker__date-input" id="date-2015-05-17" name="voyage[start_date]" type="radio" value="2015-05-17">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-05-17">
                     <div class="date-item__month u-light">May</div>
@@ -604,7 +604,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-05-18" name="date" type="radio" value="2015-05-18">
+                  <input class="date-picker__date-input" id="date-2015-05-18" name="voyage[start_date]" type="radio" value="2015-05-18">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-05-18">
                     <div class="date-item__month u-light">May</div>
@@ -617,7 +617,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-05-19" name="date" type="radio" value="2015-05-19">
+                  <input class="date-picker__date-input" id="date-2015-05-19" name="voyage[start_date]" type="radio" value="2015-05-19">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-05-19">
                     <div class="date-item__month u-light">May</div>
@@ -630,7 +630,7 @@
                   </label>
                 </div><div class="date-picker__date-container">
 
-                  <input class="date-picker__date-input" id="date-2015-05-20" name="date" type="radio" value="2015-05-20">
+                  <input class="date-picker__date-input" id="date-2015-05-20" name="voyage[start_date]" type="radio" value="2015-05-20">
 
                   <label class="date-picker-item date-picker__date-item" for="date-2015-05-20">
                     <div class="date-item__month u-light">May</div>
@@ -646,7 +646,7 @@
             </div>
           </div>
           <div>
-            <button class="btn btn-primary btn-advance-step" type="submit">Find a Sailor</button>
+            <button class="btn btn-primary find-sailors" type="submit">Find a Sailor</button>
           </div>
         </form>
       </div>

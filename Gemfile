@@ -30,6 +30,7 @@ gem 'jquery-ui-rails'
 gem 'backbone-on-rails'
 gem 'underscore-rails'
 gem 'rails_12factor'
+gem 'json'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

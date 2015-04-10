@@ -18,6 +18,8 @@ TaskPirates.Views.SailorIndex = Backbone.CompositeView.extend({
     this.voyages.each(function (voyage) {
       this.addVoyage(voyage);
     });
+
+    this.addTasks();
   },
 
   addSailor: function (sailor) {
@@ -34,6 +36,11 @@ TaskPirates.Views.SailorIndex = Backbone.CompositeView.extend({
       parentView: this
     });
     this.addSubview('.voyages', voyageItemView);
+  },
+
+  addTasks: function () {
+    var tasksView = new TaskPirates.Views.VoyageTypes();
+    this.addSubview('.tasks-container', tasksView);
   },
 
   removeVoyage: function (voyage) {

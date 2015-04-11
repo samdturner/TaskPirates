@@ -1,11 +1,15 @@
 TaskPirates.Views.SailorProfile = Backbone.View.extend({
+  initialize: function () {
+    this.listenTo(this.model, 'sync', this.render);
+  },
+
   events: {
     'click .hire-btn' : 'hireSailor'
   },
 
   tagName: 'ul',
 
-  template: JST['sailor/sailors_index'],
+  template: JST['sailor/sailor_profile'],
 
   render: function () {
     var content = this.template({

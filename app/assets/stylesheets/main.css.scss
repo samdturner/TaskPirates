@@ -507,17 +507,6 @@ h1, .h1 {
   flex: 1 1 23.5%;
 }
 
-@media (max-width: 1024px) and (min-width: 801px), (min-width: 1025px)
-.view--recommendations .taskers-section {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-}
-
 .profile-view .header-container .detail-section {
   display: -webkit-box;
   display: -webkit-flex;
@@ -639,6 +628,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 @media (max-width: 1024px) and (min-width: 801px), (min-width: 1025px)
 .view--recommendations .tasker-card-item:nth-child(4n+1) {
   margin-left: 0;
+  margin-right: 0;
 }
 
 .view--recommendations .tasker-hire-btn {
@@ -686,4 +676,11 @@ a:visited, .link:visited {
 
 .view--recommendations .tasker-hourly-rate {
   opacity: .6;
+}
+
+@media (min-width: 501px) {
+  .view--recommendations .recommendations-container {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
 }

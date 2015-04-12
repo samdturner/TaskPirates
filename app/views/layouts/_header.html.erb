@@ -1,6 +1,13 @@
-<% if signed_in? %>
-  <%= link_to "Dashboard", root_url %>
-  <%= link_to "Log out", session_url, method: :delete %>
-<% else %>
-  <%= link_to "Log in", new_session_url %>
-<% end %>
+<header class="page-header page-header-html">
+  <div class="container">
+    <a class="header-logo js-header-logo" href="/dashboard"></a>
+    <nav class="page-header-navigation">
+      <ul class="js-header-links">
+        <li class="header-link dashboard-path"><a href="/dashboard">Dashboard</a></li>
+        <li class="header-link js-tasker-profile-link profile-path"><a href="/settings/profile">Profile</a></li>
+        <li class="header-link account-path"><a href="/account">Account</a></li>
+        <li class="header-link"><%= link_to "Log out", session_url, method: :delete %></li>
+        </ul>
+      </nav>
+    </div>
+  </header>

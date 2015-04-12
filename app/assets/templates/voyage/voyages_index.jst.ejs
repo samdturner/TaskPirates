@@ -1,7 +1,24 @@
-<li class="voyage-name"><%= voyage.get('name') %></li>
-<li class="sailor-name"><%= voyage.sailor().get('name') %></li>
-<button type="button"
-        class="btn btn-danger
-        cancel-btn">
-        Cancel
-</button>
+<div class="panel tasker-card-item u-align-center tasker-card-panel" cid="55" data-invitee-id="809628">
+  <div class="tasker-avatar-container box-break">
+    <img class="tasker-avatar" src="http://placekitten.com/g/144/144">
+
+  </div>
+  <h3 class="tasker-display-name">
+    <%= voyage.sailor().escape('name') %>
+  </h3>
+  <div class="tasker-section-details">
+    <div class="tasker-section-details__detail">
+      <span class="voyage-description">
+        Hired for... <%= voyage.escape('name') %>
+      </span>
+    </div>
+  </div>
+  <div class="tasker-card__actions">
+    <a class="btn btn-primary btn-block tasker-hire-btn js-btn--next" href="https://www.taskrabbit.com/tasks/a/recommendations?uuid=c74c2f64-3bb4-43dd-84aa-a4ecfaa31c1a#">
+      <span class="u-regular">Voyage Complete</span>
+    </a>
+    <span class="link js-reviews-link-809628" cid="57">Cancel voyage</span>
+  </div>
+
+  <div class="tasker-experience-bar"></div>
+</div>

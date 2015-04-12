@@ -1,17 +1,49 @@
-<h1>Log In</h1>
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">TASK PIRATES</a>
+            </div>
 
-<form action="<%= session_url %>" method="post">
-    <%= auth_token_input %>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Log in</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
 
-    <label>
-      Email Address
-      <input type="text" name="user[email]" value="<%= @user.email %>">
-    </label>
+    <header>
+        <div class="background-image"></div>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1>Task Pirates</h1>
+                <hr>
+                <p>Starting your next voyage and could use some extra hands at deck?
+                    There's bound to be some pirates on this rock as crazy as you.</p>
+                <a href="#about" class="btn btn-primary btn-xl page-scroll">Take a Tour</a>
+            </div>
+        </div>
+    </header>
 
-    <label>
-      Password
-      <input type="password" name="user[password]">
-    </label>
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
 
-    <input type="submit" value="Log in">
-</form>
+    <!-- Custom Theme JavaScript -->
+    <script src="js/creative.js"></script>

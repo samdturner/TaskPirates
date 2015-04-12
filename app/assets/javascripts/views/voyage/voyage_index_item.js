@@ -7,7 +7,7 @@ TaskPirates.Views.VoyageIndexItem = Backbone.View.extend({
     'click .cancel-btn' : 'cancelVoyage'
   },
 
-  tagName: 'ul',
+  tagName: 'div',
 
   template: JST['voyage/voyages_index'],
 

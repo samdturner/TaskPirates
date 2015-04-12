@@ -7,7 +7,7 @@ TaskPirates.Views.SailorIndexItem = Backbone.View.extend({
     'click .hire-btn' : 'hireSailor'
   },
 
-  tagName: 'ul',
+  tagName: 'div',
 
   template: JST['sailor/sailors_index'],
 

@@ -860,6 +860,8 @@ p {
   background-size: 215px 48px;
   width: 215px;
   height: 48px;
+  position: absolute;
+  left: 0;
 }
 
 .page-header-html .page-header-navigation {
@@ -1218,7 +1220,7 @@ header .header-content .header-content-inner p {
 }
 
 @media(min-width:768px) {
-    header {
+    header .home-page {
         min-height: 100%;
     }
 
@@ -1473,4 +1475,83 @@ img::selection {
 img::-moz-selection {
     color: #fff;
     background: 0 0;
+}
+
+@media (max-width: 800px) and (min-width: 501px),
+(max-width: 1024px) and (min-width: 801px), (min-width: 1025px) {
+  .ls-main-content {
+    max-width: 500px;
+    margin-bottom: 1em;
+    border-radius: 4px;
+    background-color: rgba(255,255,255,0.9);
+  }
+}
+
+.ls-main-content {
+  position: relative;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100%;
+  top: 2em;
+}
+
+.panel--spaced {
+  padding: 1.125em 1.5em;
+}
+
+.ls-main-content .ls-logo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto 1em;
+}
+
+fieldset.margin-bottom {
+  margin-bottom: 1em;
+}
+
+form fieldset, form .input-container {
+  position: relative;
+}
+
+input[type=text], input[type=password], input[type=email], input[type=search], input[type=url], input[type=number] {
+  padding: 0.625em 1em;
+}
+
+input[type=text], input[type=password], input[type=email], input[type=search], input[type=url], input[type=number], select {
+  vertical-align: middle;
+  min-height: 40px;
+}
+
+input[type=text], input[type=password], input[type=email], input[type=search], input[type=url], input[type=number], textarea, select {
+  color: #828a8b;
+  border: 1px solid #b4b9b9;
+  font-size: 1em;
+  border-radius: 4px;
+  -webkit-transition-property: border-color, color, box-shadow;
+  transition-property: border-color, color, box-shadow;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  max-width: 100%;
+}
+
+.u-full-width {
+  width: 100%;
+}
+
+.u-pull-right {
+  float: right;
+}
+
+@media (max-width: 1024px) and (min-width: 801px), (min-width: 1025px) {
+  .page-header-html {
+    padding-top: 30px;
+    display: block;
+  }
+}
+
+header.page-header {
+  position: absolute;
+  border-bottom: 0;
 }

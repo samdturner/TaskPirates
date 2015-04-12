@@ -26,7 +26,7 @@ TaskPirates.Views.SailorIndex = Backbone.CompositeView.extend({
 
   addTasks: function () {
     var tasksView = new TaskPirates.Views.VoyageTypes();
-    this.addSubview('.dashboard', tasksView);
+    this.addSubview('.sidebar-tasks', tasksView);
   },
 
   removeVoyage: function (voyage) {

@@ -1,51 +1,29 @@
-<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">TASK PIRATES</a>
-            </div>
+<div class="layout--container js-layout-container">
+  <div class="main--container js-main-container">
+    <div class="main--content">
+      <div class="background-image"></div>
+      <div class="panel panel--spaced is-focused ls-main-content">
+        <img class="ls-logo" src="https://d2613xx0oxxbnv.cloudfront.net/v3/assets/tr_core_assets/logos/logo-h-547d52e5757dec0483a9b4a8f65744d7.png">
+        <div class="js-child-container">
+          <div class="view-in">
+            <form novalidate="" action="<%= session_url %>" method="post">
+              <%= auth_token_input %>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Log in</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+              <fieldset class="margin-bottom js-error-target" data-key="email">
+                <label for="email">Email Address</label>
+                <input class="u-full-width" id="email" name="user[email]" type="text">
+              </fieldset><fieldset class="margin-bottom js-error-target" data-key="password">
+                <label for="password">Password</label>
+                <input class="u-full-width" id="password" name="user[password]" type="password">
+              </fieldset>
+              <fieldset class="margin-bottom">
+                <button class="btn btn-primary u-full-width" type="submit">Log in</button>
+              </fieldset>
+              <a class="u-pull-right" href="/password/reset">Forgot password?</a>
+            </form>
+          </div>
         </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-    <header>
-        <div class="background-image"></div>
-        <div class="header-content">
-            <div class="header-content-inner">
-                <h1>Task Pirates</h1>
-                <hr>
-                <p>Starting your next voyage and could use some extra hands at deck?
-                    There's bound to be some pirates on this rock as crazy as you.</p>
-                <p class="black-blur">Starting your next voyage and could use some extra hands at deck?
-                    There's bound to be some pirates on this rock as crazy as you.</p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Take a Tour</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/jquery.fittext.js"></script>
-    <script src="js/wow.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/creative.js"></script>
+      </div>
+    </div>
+  </div>
+</div>

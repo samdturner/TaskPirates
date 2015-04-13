@@ -1,0 +1,16 @@
+<div class="date-picker__date-container <%= containerName %>">
+
+  <input class="date-picker__date-input" id="date-<%= fullDate %>"
+        name="voyage[<%= typeName %>]" type="radio" value="<%= fullDate %>">
+
+  <label class="date-picker-item date-picker__date-item"
+          for="date-<%= fullDate %>">
+    <div class="date-item__month u-light"><%= monthName %></div>
+    <div class="date-item__day u-semibold"><%= dayNum %></div>
+    <div class="date-item__dow u-semibold">
+
+      <span><%= dayName %></span>
+
+    </div>
+  </label>
+</div>

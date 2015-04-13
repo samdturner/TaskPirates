@@ -1,659 +1,79 @@
 <form>
-<div class="section-body js-container--view">
-  <div class="build-view--form" data-flow-state="form" data-vertical="Assistance"
-  cid="7" data-task-template="2058">
-  <div class="form-container-inner">
-    <div class="job-form-fields">
-      <div class="job-field-container js-job-field-container panel" data-child="category" id="category" data-child-status="hidden"><div class="transition-section" cid="9"></div></div>
-      <div class="job-field-container js-job-field-container panel is-focused" data-child="categoryInputs" id="categoryInputs" data-child-status="editing">
-        <div class="" cid="10">
-          <div class="job-form__field job-form__title title-section">
-            <label class="job-form__field-label">Task Details</label>
-          </div>
-          <div class="job-form__field is-editable">
-            <div class="job-form__field-inner">
-              <form novalidate="">
-                <div class="js-container--error"></div>
-                <div class="fields-container js-container--fields">
-                  <fieldset class="js-error-target job-form__option-container field-focus-container job-form__category-input-fields" data-key="vehicle_requirement">
-                    <h4 class="category-input-fields__title">Will the task require a vehicle?</h4>
-                    <fieldset class="fieldset-radio">
-                      <input id="vehicle_none" name="voyage[task_requirement]" type="radio" value="none">
-                      <label for="vehicle_none">No vehicle required</label>
-                    </fieldset>
-
-                    <fieldset class="fieldset-radio">
-                      <input id="vehicle_car" name="voyage[task_requirement]" type="radio" value="car">
-                      <label for="vehicle_car">Needs a <strong>car</strong></label>
-                    </fieldset>
-
-                    <fieldset class="fieldset-radio">
-                      <input id="vehicle_truck" name="voyage[task_requirement]" type="radio" value="truck">
-                      <label for="vehicle_truck">Needs a <strong>truck</strong></label>
-                    </fieldset>
-
-                    <fieldset class="fieldset-radio">
-                      <input id="vehicle_car_or_truck" name="voyage[task_requirement]" type="radio" value="car_or_truck">
-                      <label for="vehicle_car_or_truck">Needs a <strong>car or truck</strong></label>
-                    </fieldset>
-
-                  </fieldset>
-
-
-                </div>
-                <div>
-                  <button class="btn btn-primary btn-advance-step" type="submit">Save</button>
-                </div>
-              </form>
+  <div class="section-body js-container--view">
+    <div class="build-view--form" data-flow-state="form" data-vertical="Assistance"
+    cid="7" data-task-template="2058">
+    <div class="form-container-inner">
+      <div class="job-form-fields">
+        <div class="job-field-container js-job-field-container panel" data-child="category" id="category" data-child-status="hidden"><div class="transition-section" cid="9"></div></div>
+        <div class="job-field-container js-job-field-container panel is-focused" data-child="categoryInputs" id="categoryInputs" data-child-status="editing">
+          <div class="" cid="10">
+            <div class="job-form__field job-form__title title-section">
+              <label class="job-form__field-label">Task Details</label>
             </div>
-          </div>
-        </div>
-      </div>
+            <div class="job-form__field is-editable">
+              <div class="job-form__field-inner">
+                <form novalidate="">
+                  <div class="js-container--error"></div>
+                  <div class="fields-container js-container--fields">
+                    <fieldset class="js-error-target job-form__option-container field-focus-container job-form__category-input-fields" data-key="vehicle_requirement">
+                      <h4 class="category-input-fields__title">Will the task require a vehicle?</h4>
+                      <fieldset class="fieldset-radio">
+                        <input id="vehicle_none" name="voyage[task_requirement]" type="radio" value="none">
+                        <label for="vehicle_none">No vehicle required</label>
+                      </fieldset>
 
-      <div class="job-field-container js-job-field-container panel is-focused" data-child="descriptionAndVirtual" id="descriptionAndVirtual" data-child-status="editing">
-        <div class="" cid="11">
-          <div class="job-form__field job-form__title title-section">
-            <label class="job-form__field-label">Tell us about your task</label>
-          </div>
-          <div class="job-form__field is-editable">
-            <div class="job-form__field-inner">
-              <form novalidate="">
-                <div class="fields-container js-container--fields">
-                  <div class="field-focus-container">
+                      <fieldset class="fieldset-radio">
+                        <input id="vehicle_car" name="voyage[task_requirement]" type="radio" value="car">
+                        <label for="vehicle_car">Needs a <strong>car</strong></label>
+                      </fieldset>
 
-                    <fieldset class="js-error-target" data-key="description">
-                      <textarea class="field-textarea form--block-input" name="voyage[task_description]" placeholder="EXAMPLE: There’s a restaurant on 3rd St. that I really want to try, but the line is terrible. Can you go to the restaurant at 4pm on Saturday and save my space in line until 7:30pm?" rows="8"></textarea>
+                      <fieldset class="fieldset-radio">
+                        <input id="vehicle_truck" name="voyage[task_requirement]" type="radio" value="truck">
+                        <label for="vehicle_truck">Needs a <strong>truck</strong></label>
+                      </fieldset>
+
+                      <fieldset class="fieldset-radio">
+                        <input id="vehicle_car_or_truck" name="voyage[task_requirement]" type="radio" value="car_or_truck">
+                        <label for="vehicle_car_or_truck">Needs a <strong>car or truck</strong></label>
+                      </fieldset>
+
                     </fieldset>
+
+
                   </div>
-                </div>
-                <div>
-                  <button class="btn btn-primary btn-advance-step" type="submit">Save</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="job-field-container js-job-field-container panel is-focused" data-child="dateAndTime" id="dateAndTime" data-child-status="editing"><div class="" cid="12"><div class="job-form__field job-form__title title-section">
-        <label class="job-form__field-label">Your voyage start date</label>
-      </div>
-      <div class="job-form__field is-editable">
-        <div class="job-form__field-inner">
-          <form novalidate="">
-            <div class="js-container--error"></div>
-            <div class="fields-container js-container--fields"><div class="date-picker js-error-target" data-key="date slot">
-              <a class="date-picker__arrow date-picker__arrow--right js-move js-move-left" data-direction="-1" href="https://www.taskrabbit.com/tasks/a/form?uuid=c48b0678-f536-4493-b0f0-d5127eb947f4#">
-                <i class="ss-icon ss-caret-right"></i>
-              </a>
-              <a class="date-picker__arrow date-picker__arrow--left js-move js-move-right" data-direction="1" href="https://www.taskrabbit.com/tasks/a/form?uuid=c48b0678-f536-4493-b0f0-d5127eb947f4#">
-                <i class="ss-icon ss-caret-left"></i>
-              </a>
-              <div class="date-picker__date-list-container js-date-list-container">
-                <div class="date-picker__date-list js-date-list" style="left: -3200px;"><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-04-09" name="voyage[start_date]" type="radio" value="2015-04-09">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-04-09">
-                    <div class="date-item__month u-light">Apr</div>
-                    <div class="date-item__day u-semibold">09</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Today</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-04-10" name="voyage[start_date]" type="radio" value="2015-04-10">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-04-10">
-                    <div class="date-item__month u-light">Apr</div>
-                    <div class="date-item__day u-semibold">10</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Fri</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-04-11" name="voyage[start_date]" type="radio" value="2015-04-11">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-04-11">
-                    <div class="date-item__month u-light">Apr</div>
-                    <div class="date-item__day u-semibold">11</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Sat</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-04-12" name="voyage[start_date]" type="radio" value="2015-04-12">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-04-12">
-                    <div class="date-item__month u-light">Apr</div>
-                    <div class="date-item__day u-semibold">12</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Sun</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-04-13" name="voyage[start_date]" type="radio" value="2015-04-13">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-04-13">
-                    <div class="date-item__month u-light">Apr</div>
-                    <div class="date-item__day u-semibold">13</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Mon</span>
-
-                    </div>
-
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-04-14" name="voyage[start_date]" type="radio" value="2015-04-14">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-04-14">
-                    <div class="date-item__month u-light">Apr</div>
-                    <div class="date-item__day u-semibold">14</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Tue</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-04-15" name="voyage[start_date]" type="radio" value="2015-04-15">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-04-15">
-                    <div class="date-item__month u-light">Apr</div>
-                    <div class="date-item__day u-semibold">15</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Wed</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-04-16" name="voyage[start_date]" type="radio" value="2015-04-16">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-04-16">
-                    <div class="date-item__month u-light">Apr</div>
-                    <div class="date-item__day u-semibold">16</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Thu</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-04-17" name="voyage[start_date]" type="radio" value="2015-04-17">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-04-17">
-                    <div class="date-item__month u-light">Apr</div>
-                    <div class="date-item__day u-semibold">17</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Fri</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-04-18" name="voyage[start_date]" type="radio" value="2015-04-18">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-04-18">
-                    <div class="date-item__month u-light">Apr</div>
-                    <div class="date-item__day u-semibold">18</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Sat</span>
-
-                    </div>
-
-
-
-
-
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-04-19" name="voyage[start_date]" type="radio" value="2015-04-19">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-04-19">
-                    <div class="date-item__month u-light">Apr</div>
-                    <div class="date-item__day u-semibold">19</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Sun</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-04-20" name="voyage[start_date]" type="radio" value="2015-04-20">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-04-20">
-                    <div class="date-item__month u-light">Apr</div>
-                    <div class="date-item__day u-semibold">20</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Mon</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-04-21" name="voyage[start_date]" type="radio" value="2015-04-21">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-04-21">
-                    <div class="date-item__month u-light">Apr</div>
-                    <div class="date-item__day u-semibold">21</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Tue</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-04-22" name="voyage[start_date]" type="radio" value="2015-04-22">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-04-22">
-                    <div class="date-item__month u-light">Apr</div>
-                    <div class="date-item__day u-semibold">22</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Wed</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-04-23" name="voyage[start_date]" type="radio" value="2015-04-23">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-04-23">
-                    <div class="date-item__month u-light">Apr</div>
-                    <div class="date-item__day u-semibold">23</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Thu</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-04-24" name="voyage[start_date]" type="radio" value="2015-04-24">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-04-24">
-                    <div class="date-item__month u-light">Apr</div>
-                    <div class="date-item__day u-semibold">24</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Fri</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-04-25" name="voyage[start_date]" type="radio" value="2015-04-25">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-04-25">
-                    <div class="date-item__month u-light">Apr</div>
-                    <div class="date-item__day u-semibold">25</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Sat</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-04-26" name="voyage[start_date]" type="radio" value="2015-04-26">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-04-26">
-                    <div class="date-item__month u-light">Apr</div>
-                    <div class="date-item__day u-semibold">26</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Sun</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-04-27" name="voyage[start_date]" type="radio" value="2015-04-27">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-04-27">
-                    <div class="date-item__month u-light">Apr</div>
-                    <div class="date-item__day u-semibold">27</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Mon</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-04-28" name="voyage[start_date]" type="radio" value="2015-04-28">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-04-28">
-                    <div class="date-item__month u-light">Apr</div>
-                    <div class="date-item__day u-semibold">28</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Tue</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-04-29" name="voyage[start_date]" type="radio" value="2015-04-29">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-04-29">
-                    <div class="date-item__month u-light">Apr</div>
-                    <div class="date-item__day u-semibold">29</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Wed</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-04-30" name="voyage[start_date]" type="radio" value="2015-04-30">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-04-30">
-                    <div class="date-item__month u-light">Apr</div>
-                    <div class="date-item__day u-semibold">30</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Thu</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-05-01" name="voyage[start_date]" type="radio" value="2015-05-01">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-05-01">
-                    <div class="date-item__month u-light">May</div>
-                    <div class="date-item__day u-semibold">01</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Fri</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-05-02" name="voyage[start_date]" type="radio" value="2015-05-02">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-05-02">
-                    <div class="date-item__month u-light">May</div>
-                    <div class="date-item__day u-semibold">02</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Sat</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-05-03" name="voyage[start_date]" type="radio" value="2015-05-03">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-05-03">
-                    <div class="date-item__month u-light">May</div>
-                    <div class="date-item__day u-semibold">03</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Sun</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-05-04" name="voyage[start_date]" type="radio" value="2015-05-04">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-05-04">
-                    <div class="date-item__month u-light">May</div>
-                    <div class="date-item__day u-semibold">04</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Mon</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-05-05" name="voyage[start_date]" type="radio" value="2015-05-05">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-05-05">
-                    <div class="date-item__month u-light">May</div>
-                    <div class="date-item__day u-semibold">05</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Tue</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-05-06" name="voyage[start_date]" type="radio" value="2015-05-06">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-05-06">
-                    <div class="date-item__month u-light">May</div>
-                    <div class="date-item__day u-semibold">06</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Wed</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-05-07" name="voyage[start_date]" type="radio" value="2015-05-07">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-05-07">
-                    <div class="date-item__month u-light">May</div>
-                    <div class="date-item__day u-semibold">07</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Thu</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-05-08" name="voyage[start_date]" type="radio" value="2015-05-08">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-05-08">
-                    <div class="date-item__month u-light">May</div>
-                    <div class="date-item__day u-semibold">08</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Fri</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-05-09" name="voyage[start_date]" type="radio" value="2015-05-09">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-05-09">
-                    <div class="date-item__month u-light">May</div>
-                    <div class="date-item__day u-semibold">09</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Sat</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-05-10" name="voyage[start_date]" type="radio" value="2015-05-10">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-05-10">
-                    <div class="date-item__month u-light">May</div>
-                    <div class="date-item__day u-semibold">10</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Sun</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-05-11" name="voyage[start_date]" type="radio" value="2015-05-11">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-05-11">
-                    <div class="date-item__month u-light">May</div>
-                    <div class="date-item__day u-semibold">11</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Mon</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-05-12" name="voyage[start_date]" type="radio" value="2015-05-12">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-05-12">
-                    <div class="date-item__month u-light">May</div>
-                    <div class="date-item__day u-semibold">12</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Tue</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-05-13" name="voyage[start_date]" type="radio" value="2015-05-13">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-05-13">
-                    <div class="date-item__month u-light">May</div>
-                    <div class="date-item__day u-semibold">13</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Wed</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-05-14" name="voyage[start_date]" type="radio" value="2015-05-14">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-05-14">
-                    <div class="date-item__month u-light">May</div>
-                    <div class="date-item__day u-semibold">14</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Thu</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-05-15" name="voyage[start_date]" type="radio" value="2015-05-15">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-05-15">
-                    <div class="date-item__month u-light">May</div>
-                    <div class="date-item__day u-semibold">15</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Fri</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-05-16" name="voyage[start_date]" type="radio" value="2015-05-16">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-05-16">
-                    <div class="date-item__month u-light">May</div>
-                    <div class="date-item__day u-semibold">16</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Sat</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-05-17" name="voyage[start_date]" type="radio" value="2015-05-17">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-05-17">
-                    <div class="date-item__month u-light">May</div>
-                    <div class="date-item__day u-semibold">17</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Sun</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-05-18" name="voyage[start_date]" type="radio" value="2015-05-18">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-05-18">
-                    <div class="date-item__month u-light">May</div>
-                    <div class="date-item__day u-semibold">18</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Mon</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-05-19" name="voyage[start_date]" type="radio" value="2015-05-19">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-05-19">
-                    <div class="date-item__month u-light">May</div>
-                    <div class="date-item__day u-semibold">19</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Tue</span>
-
-                    </div>
-                  </label>
-                </div><div class="date-picker__date-container">
-
-                  <input class="date-picker__date-input" id="date-2015-05-20" name="voyage[start_date]" type="radio" value="2015-05-20">
-
-                  <label class="date-picker-item date-picker__date-item" for="date-2015-05-20">
-                    <div class="date-item__month u-light">May</div>
-                    <div class="date-item__day u-semibold">20</div>
-                    <div class="date-item__dow u-semibold">
-
-                      <span>Wed</span>
-
-                    </div>
-                  </label>
-                </div></div>
+                  <div>
+                    <button class="btn btn-primary btn-advance-step" type="submit">Save</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
-          <div>
-            <button class="btn btn-primary find-sailors" type="submit">Find a Sailor</button>
+        </div>
+
+        <div class="job-field-container js-job-field-container panel is-focused" data-child="descriptionAndVirtual" id="descriptionAndVirtual" data-child-status="editing">
+          <div class="" cid="11">
+            <div class="job-form__field job-form__title title-section">
+              <label class="job-form__field-label">Tell us about your task</label>
+            </div>
+            <div class="job-form__field is-editable">
+              <div class="job-form__field-inner">
+                <form novalidate="">
+                  <div class="fields-container js-container--fields">
+                    <div class="field-focus-container">
+
+                      <fieldset class="js-error-target" data-key="description">
+                        <textarea class="field-textarea form--block-input" name="voyage[task_description]" placeholder="EXAMPLE: There’s a restaurant on 3rd St. that I really want to try, but the line is terrible. Can you go to the restaurant at 4pm on Saturday and save my space in line until 7:30pm?" rows="8"></textarea>
+                      </fieldset>
+                    </div>
+                  </div>
+                  <div>
+                    <button class="btn btn-primary btn-advance-step" type="submit">Save</button>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
-        </form>
-      </div>
-    </div>
+        </div>
   </div>
-</div>
-</div>
 </div>
 </form>

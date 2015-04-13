@@ -21,7 +21,6 @@ TaskPirates.Routers.Router = Backbone.Router.extend({
   },
 
   sailorIndex: function (id) {
-    debugger
     this.voyages.fetch();
     var sailorIndexView = new TaskPirates.Views.SailorIndex({
       voyages: this.voyages

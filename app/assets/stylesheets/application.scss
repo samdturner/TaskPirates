@@ -280,7 +280,7 @@
 
  .date-picker__date-list {
    position: relative;
-   left: 0;
+   left: 20;
    -webkit-transition: left 0.3s ease-in-out;
    transition: left 0.3s ease-in-out;
    white-space: nowrap;
@@ -1611,4 +1611,13 @@ div.pirate-logo-text-wrapper {
 
 .pirate-logo {
   float: left;
+}
+
+.ss-icon {
+  vertical-align: middle;
+  position: relative;
+}
+
+.ss-caret-left {
+  left: -12px;
 }

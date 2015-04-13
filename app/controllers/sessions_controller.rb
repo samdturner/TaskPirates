@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
                                 params[:user][:password])
     if @user
       sign_in(@user)
-      redirect_to root_url
+      redirect_to '/root'
     else
       flash[:errors] = "Invalid login credentials"
       render :new

@@ -1,5 +1,6 @@
 TaskPirates.Views.SailorIndex = Backbone.CompositeView.extend({
-  template: JST["sailor/index"],
+  template: [JST["sailor/index"], JST["layouts/header"],
+            JST["layouts/header_dashboard_text"]],
 
   initialize: function (options) {
     var view = this;
@@ -38,8 +39,11 @@ TaskPirates.Views.SailorIndex = Backbone.CompositeView.extend({
   },
 
   render: function () {
-    var content = this.template();
+    debugger
+    var content = this.template[0]();
     this.$el.html(content);
+    this.$el.find('.dashboard').prepend(this.template[1]());
+    this.$el.find('div.section-salute').append(this.template[2]());
     this.attachSubviews();
     return this;
   },

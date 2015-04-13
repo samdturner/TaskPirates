@@ -6,7 +6,7 @@ TaskPirates.Views.VoyageTypes = Backbone.View.extend({
   template: JST['voyage/voyage_types'],
 
   events: {
-    'click button.btn-new-voyage' : 'newVoyage'
+    'click a.new-voyage' : 'newVoyage'
   },
 
   render: function () {

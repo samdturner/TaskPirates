@@ -370,6 +370,16 @@
    position: relative;
  }
 
+ .page-header-html {
+    background-color: #BDA059;
+    top: -7px;
+    margin-top: 0px;
+  }
+
+  .page-header-html .container {
+    top: -28px;
+  }
+
  .main-content {
    position: relative;
    width: 100%;
@@ -569,7 +579,6 @@
    margin-left: 1em;
    margin-right: 1em;
    overflow: visible;
-   display: inline;
    width: 260px;
    height: 420px;
    float: left;
@@ -612,8 +621,17 @@
  }
 
  .view--recommendations .tasker-section-details__detail {
-   width: 50%;
+   width: 90%;
    float: left;
+ }
+
+ .tasker-section-details__detail {
+   margin: auto;
+   margin-right: 0;
+   margin-left: 0;
+   text-align: left;
+   overflow: hidden;
+   height: 47px;
  }
 
  .view--recommendations .tasker-stat-number {
@@ -830,6 +848,7 @@ p {
 }
 
 .page-header {
+  margin: 6px 0 20px;
   position: relative;
   top: 0;
   width: 100%;
@@ -856,10 +875,10 @@ p {
 
 .page-header-html .header-logo {
   display: inline-block;
-  background: url("https://d2613xx0oxxbnv.cloudfront.net/v3/assets/tr_core_assets/logos/logo-h-81d1f3827a046ff0da2583c44f0768d8.svg") no-repeat;
-  background-size: 215px 48px;
-  width: 215px;
-  height: 48px;
+  background: url("http://i.imgur.com/mJZlnld.png") no-repeat;
+  background-size: 96px 96px;
+  width: 96px;
+  height: 96px;
   position: absolute;
   left: 0;
 }
@@ -935,7 +954,6 @@ a.tasker-hire-btn {
 }
 
 .view-header {
-  background-color: #d1dfd2;
   padding-top: 78px;
 }
 
@@ -1165,6 +1183,7 @@ header {
   background-image: url(http://i.imgur.com/GRpTqxB.jpg);
   width: 100%;
   height: 100%;
+  top: -1px;
 
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
@@ -1554,4 +1573,42 @@ input[type=text], input[type=password], input[type=email], input[type=search], i
 header.page-header {
   position: absolute;
   border-bottom: 0;
+}
+
+div.header-content {
+  top: 350px;
+}
+
+.section-salute {
+  background-image: url(http://i.imgur.com/adKvZv3.jpg);
+  background-size: cover;
+}
+
+.taskers-section {
+  text-align: center;
+}
+
+.header-text-container {
+  position: absolute;
+  top: 225px;
+  left: 220px;
+  color: white;
+}
+
+.view-header.section-salute {
+  padding-top: 400px;
+}
+
+.pirate-logo-text-wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+
+div.pirate-logo-text-wrapper {
+  width: 35%;
+  float: left;
+}
+
+.pirate-logo {
+  float: left;
 }

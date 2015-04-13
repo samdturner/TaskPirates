@@ -1,11 +1,12 @@
 TaskPirates.Views.VoyageNewForm = Backbone.View.extend({
-  tagName: 'form',
+  tagName: 'div',
 
-  template: JST['new_voyage/questions'],
+  template: [JST['new_voyage/questions'], JST['layouts/header']],
 
   render: function () {
-    var content = this.template();
-    this.$el.html(content);
+    this.$el.html(this.template[1]());
+    var content = this.template[0]();
+    this.$el.append(content);
     return this;
   },
 

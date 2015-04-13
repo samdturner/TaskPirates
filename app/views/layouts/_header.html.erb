@@ -1,12 +1,17 @@
-<header class="page-header page-header-html">
+<header class="page-header page-header-html" style="margin-top: 0px">
   <div class="container">
-    <a class="header-logo js-header-logo" href="/dashboard"></a>
-    <nav class="page-header-navigation">
-      <ul class="js-header-links">
-        <li class="header-link dashboard-path"><a href="/dashboard">Dashboard</a></li>
-        <li class="header-link js-tasker-profile-link profile-path"><a href="/settings/profile">Profile</a></li>
-        <li class="header-link account-path"><a href="/account">Account</a></li>
-        <li class="header-link"><%= link_to "Log out", session_url, method: :delete %></li>
+      <div class="logo-container">
+        <img class="pirate-logo" src="http://i.imgur.com/C61Kkv4.png">
+        <div class="pirate-logo-text-wrapper">
+          <img class"pirate-logo-text" src="http://fontmeme.com/embed.php?text=TaskPirates&name=Caribbean.ttf&size=45&style_color=4A462C" alt="Pirates of the Caribbean Font">
+        </div>
+      </div>
+      <nav class="page-header-navigation" style="top: 13px">
+        <ul class="js-header-links">
+          <li class="header-link dashboard-path"><a href="/dashboard">Dashboard</a></li>
+          <li class="header-link js-tasker-profile-link profile-path"><a href="/settings/profile">Profile</a></li>
+          <li class="header-link account-path"><a href="/account">Account</a></li>
+          <li class="header-link"><%= link_to "Log out", session_url, method: :delete %></li>
         </ul>
       </nav>
     </div>

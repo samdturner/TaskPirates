@@ -2,7 +2,6 @@ TaskPirates.Models.Voyage = Backbone.Model.extend({
   urlRoot: 'api/voyages',
 
   parse: function (response) {
-    // debugger
     if (response.sailor) {
       this.sailor().set(response.sailor);
       delete response.sailor;

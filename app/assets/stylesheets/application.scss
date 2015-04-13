@@ -351,9 +351,9 @@
    line-height: 1.5em;
  }
 
- .date-picker__date-input {
-   display: none;
- }
+  .date-picker__date-input {
+    display: none;
+  } 
 
  .form-container-inner {
    max-width: 1200px;
@@ -1620,4 +1620,8 @@ div.pirate-logo-text-wrapper {
 
 .ss-caret-left {
   left: -12px;
+}
+
+.btn-guest-login {
+  margin-top: 14px;
 }

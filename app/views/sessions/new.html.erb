@@ -17,7 +17,10 @@
                 <input class="u-full-width" id="password" name="user[password]" type="password">
               </fieldset>
               <fieldset class="margin-bottom">
-                <button class="btn btn-primary u-full-width" type="submit">Log in</button>
+                <button class="btn btn-primary u-full-width"
+                        type="submit">Log in</button>
+                <button class="btn btn-primary u-full-width btn-guest-login"
+                        type="submit">Guest log in</button>
               </fieldset>
               <a class="u-pull-right" href="/password/reset">Forgot password?</a>
             </form>
@@ -27,3 +30,11 @@
     </div>
   </div>
 </div>
+
+<script>
+  $('.btn-guest-login').click(function(){
+    event.preventDefault();
+    $("input[name='user[email]']").val('jack@sparrow.com');
+    $("input[name='user[password]']").val('password');
+  })
+</script>

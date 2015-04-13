@@ -20,13 +20,13 @@ TaskPirates.Views.VoyageTypes = Backbone.View.extend({
   },
 
   newVoyage: function (event) {
-    debugger
+    
     event.preventDefault();
     var task_type = $(event.currentTarget).data('task-type');
     var newVoyage = new TaskPirates.Models.Voyage();
     newVoyage.save({ task_type: task_type }, {
         success: function () {
-          debugger
+          
           var url = "voyages/" + newVoyage.get('id') +"/edit";
           Backbone.history.navigate(url, { trigger: true });
         }

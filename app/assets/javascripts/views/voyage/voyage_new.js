@@ -82,7 +82,6 @@ TaskPirates.Views.VoyageNewForm = Backbone.View.extend({
   },
 
   addEdDatePickers: function (num) {
-    debugger;
     this.addDatePickers(num, 'end_date', '.end-date-picker',
                         'end-date-container');
   },
@@ -125,7 +124,7 @@ TaskPirates.Views.VoyageNewForm = Backbone.View.extend({
       dayNum: dayNum,
       dayName: dayName
     });
-    debugger
+
     this.$el.find(className).append(content);
   },
 

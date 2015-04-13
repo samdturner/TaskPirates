@@ -39,7 +39,7 @@ TaskPirates.Views.SailorIndex = Backbone.CompositeView.extend({
   },
 
   render: function () {
-    debugger
+    
     var content = this.template[0]();
     this.$el.html(content);
     this.$el.find('.dashboard').prepend(this.template[1]());

@@ -11,7 +11,6 @@ ActiveRecord::Base.transaction do
   User.destroy_all
   Sailor.destroy_all
 
-
   jack = User.create!(fname: "Jack", lname: "Sparrow", email: "jack@sparrow.com",
               password: "password")
 

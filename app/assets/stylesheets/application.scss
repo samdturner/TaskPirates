@@ -13,6 +13,14 @@
  */
 
  @import "bootstrap-sprockets";
+ @font-face {
+        font-family: "Treasure Map";
+        src: url(/assets/Treamd.ttf) format("truetype");
+    };
+ @font-face {
+        font-family: "Delitsch";
+        src: url(/assets/DelitschAntiqua.ttf) format("truetype");
+    };
 
  html, body, div, span, object,
  iframe, h1, h2, h3, h4, h5, h6,
@@ -138,7 +146,7 @@
 
  body, input, textarea,
  select, button, legend, p {
-   font-family: "Proxima", Arial, Helvetica, sans-serif;
+   font-family: "Delitsch";
    font-weight: 300;
    font-size: 1rem;
    line-height: 1.4;
@@ -982,7 +990,7 @@ body {
 }
 
 body {
-    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+    font-family: "Delitsch";
 }
 
 hr {
@@ -1016,7 +1024,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: "Delitsch";
 }
 
 p {
@@ -1047,7 +1055,7 @@ aside {
 }
 
 .navbar-default {
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: "Delitsch";
     background-color: #fff;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
@@ -1056,7 +1064,7 @@ aside {
 
 .navbar-default .navbar-header .navbar-brand {
     text-transform: uppercase;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: "Delitsch";
     font-weight: 700;
 }
 
@@ -1269,7 +1277,7 @@ header .header-content .header-content-inner p {
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
     padding: 0 15px;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: "Delitsch";
 }
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
@@ -1438,6 +1446,20 @@ div.header-content {
 div.pirate-logo-text-wrapper {
   width: 30%;
   float: left;
+}
+
+.pirate-logo-text-wrapper-login img {
+  max-width: 100%;
+  height: auto;
+}
+
+div.pirate-logo-text-wrapper-login {
+  width: 75%;
+  float: left;
+}
+
+.pirate-logo.login {
+  margin-left: 18px;
 }
 
 .pirate-logo {

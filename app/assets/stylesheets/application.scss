@@ -46,14 +46,12 @@
  }
 
  .job-form__field-label {
-   color: #969d9e;
    font-weight: normal;
    font-size: 1rem;
    text-transform: uppercase;
  }
 
  .job-form__field.is-editable {
-   background: white;
    padding-bottom: 1em;
    padding-top: 1.375em;
  }
@@ -69,7 +67,7 @@
  }
 
  .panel {
-   background: white;
+   background: #B9995B;
    overflow: hidden;
    padding: 0.5em;
    margin-top: 0.25em;
@@ -89,7 +87,7 @@
 
  .category-input-fields__title {
    padding-bottom: 0.5em;
-   border-bottom: 1px solid #ebecec;
+   border-bottom: 1px solid #060503;
    margin-bottom: 1em;
  }
 
@@ -102,6 +100,7 @@
    position: absolute;
    top: 2px;
    left: 2px;
+   margin-top: 9px;
  }
 
  h4 {
@@ -164,14 +163,10 @@
  }
 
  .btn-advance-step, .confirmation-form-container,
- .job-form-fields, .field-focus-container {
+ .job-form-fields, .field-focus-container, .find-sailors {
    display: block;
    margin-left: auto;
    margin-right: auto;
- }
-
- .btn-primary, .btn-primary:visited {
-   border: 1px solid #1da3bf;
  }
 
  .btn {
@@ -245,10 +240,6 @@
    float: left;
  }
 
- a:visited, .link:visited {
-   color: #158aa2;
- }
-
  .date-picker__arrow {
    font-size: 1.125rem;
    width: 40px;
@@ -257,7 +248,7 @@
  }
 
  a, .link {
-   color: #158aa2;
+   color: #A35D11;
    text-decoration: none;
    cursor: pointer;
  }
@@ -298,10 +289,11 @@
    width: 100px;
    display: block;
    position: relative;
-   border: 1px solid #b4b9b9;
+   border: 1px solid #000000;
    border-radius: 4px;
    padding: 0.375em;
    text-align: center;
+   background-color: #fff;
  }
 
  .date-item__month {
@@ -364,7 +356,7 @@
  }
 
  .page-header-html {
-    background-color: #000000;
+    background-color: #D2C6BA;
     top: -7px;
     margin-top: 0px;
   }
@@ -664,8 +656,6 @@
    border-radius: 4px;
    font-size: 1.25rem;
    font-weight: normal;
-   border: 1px solid #969d9e;
-   background-color: transparent;
    outline: none;
    cursor: pointer;
    -webkit-transition-property: background, color, border-color, box-shadow;
@@ -713,11 +703,12 @@
   margin-bottom: 16px;
   background-color: white;
   border-radius: 4px;
-  border: 1px solid #cfd2d3;
+  border: 1px solid #B9995B;
+  border-radius: 7px;
 }
 
 .vertical-picker {
-  background-color: white;
+  background-color: #B9995B;
   padding: 16px;
   position: relative;
   overflow: hidden;
@@ -766,6 +757,7 @@ p {
   cursor: pointer;
   min-height: 100px;
   position: relative;
+  background-color: white;
 }
 
 .vertical-picker .task-type-label {
@@ -853,7 +845,7 @@ p {
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
   position: relative;
 }
@@ -878,13 +870,15 @@ p {
   vertical-align: top;
 }
 
-.page-header-html .page-header-navigation .header-link:first-child, .page-header-html .page-header-navigation .header-segment:first-child {
+.page-header-html .page-header-navigation .header-link:first-child,
+.page-header-html .page-header-navigation .header-segment:first-child {
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
 }
 
-.page-header-html .page-header-navigation .header-link, .page-header-html .page-header-navigation .header-segment {
-  background: #f5f6f6;
+.page-header-html .page-header-navigation .header-link,
+.page-header-html .page-header-navigation .header-segment {
+  background: #060503;
   font-size: 14px;
   line-height: 1.4em;
 }
@@ -897,14 +891,17 @@ ul li {
   list-style-type: none;
 }
 
-.page-header-html .page-header-navigation .header-link span, .page-header-html .page-header-navigation .header-link a, .page-header-html .page-header-navigation .header-segment span, .page-header-html .page-header-navigation .header-segment a {
+.page-header-html .page-header-navigation .header-link span,
+.page-header-html .page-header-navigation .header-link a,
+.page-header-html .page-header-navigation .header-segment span,
+.page-header-html .page-header-navigation .header-segment a {
   padding: .75em 1.2em;
   display: inline-block;
   font-weight: normal;
 }
 
 a:hover, a:focus, .link:hover, .link:focus {
-  color: #004c5a;
+  color: #6A441A;
   text-decoration: none;
 }
 
@@ -990,7 +987,6 @@ body {
 
 hr {
     max-width: 50px;
-    border-color: #f05f40;
     border-width: 3px;
 }
 
@@ -998,8 +994,12 @@ hr.light {
     border-color: #fff;
 }
 
+li.header-link {
+  color: #A35D11;
+}
+
 a {
-    color: #f05f40;
+    color: #A35D11;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -1007,7 +1007,7 @@ a {
 
 a:hover,
 a:focus {
-    color: #eb3812;
+    color: #fff;
 }
 
 h1,
@@ -1023,10 +1023,6 @@ p {
     margin-bottom: 20px;
     font-size: 16px;
     line-height: 1.5;
-}
-
-.bg-primary {
-    background-color: #f05f40;
 }
 
 .bg-dark {
@@ -1072,17 +1068,6 @@ aside {
     color: #222;
 }
 
-.navbar-default .nav > li>a:hover,
-.navbar-default .nav>li>a:focus:hover {
-    color: #f05f40;
-}
-
-.navbar-default .nav > li.active>a,
-.navbar-default .nav>li.active>a:focus {
-    color: #f05f40!important;
-    background-color: transparent;
-}
-
 .navbar-default .nav > li.active>a:hover,
 .navbar-default .nav>li.active>a:focus:hover {
     background-color: transparent;
@@ -1118,11 +1103,6 @@ aside {
         background-color: #fff;
     }
 
-    .navbar-default.affix .navbar-header .navbar-brand {
-        font-size: 14px;
-        color: #f05f40;
-    }
-
     .navbar-default.affix .navbar-header .navbar-brand:hover,
     .navbar-default.affix .navbar-header .navbar-brand:focus {
         color: #eb3812;
@@ -1131,11 +1111,6 @@ aside {
     .navbar-default.affix .nav > li>a,
     .navbar-default.affix .nav>li>a:focus {
         color: #222;
-    }
-
-    .navbar-default.affix .nav > li>a:hover,
-    .navbar-default.affix .nav>li>a:focus:hover {
-        color: #f05f40;
     }
 }
 
@@ -1461,7 +1436,7 @@ div.header-content {
 }
 
 div.pirate-logo-text-wrapper {
-  width: 35%;
+  width: 30%;
   float: left;
 }
 
@@ -1483,6 +1458,18 @@ div.pirate-logo-text-wrapper {
 }
 
 .header-container {
-  background-color: #F8F8F8;
+  background-color: #D2C6BA;
   border-radius: 4px;
+}
+
+.job-field-container.panel {
+  background-color: #B9995B;
+}
+
+.job-form__field {
+  background-color: #B9995B;
+}
+
+button.find-sailors, button.btn-advance-step {
+  display: block;
 }

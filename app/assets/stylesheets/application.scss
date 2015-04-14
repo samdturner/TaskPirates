@@ -573,7 +573,7 @@
    margin-right: 1em;
    overflow: visible;
    width: 260px;
-   height: 420px;
+   height: 375px;
    float: left;
  }
 
@@ -616,6 +616,20 @@
  .view--recommendations .tasker-section-details__detail {
    width: 90%;
    float: left;
+   display: inline-block;
+ }
+
+ .view--recommendations .tasker-hire-section-details {
+   width: 66%;
+   margin-bottom: 5em;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ .view--recommendations .tasker-hire-details__detail {
+   width: 48%;
+   float: left;
+   display: inline-block;
  }
 
  .tasker-section-details__detail {
@@ -628,7 +642,8 @@
  }
 
  .view--recommendations .tasker-stat-number {
-   font-size: 1.25rem;
+   font-size: -0.75rem;
+   text-align: center;
  }
 
  .btn.btn-block, .btn:visited.btn-block {
@@ -1494,4 +1509,19 @@ div.pirate-logo-text-wrapper-login {
 
 button.find-sailors, button.btn-advance-step {
   display: block;
+}
+
+.tasker-stat-title {
+  text-align: center;
+}
+
+span.tasker-hourly-rate {
+  display: block;
+  font-size: 0.75rem;
+  margin: 0px 8px 0 10px;
+}
+
+span.hire-me {
+  display: block;
+  width: 57%
 }

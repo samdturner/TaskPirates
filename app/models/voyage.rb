@@ -17,8 +17,6 @@ class Voyage < ActiveRecord::Base
         sailors.*
       FROM
         sailors
-      JOIN
-        voyages ON voyages.sailor_id = sailors.id
       WHERE
         sailors.task_requirement = :voyage_task_requirement
         AND

@@ -1,5 +1,6 @@
 TaskPirates.Views.VoyageHire = Backbone.CompositeView.extend({
-  template: JST["sailor/index"],
+  template: [JST["layouts/header_image"],
+            JST["sailor/sailor_hire_panel_container"]],
 
   initialize: function (options) {
     var view = this;
@@ -14,16 +15,20 @@ TaskPirates.Views.VoyageHire = Backbone.CompositeView.extend({
   },
 
   addSailor: function (sailor) {
-    var sailorItemView = new TaskPirates.Views.SailorIndexItem({
+    var sailorPanelView = new TaskPirates.Views.SailorHirePanel({
       model: sailor,
       parentView: this
     });
-    this.addSubview('.sailors-available', sailorItemView);
+    debugger;
+    this.addSubview('.sailors-available', sailorPanelView);
   },
 
   render: function () {
-    var content = this.template();
-    this.$el.html(content);
+    var header_image = this.template[0]();
+    this.$el.html(header_image);
+
+    var sailorHirePanelCont = this.template[1]();
+    this.$el.append(sailorHirePanelCont);
     this.attachSubviews();
     return this;
   },

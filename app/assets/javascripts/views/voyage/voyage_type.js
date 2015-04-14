@@ -1,4 +1,4 @@
-TaskPirates.Views.VoyageTypes = Backbone.View.extend({
+TaskPirates.Views.VoyageTypesContainer = Backbone.View.extend({
   events: {
     'click .task-box' : 'showForm'
   },

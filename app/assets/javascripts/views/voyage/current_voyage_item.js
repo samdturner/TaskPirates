@@ -1,4 +1,4 @@
-TaskPirates.Views.VoyageIndexItem = Backbone.View.extend({
+TaskPirates.Views.CurrentVoyageItem = Backbone.View.extend({
   initialize: function (options) {
     this.parentView = options.parentView
   },
@@ -9,7 +9,7 @@ TaskPirates.Views.VoyageIndexItem = Backbone.View.extend({
 
   tagName: 'div',
 
-  template: JST['voyage/voyages_index'],
+  template: JST['voyage/current_voyage_item'],
 
   render: function () {
     var content = this.template({

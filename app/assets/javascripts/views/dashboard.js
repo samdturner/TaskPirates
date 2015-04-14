@@ -1,5 +1,6 @@
-TaskPirates.Views.SailorIndex = Backbone.CompositeView.extend({
-  template: [JST["sailor/index"], JST["layouts/header"],
+TaskPirates.Views.Dashboard = Backbone.CompositeView.extend({
+  template: [JST["dashboard/dashboard_container"],
+            JST["layouts/header_image"],
             JST["layouts/header_dashboard_text"]],
 
   initialize: function (options) {
@@ -18,15 +19,15 @@ TaskPirates.Views.SailorIndex = Backbone.CompositeView.extend({
   },
 
   addVoyage: function (voyage) {
-    var voyageItemView = new TaskPirates.Views.VoyageIndexItem({
+    var currentVoyageItemView = new TaskPirates.Views.CurrentVoyageItem({
       model: voyage,
       parentView: this
     });
-    this.addSubview('.current-voyages', voyageItemView);
+    this.addSubview('.current-voyages', currentVoyageItemView);
   },
 
   addTasks: function () {
-    var tasksView = new TaskPirates.Views.VoyageTypes();
+    var tasksView = new TaskPirates.Views.VoyageTypesContainer();
     this.addSubview('.sidebar-tasks', tasksView);
   },
 
@@ -39,7 +40,7 @@ TaskPirates.Views.SailorIndex = Backbone.CompositeView.extend({
   },
 
   render: function () {
-    
+
     var content = this.template[0]();
     this.$el.html(content);
     this.$el.find('.dashboard').prepend(this.template[1]());

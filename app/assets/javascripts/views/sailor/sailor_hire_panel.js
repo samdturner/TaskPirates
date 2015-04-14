@@ -1,4 +1,4 @@
-TaskPirates.Views.SailorIndexItem = Backbone.View.extend({
+TaskPirates.Views.SailorHirePanel = Backbone.View.extend({
   initialize: function (options) {
     this.parentView = options.parentView
   },
@@ -9,7 +9,7 @@ TaskPirates.Views.SailorIndexItem = Backbone.View.extend({
 
   tagName: 'div',
 
-  template: JST['sailor/sailors_index'],
+  template: JST['sailor/sailor_hire_panel'],
 
   render: function () {
     var content = this.template({

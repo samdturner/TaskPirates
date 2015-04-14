@@ -6,7 +6,7 @@ TaskPirates.Routers.Router = Backbone.Router.extend({
   },
 
   routes: {
-    '' : 'sailorIndex',
+    '' : 'dashboard',
     'voyages/:id/edit' : 'voyageForm',
     'voyages/:id/hire' : 'voyageHire',
     'sailors/:id' :'sailorProfile'
@@ -20,21 +20,21 @@ TaskPirates.Routers.Router = Backbone.Router.extend({
     this._swapViews(sailorProfileView);
   },
 
-  sailorIndex: function (id) {
+  dashboard: function (id) {
     this.voyages.fetch();
-    var sailorIndexView = new TaskPirates.Views.SailorIndex({
+    var dashboardView = new TaskPirates.Views.Dashboard({
       voyages: this.voyages
     });
-    this._swapViews(sailorIndexView);
+    this._swapViews(dashboardView);
   },
 
   voyageForm: function (id) {
     var newVoyage = this.voyages.getOrFetch(id);
-    var voyageNewView = new TaskPirates.Views.VoyageNewForm({
+    var voyageNewFormView = new TaskPirates.Views.VoyageNewForm({
       model: newVoyage,
       collection: this.voyages
     });
-    this._swapViews(voyageNewView);
+    this._swapViews(voyageNewFormView);
   },
 
   voyageHire: function (id) {

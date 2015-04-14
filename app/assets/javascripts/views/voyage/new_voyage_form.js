@@ -10,9 +10,10 @@ TaskPirates.Views.VoyageNewForm = Backbone.View.extend({
     'click a.js-move-right.end' : 'shiftEdDtRight'
   },
 
-  template: [JST['new_voyage/questions'], JST['layouts/header'],
-            JST['new_voyage/date_picker'],
-            JST['new_voyage/date_picker_container']],
+  template: [JST['new_voyage_form/questions'],
+            JST['layouts/header_image'],
+            JST['new_voyage_form/date_picker'],
+            JST['new_voyage_form/date_picker_container']],
 
   render: function () {
     this.$el.html(this.template[1]());

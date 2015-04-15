@@ -34,21 +34,24 @@
     </h3>
 
     <form>
-      <div class="stars-container">
-        <input name="stars" id="e5" type="radio"></a><label for="e5">☆</label>
-        <input name="stars" id="e4" type="radio"></a><label for="e4">☆</label>
-        <input name="stars" id="e3" type="radio"></a><label for="e3">☆</label>
-        <input name="stars" id="e2" type="radio"></a><label for="e2">☆</label>
-        <input name="stars" id="e1" type="radio"></a><label for="e1">☆</label>
+      <div class="stars-container-<%= voyage.get('id') %>">
+        <input name="rating" id="e5" type="radio"></a><label for="e5">☆</label>
+        <input name="rating" id="e4" type="radio"></a><label for="e4">☆</label>
+        <input name="rating" id="e3" type="radio"></a><label for="e3">☆</label>
+        <input name="rating" id="e2" type="radio"></a><label for="e2">☆</label>
+        <input name="rating" id="e1" type="radio"></a><label for="e1">☆</label>
       </div>
 
       <textarea class="field-textarea form--block-input"
-                name="voyage[task_description]"
+                name="comment"
                 placeholder="EXAMPLE: There’s a restaurant on 3rd St."
                 rows="4">
       </textarea>
 
-      <button class="btn-fld btn-primary btn">Submit</button>
+      <button class="btn-fld btn-primary btn btn-submit-review"
+              data-voyage-id="<%= voyage.get('id') %>">
+              Submit
+      </button>
     </form>
 
   </div>

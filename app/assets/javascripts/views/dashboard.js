@@ -18,6 +18,10 @@ TaskPirates.Views.Dashboard = Backbone.CompositeView.extend({
     this.addTasks();
   },
 
+  events: {
+    "click .btn-submit-review" : "submitReview"
+  },
+
   addVoyage: function (voyage) {
     var currentVoyageItemView = new TaskPirates.Views.CurrentVoyageItem({
       model: voyage,
@@ -56,4 +60,19 @@ TaskPirates.Views.Dashboard = Backbone.CompositeView.extend({
       }.bind(this)
     });
   },
+
+  submitReview: function (event) {
+    debugger;
+    event.preventDefault();
+    var voyageId = $(event.currentTarget).data("voyageId");
+    var reviewedVoyage = this.voyages.getOrFetch(voyageId);
+    var selector = ".stars-container-" + voyageId;
+    var attrs = this.$el.find(selector).JSONserialize();
+    reviewedVoyage.set(attrs);
+    reviewedVoyage.save({}, {
+      success: function () {
+        this.voyages.remove(reviewedVoyage);
+      }
+    });
+  }
 });

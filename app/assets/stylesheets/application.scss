@@ -1,708 +1,708 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *= require_tree .
- */
-
- @import "bootstrap-sprockets";
- @font-face {
-        font-family: "Delitsch";
-        src: url(/assets/DelitschAntiqua.ttf) format("truetype");
-    };
-
- html, body, div, span, object,
- iframe, h1, h2, h3, h4, h5, h6,
- p, blockquote, pre, a, abbr, acronym,
- address, code, del, dfn, em, img, q, dl,
- dt, dd, ol, ul, li, fieldset, form,
- label, legend, table, caption, tbody,
- tfoot, thead, tr, th, td, article, aside,
- dialog, figure, footer, header, hgroup,
- nav, section, input, select, textarea {
-   margin: 0;
-   padding: 0;
-   border: 0;
-   font-weight: inherit;
-   font-style: inherit;
-   font-size: 100%;
-   font-family: inherit;
-   vertical-align: baseline;
- }
-
- .job-field-container.is-focused {
-   cursor: default
- }
-
- .job-form__field {
-   padding-left: 0.5em;
- }
-
- .fields-container {
-   margin-bottom: 2em;
- }
-
- .job-form__field-label {
-   font-weight: normal;
-   font-size: 1rem;
-   text-transform: uppercase;
- }
-
- .job-form__field.is-editable {
-   padding-bottom: 1em;
-   padding-top: 1.375em;
- }
-
- .panel.is-focused {
-   box-shadow: 0px 2px 2px 0px rgba(50,58,59,0.15);
-   margin-top: 1em;
-   margin-bottom: 1em;
- }
-
- .job-field-container {
-   padding: 1.375em;
- }
-
- .panel {
-   background: #B9995B;
-   overflow: hidden;
-   padding: 0.5em;
-   margin-top: 0.25em;
- }
-
- .job-form__category-input-fields[data-key="vehicle_requirement"] {
-   max-height: 275px;
-   overflow: hidden;
-   margin-bottom: 0;
- }
-
- .field-focus-container {
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
- }
-
- .category-input-fields__title {
-   padding-bottom: 0.5em;
-   border-bottom: 1px solid #060503;
-   margin-bottom: 1em;
- }
-
- fieldset.fieldset-radio {
-   margin-bottom: 0.25em;
- }
-
- fieldset.fieldset-radio input[type="radio"] {
-   display: block;
-   position: absolute;
-   top: 2px;
-   left: 2px;
-   margin-top: 9px;
- }
-
- h4 {
-   font-weight: 600;
- }
-
- form fieldset {
-   position: relative;
- }
-
- * {
-   box-sixing: border-box;
- }
-
- div, label {
-   display: block;
-   margin: 0;
-   padding: 0;
-   border: 0;
-   font-weight: inherit;
-   font-style: inherit;
-   font-size: 100%;
-   font-family: inherit;
-   vertical-align: baseline;
- }
-
- fieldset {
-   -webkit-margin-start: 2px;
-   -webkit-margin-end: 2px;
-   -webkit-padding-before: 0.35em;
-   -webkit-padding-start: 0.75em;
-   -webkit-padding-end: 0.75em;
-   -webkit-padding-after: 0.625em;
- }
-
- body, input, textarea,
- select, button, legend, p {
-   font-family: "Delitsch";
-   font-weight: 300;
-   font-size: 1rem;
-   line-height: 1.4;
- }
-
- fieldset.fieldset-checkbox input[type="checkbox"]+label,
- fieldset.fieldset-checkbox input[type="radio"]+label,
- fieldset.fieldset-radio input[type="checkbox"]+label,
- fieldset.fieldset-radio input[type="radio"]+label {
-   display: block;
-   margin-left: 1.75em;
- }
-
- label[for] {
-   cursor: pointer;
- }
-
- button.btn-advance-step {
-   margin-top: 0;
-   margin-bottom: 0;
-   display: block;
- }
-
- .btn-advance-step, .confirmation-form-container,
- .job-form-fields, .field-focus-container, .find-sailors {
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
- }
-
- .btn {
-   text-align: center;
-   padding: 0.5em 1.38em 0.5em;
-   border-radius: 4px;
-   font-size: 1.25rem;
-   font-weight: normal;
-   outline: none;
-   cursor: pointer;
-   -webkit-transition-property: background, color, border-color, box-shadow;
-   transition-property: background, color, border-color, box-shadow;
-   -webkit-transition-timing-function: ease;
-   transition-timing-function: ease;
-   -webkit-transition-duration: 0.16s;
-   transition-duration: 0.16s;
- }
-
- .job-form__field-inner {
-   max-width: 100%;
- }
-
- .form--block-input {
-   width: 100%;
- }
-
- input[type=text], input[type=password],
- input[type=email], input[type=search],
- input[type=url], input[type=number],
- textarea, select {
-   color: #828a8b;
-   border: 1px solid #b4b9b9;
-   font-size: 1em;
-   border-radius: 4px;
-   -webkit-transition-property: border-color, color, box-shadow;
-   transition-property: border-color, color, box-shadow;
-   -webkit-transition-duration: 0.15s;
-   transition-duration: 0.15s;
-   max-width: 100%;
- }
-
- input[type=text], input[type=password], input[type=email],
- input[type=search], input[type=url],
- input[type=submit], input[type=number], textarea {
-   outline: none;
- }
-
- textarea {
-   white-space: normal;
-   padding: 0.5em 0.75em;
- }
-
- input, textarea, keygen, select, button {
-   margin: 0em;
-   color: initial;
-   letter-spacing: normal;
-   word-spacing: normal;
-   text-transform: none;
-   text-indent: 0px;
-   text-shadow: none;
-   display: inline-block;
-   text-align: start;
- }
-
- .date-picker__arrow.date-picker__arrow--right {
-   float: right;
- }
-
- .date-picker__arrow.date-picker__arrow--left {
-   float: left;
- }
-
- .date-picker__arrow {
-   font-size: 1.125rem;
-   width: 40px;
-   vertical-align: middle;
-   line-height: 116px;
- }
-
- a, .link {
-   color: #A35D11;
-   text-decoration: none;
-   cursor: pointer;
- }
-
- .date-picker__date-list-container {
-   position: relative;
-   overflow-x: hidden;
-   margin-left: 40px;
-   margin-right: 40px;
-   padding-top: 0.5em;
-   height: 190px;
- }
-
- .date-picker__date-list {
-   position: relative;
-   left: 20;
-   -webkit-transition: left 0.3s ease-in-out;
-   transition: left 0.3s ease-in-out;
-   white-space: nowrap;
- }
-
- .date-picker__date-container {
-   display: inline-block;
-   margin: 0 0.25rem;
-   vertical-align: top;
- }
-
- .date-picker__date-list {
-   position: relative;
-   left: 0;
-   -webkit-transition: left 0.3s ease-in-out;
-   transition: left 0.3s ease-in-out;
-   white-space: nowrap;
- }
-
- .date-picker__date-item {
-   height: 100px;
-   width: 100px;
-   display: block;
-   position: relative;
-   border: 1px solid #000000;
-   border-radius: 4px;
-   padding: 0.375em;
-   text-align: center;
-   background-color: #fff;
- }
-
- .date-item__month {
-   color: #b4b9b9;
- }
-
- .date-item__month, .date-item__day, .date-item__dow {
-   line-height: 1em;
- }
-
- .u-light {
-   font-weight: 300;
- }
-
- .date-item__day {
-   font-weight: bold;
-   font-size: 3rem;
- }
-
- .u-semibold {
-   font-weight: 600;
- }
-
- .date-picker__date-input:checked+.date-picker__date-item,
- .date-picker__date-input:checked+.date-picker__date-item
- .date-item__month {
-   background: #4E3B21;
-   color: white;
-   height: auto;
- }
-
- .date-picker__date-input:checked+.date-picker__date-item {
-   width: 148px;
-   height: 122px;
-   top: -0.5em;
- }
-
- .date-picker__date-input:checked+.date-picker__date-item .date-item__month {
-   opacity: 0.6;
-   line-height: 1.5em;
- }
-
-  .date-picker__date-input {
-    display: none;
-  }
-
- .form-container-inner {
-   max-width: 1200px;
-   margin: 0 auto;
-   position: relative;
- }
-
- /* .page-header-html+.main-content {
-   -
- } */
-
- .page-header-html+.main-content {
-   min-height: 500px;
-   position: relative;
- }
-
- .page-header-html {
-    background-color: #D2C6BA;
-    top: -7px;
-    margin-top: 0px;
-  }
-
-  .page-header-html .container {
-    top: -28px;
-  }
-
- .main-content {
-   position: relative;
-   width: 100%;
- }
-
- .view-container {
-   position: relative;
-   margin: 0 auto;
- }
-
- .profile-view {
-   padding-bottom: 0;
- }
-
- .profile-view .search-header-container.is-visible+.header-container {
-   padding-top: 130px;
- }
-
- .profile-view .header-container, .profile-view .header-container p {
-   color: white;
- }
-
- .profile-view .header-container {
-   padding: 0 2em;
-   padding-top: 2em;
-   position: relative;
- }
-
- .profile-view .header-container, .profile-view .about, .profile-view .job-type-main {
-   max-width: 1128px;
-   margin: 0 auto;
- }
-
- .profile-view .header-container .rabbit-avatar {
-   max-width: 180px;
-   margin: 0 auto 2em;
- }
-
- .profile-view .header-container [class^=avatar-container] {
-   border: 4px solid white;
- }
-
- .avatar-container-180 {
-   z-index: 10;
-   overflow: hidden;
-   width: 180px;
-   height: 180px;
-   border-radius: 50%;
-   border: 2px solid #158aa2;
-   background-color: white;
-   text-align: left;
-   position: relative;
- }
-
- .avatar-container-180 img {
-   width: 100%;
-   height: 100%;
- }
-
- .avatar-180 {
-   z-index: 0;
-   position: relative;
-   border-radius: 50%;
-   width: 180px;
-   height: 180px;
-   max-width: 100%;
-   max-height: 100%;
- }
-
- .avatar-container-180 {
-   z-index: 10;
-   overflow: hidden;
-   width: 180px;
-   height: 180px;
-   border-radius: 50%;
-   border: 2px solid #158aa2;
-   background-color: white;
-   text-align: left;
-   position: relative;
- }
-
- .profile-view .header-container .elite-banner {
-   background-color: #ff7c50;
-   color: white;
-   text-transform: uppercase;
-   text-align: center;
-   padding: 0.35em 0 0.25em;
-   font-weight: normal;
-   font-size: 0.85em;
-   position: relative;
-   max-width: 150px;
-   margin: -3em auto 0;
-   border-radius: 1em;
-   z-index: 10;
- }
-
- .profile-view .header-container .rabbit-title {
-   text-align: center;
-   font-weight: 300;
- }
-
- @media (min-width: 501px) {
-   h1, .h1 {
-     font-size: 2.5rem;
-   }
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any styles
+* defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+* file per style scope.
+*= require_tree .
+*/
+
+@import "bootstrap-sprockets";
+@font-face {
+  font-family: "Delitsch";
+  src: url(/assets/DelitschAntiqua.ttf) format("truetype");
+};
+
+html, body, div, span, object,
+iframe, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, a, abbr, acronym,
+address, code, del, dfn, em, img, q, dl,
+dt, dd, ol, ul, li, fieldset, form,
+label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+dialog, figure, footer, header, hgroup,
+nav, section, input, select, textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
 }
 
- .profile-view .header-container .rabbit-title strong {
-   font-weight: normal;
- }
+.job-field-container.is-focused {
+  cursor: default
+}
 
- .profile-view .header-container .rabbit-details-container {
-   width: 100%;
-   max-width: 850px;
-   margin: 2em auto 0;
- }
+.job-form__field {
+  padding-left: 0.5em;
+}
 
- @media (max-width: 1024px) and (min-width: 801px), (min-width: 1025px) {
-   .profile-view .header-container .rabbit-details-main {
-     display: -webkit-box;
-     display: -webkit-flex;
-     display: -ms-flexbox;
-     display: flex;
-     -webkit-box-align: stretch;
-     -webkit-align-items: stretch;
-     -ms-flex-align: stretch;
-     align-items: stretch;
-     -webkit-align-content: stretch;
-     -ms-flex-line-pack: stretch;
-     align-content: stretch;
-     -webkit-box-pack: center;
-     -webkit-justify-content: center;
-     -ms-flex-pack: center;
-     justify-content: center;
-   }
- }
+.fields-container {
+  margin-bottom: 2em;
+}
 
- @media (max-width: 1024px) and (min-width: 801px), (min-width: 1025px) {
-   .view--recommendations .taskers-section {
-     display: block;
-    }
- }
+.job-form__field-label {
+  font-weight: normal;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
 
- .profile-view .header-container .detail-section {
-   display: -webkit-box;
-   display: -webkit-flex;
-   display: -ms-flexbox;
-   display: flex;
-   -webkit-box-pack: center;
-   -webkit-justify-content: center;
-   -ms-flex-pack: center;
-   justify-content: center;
-   -webkit-box-flex: 1;
-   -webkit-flex: 1 1 auto;
-   -ms-flex: 1 1 auto;
-   flex: 1 1 auto;
- }
+.job-form__field.is-editable {
+  padding-bottom: 1em;
+  padding-top: 1.375em;
+}
 
- .profile-view .header-container .detail-content strong {
-   font-weight: normal;
- }
+.panel.is-focused {
+  box-shadow: 0px 2px 2px 0px rgba(50,58,59,0.15);
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
 
- div.profile-view {
-   background: grey;
- }
+.job-field-container {
+  padding: 1.375em;
+}
 
- .row {
-   position: relative;
- }
+.panel {
+  background: #B9995B;
+  overflow: hidden;
+  padding: 0.5em;
+  margin-top: 0.25em;
+}
 
- h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-   font-weight: 600;
-   margin-bottom: 0.754ex;
- }
+.job-form__category-input-fields[data-key="vehicle_requirement"] {
+  max-height: 275px;
+  overflow: hidden;
+  margin-bottom: 0;
+}
 
- .row [class^='col-'], .row [class*=' col-'] {
-   float: left;
-   -moz-box-sizing: border-box;
-   box-sizing: border-box;
-   margin-bottom: 1rem;
- }
+.field-focus-container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
- .view--recommendations .recommendations-container {
-   max-width: 1200px;
-   margin: 0 auto;
-   position: relative;
- }
+.category-input-fields__title {
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #060503;
+  margin-bottom: 1em;
+}
 
- .recommendations--instructions {
-   margin: 1.5em 0;
-   color: #828a8b;
- }
+fieldset.fieldset-radio {
+  margin-bottom: 0.25em;
+}
 
- .view--recommendations .tasker-card-item {
-   position: relative;
-   margin-bottom: 2em;
-   margin-left: 1em;
-   margin-right: 1em;
-   overflow: visible;
-   width: 260px;
-   height: 375px;
-   float: left;
- }
+fieldset.fieldset-radio input[type="radio"] {
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  margin-top: 9px;
+}
 
- .u-align-center {
-   text-align: center;
- }
+h4 {
+  font-weight: 600;
+}
 
- .view--recommendations .tasker-avatar-container {
-   width: 144px;
-   height: 144px;
-   margin-bottom: 1em;
-   margin-left: auto;
-   margin-right: auto;
-   margin-top: -1.5em;
-   position: relative;
- }
+form fieldset {
+  position: relative;
+}
 
- .view--recommendations .tasker-avatar {
-   background: white;
-   border: 1px solid rgba(180,185,185,0.35);
-   border-radius: 100%;
-   max-width: 100%;
-   max-height: 100%;
- }
+* {
+  box-sixing: border-box;
+}
 
- .view--recommendations .tasker-display-name {
-   width: 100%;
-   margin-top: 0.75rem;
-   margin-bottom: 1rem;
-   font-size: 1.75rem;
- }
+div, label {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
 
- .view--recommendations .tasker-section-details {
-   width: 66%;
-   margin-bottom: 1em;
-   margin-left: auto;
-   margin-right: auto;
- }
+fieldset {
+  -webkit-margin-start: 2px;
+  -webkit-margin-end: 2px;
+  -webkit-padding-before: 0.35em;
+  -webkit-padding-start: 0.75em;
+  -webkit-padding-end: 0.75em;
+  -webkit-padding-after: 0.625em;
+}
 
- .view--recommendations .tasker-section-details__detail {
-   width: 90%;
-   float: left;
-   display: inline-block;
- }
+body, input, textarea,
+select, button, legend, p {
+  font-family: "Delitsch";
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.4;
+}
 
- .view--recommendations .tasker-hire-section-details {
-   width: 66%;
-   margin-bottom: 5em;
-   margin-left: auto;
-   margin-right: auto;
- }
+fieldset.fieldset-checkbox input[type="checkbox"]+label,
+fieldset.fieldset-checkbox input[type="radio"]+label,
+fieldset.fieldset-radio input[type="checkbox"]+label,
+fieldset.fieldset-radio input[type="radio"]+label {
+  display: block;
+  margin-left: 1.75em;
+}
 
- .view--recommendations .tasker-hire-details__detail {
-   width: 48%;
-   float: left;
-   display: inline-block;
- }
+label[for] {
+  cursor: pointer;
+}
 
- .tasker-section-details__detail {
-   margin: auto;
-   margin-right: 0;
-   margin-left: 0;
-   text-align: left;
-   overflow: hidden;
-   height: 47px;
- }
+button.btn-advance-step {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: block;
+}
 
- .view--recommendations .tasker-stat-number {
-   font-size: -0.75rem;
-   text-align: center;
- }
+.btn-advance-step, .confirmation-form-container,
+.job-form-fields, .field-focus-container, .find-sailors {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
- .btn.btn-block, .btn:visited.btn-block {
-   width: 100%;
-   max-width: 100%;
- }
+.btn {
+  text-align: center;
+  padding: 0.5em 1.38em 0.5em;
+  border-radius: 4px;
+  font-size: 1.25rem;
+  font-weight: normal;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition-property: background, color, border-color, box-shadow;
+  transition-property: background, color, border-color, box-shadow;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-duration: 0.16s;
+  transition-duration: 0.16s;
+}
 
- @media (max-width: 1024px) and (min-width: 801px), (min-width: 1025px) {
-   .view--recommendations .tasker-card__actions {
-     -webkit-box-ordinal-group: 5;
-     -webkit-order: 4;
-     -ms-flex-order: 4;
-     order: 4;
-     width: 80%;
-     margin: 0 auto 0 auto;
-   }
- }
+.job-form__field-inner {
+  max-width: 100%;
+}
 
- @media (max-width: 1024px) and (min-width: 801px), (min-width: 1025px) {
-   .view--recommendations .tasker-card-item:nth-child(4n+1) {
-     margin-left: 0;
-   }
+.form--block-input {
+  width: 100%;
+}
+
+input[type=text], input[type=password],
+input[type=email], input[type=search],
+input[type=url], input[type=number],
+textarea, select {
+  color: #828a8b;
+  border: 1px solid #b4b9b9;
+  font-size: 1em;
+  border-radius: 4px;
+  -webkit-transition-property: border-color, color, box-shadow;
+  transition-property: border-color, color, box-shadow;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  max-width: 100%;
+}
+
+input[type=text], input[type=password], input[type=email],
+input[type=search], input[type=url],
+input[type=submit], input[type=number], textarea {
+  outline: none;
+}
+
+textarea {
+  white-space: normal;
+  padding: 0.5em 0.75em;
+}
+
+input, textarea, keygen, select, button {
+  margin: 0em;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+}
+
+.date-picker__arrow.date-picker__arrow--right {
+  float: right;
+}
+
+.date-picker__arrow.date-picker__arrow--left {
+  float: left;
+}
+
+.date-picker__arrow {
+  font-size: 1.125rem;
+  width: 40px;
+  vertical-align: middle;
+  line-height: 116px;
+}
+
+a, .link {
+  color: #A35D11;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.date-picker__date-list-container {
+  position: relative;
+  overflow-x: hidden;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding-top: 0.5em;
+  height: 190px;
+}
+
+.date-picker__date-list {
+  position: relative;
+  left: 20;
+  -webkit-transition: left 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out;
+  white-space: nowrap;
+}
+
+.date-picker__date-container {
+  display: inline-block;
+  margin: 0 0.25rem;
+  vertical-align: top;
+}
+
+.date-picker__date-list {
+  position: relative;
+  left: 0;
+  -webkit-transition: left 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out;
+  white-space: nowrap;
+}
+
+.date-picker__date-item {
+  height: 100px;
+  width: 100px;
+  display: block;
+  position: relative;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  padding: 0.375em;
+  text-align: center;
+  background-color: #fff;
+}
+
+.date-item__month {
+  color: #b4b9b9;
+}
+
+.date-item__month, .date-item__day, .date-item__dow {
+  line-height: 1em;
+}
+
+.u-light {
+  font-weight: 300;
+}
+
+.date-item__day {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.u-semibold {
+  font-weight: 600;
+}
+
+.date-picker__date-input:checked+.date-picker__date-item,
+.date-picker__date-input:checked+.date-picker__date-item
+.date-item__month {
+  background: #4E3B21;
+  color: white;
+  height: auto;
+}
+
+.date-picker__date-input:checked+.date-picker__date-item {
+  width: 148px;
+  height: 122px;
+  top: -0.5em;
+}
+
+.date-picker__date-input:checked+.date-picker__date-item .date-item__month {
+  opacity: 0.6;
+  line-height: 1.5em;
+}
+
+.date-picker__date-input {
+  display: none;
+}
+
+.form-container-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* .page-header-html+.main-content {
+-
+} */
+
+.page-header-html+.main-content {
+  min-height: 500px;
+  position: relative;
+}
+
+.page-header-html {
+  background-color: #D2C6BA;
+  top: -7px;
+  margin-top: 0px;
+}
+
+.page-header-html .container {
+  top: -28px;
+}
+
+.main-content {
+  position: relative;
+  width: 100%;
+}
+
+.view-container {
+  position: relative;
+  margin: 0 auto;
+}
+
+.profile-view {
+  padding-bottom: 0;
+}
+
+.profile-view .search-header-container.is-visible+.header-container {
+  padding-top: 130px;
+}
+
+.profile-view .header-container, .profile-view .header-container p {
+  color: white;
+}
+
+.profile-view .header-container {
+  padding: 0 2em;
+  padding-top: 2em;
+  position: relative;
+}
+
+.profile-view .header-container, .profile-view .about, .profile-view .job-type-main {
+  max-width: 1128px;
+  margin: 0 auto;
+}
+
+.profile-view .header-container .rabbit-avatar {
+  max-width: 180px;
+  margin: 0 auto 2em;
+}
+
+.profile-view .header-container [class^=avatar-container] {
+  border: 4px solid white;
+}
+
+.avatar-container-180 {
+  z-index: 10;
+  overflow: hidden;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 2px solid #158aa2;
+  background-color: white;
+  text-align: left;
+  position: relative;
+}
+
+.avatar-container-180 img {
+  width: 100%;
+  height: 100%;
+}
+
+.avatar-180 {
+  z-index: 0;
+  position: relative;
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.avatar-container-180 {
+  z-index: 10;
+  overflow: hidden;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 2px solid #158aa2;
+  background-color: white;
+  text-align: left;
+  position: relative;
+}
+
+.profile-view .header-container .elite-banner {
+  background-color: #ff7c50;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.35em 0 0.25em;
+  font-weight: normal;
+  font-size: 0.85em;
+  position: relative;
+  max-width: 150px;
+  margin: -3em auto 0;
+  border-radius: 1em;
+  z-index: 10;
+}
+
+.profile-view .header-container .rabbit-title {
+  text-align: center;
+  font-weight: 300;
+}
+
+@media (min-width: 501px) {
+  h1, .h1 {
+    font-size: 2.5rem;
   }
- .view--recommendations .tasker-hire-btn {
-   margin-bottom: 1.25rem;
- }
+}
 
- .btn, .btn:visited {
-   -webkit-appearance: none;
-   display: inline-block;
-   text-align: center;
-   padding: 0.5em 1.38em 0.5em;
-   border-radius: 4px;
-   font-size: 1.25rem;
-   font-weight: normal;
-   outline: none;
-   cursor: pointer;
-   -webkit-transition-property: background, color, border-color, box-shadow;
-   transition-property: background, color, border-color, box-shadow;
-   -webkit-transition-timing-function: ease;
-   transition-timing-function: ease;
-   -webkit-transition-duration: 0.16s;
-   transition-duration: 0.16s;
-   -webkit-user-select: none;
-   -moz-user-select: none;
-   -ms-user-select: none;
-   user-select: none;
- }
+.profile-view .header-container .rabbit-title strong {
+  font-weight: normal;
+}
 
- .u-regular {
-   font-weight: normal;
- }
+.profile-view .header-container .rabbit-details-container {
+  width: 100%;
+  max-width: 850px;
+  margin: 2em auto 0;
+}
 
- span.u-regular {
-   text-align: center;
-   width: 100%;
-   align: center;
-   display: inline-block;
-   margin: auto;
- }
+@media (max-width: 1024px) and (min-width: 801px), (min-width: 1025px) {
+  .profile-view .header-container .rabbit-details-main {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
 
- .view--recommendations .tasker-hourly-rate {
-   opacity: .6;
- }
+@media (max-width: 1024px) and (min-width: 801px), (min-width: 1025px) {
+  .view--recommendations .taskers-section {
+    display: block;
+  }
+}
+
+.profile-view .header-container .detail-section {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.profile-view .header-container .detail-content strong {
+  font-weight: normal;
+}
+
+div.profile-view {
+  background: grey;
+}
+
+.row {
+  position: relative;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: 600;
+  margin-bottom: 0.754ex;
+}
+
+.row [class^='col-'], .row [class*=' col-'] {
+  float: left;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+.view--recommendations .recommendations-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.recommendations--instructions {
+  margin: 1.5em 0;
+  color: #828a8b;
+}
+
+.view--recommendations .tasker-card-item {
+  position: relative;
+  margin-bottom: 2em;
+  margin-left: 1em;
+  margin-right: 1em;
+  overflow: visible;
+  width: 260px;
+  height: 375px;
+  float: left;
+}
+
+.u-align-center {
+  text-align: center;
+}
+
+.view--recommendations .tasker-avatar-container {
+  width: 144px;
+  height: 144px;
+  margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -1.5em;
+  position: relative;
+}
+
+.view--recommendations .tasker-avatar {
+  background: white;
+  border: 1px solid rgba(180,185,185,0.35);
+  border-radius: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.view--recommendations .tasker-display-name {
+  width: 100%;
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+}
+
+.view--recommendations .tasker-section-details {
+  width: 66%;
+  margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.view--recommendations .tasker-section-details__detail {
+  width: 90%;
+  float: left;
+  display: inline-block;
+}
+
+.view--recommendations .tasker-hire-section-details {
+  width: 66%;
+  margin-bottom: 5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.view--recommendations .tasker-hire-details__detail {
+  width: 48%;
+  float: left;
+  display: inline-block;
+}
+
+.tasker-section-details__detail {
+  margin: auto;
+  margin-right: 0;
+  margin-left: 0;
+  text-align: left;
+  overflow: hidden;
+  height: 47px;
+}
+
+.view--recommendations .tasker-stat-number {
+  font-size: -0.75rem;
+  text-align: center;
+}
+
+.btn.btn-block, .btn:visited.btn-block {
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 1024px) and (min-width: 801px), (min-width: 1025px) {
+  .view--recommendations .tasker-card__actions {
+    -webkit-box-ordinal-group: 5;
+    -webkit-order: 4;
+    -ms-flex-order: 4;
+    order: 4;
+    width: 80%;
+    margin: 0 auto 0 auto;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 801px), (min-width: 1025px) {
+  .view--recommendations .tasker-card-item:nth-child(4n+1) {
+    margin-left: 0;
+  }
+}
+.view--recommendations .tasker-hire-btn {
+  margin-bottom: 1.25rem;
+}
+
+.btn, .btn:visited {
+  -webkit-appearance: none;
+  display: inline-block;
+  text-align: center;
+  padding: 0.5em 1.38em 0.5em;
+  border-radius: 4px;
+  font-size: 1.25rem;
+  font-weight: normal;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition-property: background, color, border-color, box-shadow;
+  transition-property: background, color, border-color, box-shadow;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-duration: 0.16s;
+  transition-duration: 0.16s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.u-regular {
+  font-weight: normal;
+}
+
+span.u-regular {
+  text-align: center;
+  width: 100%;
+  align: center;
+  display: inline-block;
+  margin: auto;
+}
+
+.view--recommendations .tasker-hourly-rate {
+  opacity: .6;
+}
 
 .row.row-gutter>[class^='col-'], .row.row-gutter>[class*=' col-'] {
   padding-left: 8px;
@@ -750,7 +750,7 @@
 
 @media (min-width: 501px) {
   h3, .h3 {
-  font-size: 1.75rem;
+    font-size: 1.75rem;
   }
 }
 
@@ -995,21 +995,21 @@ a.tasker-hire-btn {
 
 html,
 body {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-    font-family: "Delitsch";
+  font-family: "Delitsch";
 }
 
 hr {
-    max-width: 50px;
-    border-width: 3px;
+  max-width: 50px;
+  border-width: 3px;
 }
 
 hr.light {
-    border-color: #fff;
+  border-color: #fff;
 }
 
 li.header-link {
@@ -1017,15 +1017,15 @@ li.header-link {
 }
 
 a {
-    color: #A35D11;
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
+  color: #A35D11;
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
 }
 
 a:hover,
 a:focus {
-    color: #fff;
+  color: #fff;
 }
 
 h1,
@@ -1034,114 +1034,114 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Delitsch";
+  font-family: "Delitsch";
 }
 
 p {
-    margin-bottom: 20px;
-    font-size: 16px;
-    line-height: 1.5;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .bg-dark {
-    color: #fff;
-    background-color: #222;
+  color: #fff;
+  background-color: #222;
 }
 
 .text-faded {
-    color: rgba(255,255,255,.7);
+  color: rgba(255,255,255,.7);
 }
 
 section {
-    padding: 100px 0;
+  padding: 100px 0;
 }
 
 aside {
-    padding: 50px 0;
+  padding: 50px 0;
 }
 
 .no-padding {
-    padding: 0;
+  padding: 0;
 }
 
 .navbar-default {
-    font-family: "Delitsch";
-    background-color: #fff;
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
+  font-family: "Delitsch";
+  background-color: #fff;
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
 }
 
 .navbar-default .navbar-header .navbar-brand {
-    text-transform: uppercase;
-    font-family: "Delitsch";
-    font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Delitsch";
+  font-weight: 700;
 }
 
 .navbar-default .nav > li>a,
 .navbar-default .nav>li>a:focus {
-    text-transform: uppercase;
-    font-size: 13px;
-    font-weight: 700;
-    color: #222;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  color: #222;
 }
 
 .navbar-default .nav > li.active>a:hover,
 .navbar-default .nav>li.active>a:focus:hover {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 @media(min-width:768px) {
-    .navbar-default {
-        border-color: rgba(255,255,255,.3);
-        background-color: transparent;
-    }
+  .navbar-default {
+    border-color: rgba(255,255,255,.3);
+    background-color: transparent;
+  }
 
-    .navbar-default .navbar-header .navbar-brand {
-        color: rgba(255,255,255,.7);
-    }
+  .navbar-default .navbar-header .navbar-brand {
+    color: rgba(255,255,255,.7);
+  }
 
-    .navbar-default .navbar-header .navbar-brand:hover,
-    .navbar-default .navbar-header .navbar-brand:focus {
-        color: #fff;
-    }
+  .navbar-default .navbar-header .navbar-brand:hover,
+  .navbar-default .navbar-header .navbar-brand:focus {
+    color: #fff;
+  }
 
-    .navbar-default .nav > li>a,
-    .navbar-default .nav>li>a:focus {
-        color: rgba(255,255,255,.7);
-    }
+  .navbar-default .nav > li>a,
+  .navbar-default .nav>li>a:focus {
+    color: rgba(255,255,255,.7);
+  }
 
-    .navbar-default .nav > li>a:hover,
-    .navbar-default .nav>li>a:focus:hover {
-        color: #fff;
-    }
+  .navbar-default .nav > li>a:hover,
+  .navbar-default .nav>li>a:focus:hover {
+    color: #fff;
+  }
 
-    .navbar-default.affix {
-        border-color: rgba(34,34,34,.05);
-        background-color: #fff;
-    }
+  .navbar-default.affix {
+    border-color: rgba(34,34,34,.05);
+    background-color: #fff;
+  }
 
-    .navbar-default.affix .navbar-header .navbar-brand:hover,
-    .navbar-default.affix .navbar-header .navbar-brand:focus {
-        color: #eb3812;
-    }
+  .navbar-default.affix .navbar-header .navbar-brand:hover,
+  .navbar-default.affix .navbar-header .navbar-brand:focus {
+    color: #eb3812;
+  }
 
-    .navbar-default.affix .nav > li>a,
-    .navbar-default.affix .nav>li>a:focus {
-        color: #222;
-    }
+  .navbar-default.affix .nav > li>a,
+  .navbar-default.affix .nav>li>a:focus {
+    color: #222;
+  }
 }
 
 header {
-    position: relative;
-    width: 100%;
-    min-height: auto;
-    text-align: center;
-    color: #fff;
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  text-align: center;
+  color: #fff;
 
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
 }
 
 .background-image {
@@ -1166,17 +1166,17 @@ header {
 }
 
 header .header-content {
-    position: relative;
-    width: 100%;
-    padding: 100px 15px;
-    text-align: center;
+  position: relative;
+  width: 100%;
+  padding: 100px 15px;
+  text-align: center;
 
   .header-content-inner {
     h1 {
-        margin-top: 0;
-        margin-bottom: 0;
-        text-transform: uppercase;
-        font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      font-weight: 700;
     }
 
     .black-blur {
@@ -1194,155 +1194,155 @@ header .header-content {
 }
 
 header .header-content .header-content-inner hr {
-    margin: 30px auto;
+  margin: 30px auto;
 }
 
 header .header-content .header-content-inner p {
-    z-index: 10;
-    margin-bottom: 50px;
-    font-size: 16px;
-    font-weight: 300;
-    color: rgba(255,255,255,.8);
-    display: block;
-    width: 600px;
-    position: absolute;
-    text-align: center;
+  z-index: 10;
+  margin-bottom: 50px;
+  font-size: 16px;
+  font-weight: 300;
+  color: rgba(255,255,255,.8);
+  display: block;
+  width: 600px;
+  position: absolute;
+  text-align: center;
 }
 
 @media(min-width:768px) {
-    header .home-page {
-        min-height: 100%;
-    }
+  header .home-page {
+    min-height: 100%;
+  }
 
-    header .header-content {
-        position: absolute;
-        top: 50%;
-        padding: 0 50px;
-        transform: translateY(-50%);
-    }
+  header .header-content {
+    position: absolute;
+    top: 50%;
+    padding: 0 50px;
+    transform: translateY(-50%);
+  }
 
-    header .header-content .header-content-inner {
-        margin-right: auto;
-        margin-left: auto;
-        max-width: 600px;
-    }
+  header .header-content .header-content-inner {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 600px;
+  }
 
-    header .header-content .header-content-inner p {
-        margin-right: auto;
-        margin-left: auto;
-        max-width: 60%;
-        font-size: 18px;
-    }
+  header .header-content .header-content-inner p {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 60%;
+    font-size: 18px;
+  }
 }
 
 .section-heading {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .service-box {
-    margin: 50px auto 0;
-    max-width: 400px;
+  margin: 50px auto 0;
+  max-width: 400px;
 }
 
 @media(min-width:992px) {
-    .service-box {
-        margin: 20px auto 0;
-    }
+  .service-box {
+    margin: 20px auto 0;
+  }
 }
 
 .service-box p {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .portfolio-box {
-    display: block;
-    position: relative;
-    margin: 0 auto;
-    max-width: 650px;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  max-width: 650px;
 }
 
 .portfolio-box .portfolio-box-caption {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    color: #fff;
-    opacity: 0;
-    background: rgba(240,95,64,.9);
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  background: rgba(240,95,64,.9);
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
 }
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    text-align: center;
-    transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-50%);
 }
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-    padding: 0 15px;
-    font-family: "Delitsch";
+  padding: 0 15px;
+  font-family: "Delitsch";
 }
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .portfolio-box:hover .portfolio-box-caption {
-    opacity: 1;
+  opacity: 1;
 }
 
 @media(min-width:768px) {
-    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-        font-size: 16px;
-    }
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+    font-size: 16px;
+  }
 
-    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-        font-size: 22px;
-    }
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    font-size: 22px;
+  }
 }
 
 .call-to-action h2 {
-    margin: 0 auto 20px;
+  margin: 0 auto 20px;
 }
 
 .no-gutter > [class*=col-] {
-    padding-right: 0;
-    padding-left: 0;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 ::-moz-selection {
-    text-shadow: none;
-    color: #fff;
-    background: #222;
+  text-shadow: none;
+  color: #fff;
+  background: #222;
 }
 
 ::selection {
-    text-shadow: none;
-    color: #fff;
-    background: #222;
+  text-shadow: none;
+  color: #fff;
+  background: #222;
 }
 
 img::selection {
-    color: #fff;
-    background: 0 0;
+  color: #fff;
+  background: 0 0;
 }
 
 img::-moz-selection {
-    color: #fff;
-    background: 0 0;
+  color: #fff;
+  background: 0 0;
 }
 
 @media (max-width: 800px) and (min-width: 501px),
@@ -1522,19 +1522,19 @@ span.hire-me {
 }
 
 #lean_overlay {
-    position: fixed;
-    z-index:100;
-    top: 0px;
-    left: 0px;
-    height:100%;
-    width:100%;
-    background: #000;
-    display: none;
+  position: fixed;
+  z-index:100;
+  top: 0px;
+  left: 0px;
+  height:100%;
+  width:100%;
+  background: #000;
+  display: none;
 }
 
 /*---------------------------------------
 
-	RESET, BODY
+RESET, BODY
 
 -----------------------------------------*/
 
@@ -1551,15 +1551,15 @@ body {
 }
 
 #banner {
-   position: fixed;
-   top: 0px; left: 0px;
-   width: 100%; background: #052739;
-   -webkit-box-shadow: 0 2px 1px rgba(0,0,0,.4);
-   -moz-box-shadow: 0 2px 1px rgba(0,0,0,.4);
-    box-shadow: 0 2px 1px rgba(0,0,0,.4);
-    z-index: 100;
-    overflow: hidden;
-  }
+  position: fixed;
+  top: 0px; left: 0px;
+  width: 100%; background: #052739;
+  -webkit-box-shadow: 0 2px 1px rgba(0,0,0,.4);
+  -moz-box-shadow: 0 2px 1px rgba(0,0,0,.4);
+  box-shadow: 0 2px 1px rgba(0,0,0,.4);
+  z-index: 100;
+  overflow: hidden;
+}
 
 #banner-left {
   float: left;
@@ -1580,44 +1580,44 @@ body {
 }
 
 #lean_overlay {
-    position: fixed;
-    z-index: 10000;
-    top: 0px;
-    left: 0px;
-    height:100%;
-    width:100%;
-    background: #000;
-    display: none;
+  position: fixed;
+  z-index: 10000;
+  top: 0px;
+  left: 0px;
+  height:100%;
+  width:100%;
+  background: #000;
+  display: none;
 }
 
 
 /*---------------------------------------
 
-	EXAMPLES
+EXAMPLES
 
 -----------------------------------------*/
 
 #signup {
 
-    width: 520px;
-    padding-bottom: 2px;
+  width: 520px;
+  padding-bottom: 2px;
 
-    display:none;
+  display:none;
 
-    background: #FFF;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    box-shadow: 0px 0px 4px rgba(0,0,0,0.7);
-    -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.7);
-    -moz-box-shadow: 0 0px 4px rgba(0,0,0,0.7);
+  background: #FFF;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: 0px 0px 4px rgba(0,0,0,0.7);
+  -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.7);
+  -moz-box-shadow: 0 0px 4px rgba(0,0,0,0.7);
 
 }
 
 
 /*---------------------------------------
 
-	RATING FORM
+RATING FORM
 
 -----------------------------------------*/
 
@@ -1627,56 +1627,56 @@ div.stars-container {
 }
 
 div.rating {
-  		background: #FDFDFD;
-			font-family: "Delitsch";
-			text-align:center;
-		}
-		em {
-			display: block;
-			margin: .5em auto 2em;
-			color: #bbb;
-		}
+  background: #FDFDFD;
+  font-family: "Delitsch";
+  text-align:center;
+}
+em {
+  display: block;
+  margin: .5em auto 2em;
+  color: #bbb;
+}
 
-		a[href*="intent"] {
-			display:inline-block;
-			margin-top: 0.4em;
-		}
+a[href*="intent"] {
+  display:inline-block;
+  margin-top: 0.4em;
+}
 
-		/*
-		 * Rating styles
-		 */
-		.rating {
-			width: 400px;
-			margin: 25px auto 25px;
-			font-size: 45px;
-			overflow:hidden;
-		}
+/*
+* Rating styles
+*/
+.rating {
+  width: 400px;
+  margin: 25px auto 25px;
+  font-size: 45px;
+  overflow:hidden;
+}
 .rating input {
   float: right;
   opacity: 0;
   position: absolute;
 }
-		.rating a,
-    .rating label {
-			float:right;
-			color: #aaa;
-			text-decoration: none;
-			-webkit-transition: color .4s;
-			-moz-transition: color .4s;
-			-o-transition: color .4s;
-			transition: color .4s;
-		}
+.rating a,
+.rating label {
+  float:right;
+  color: #aaa;
+  text-decoration: none;
+  -webkit-transition: color .4s;
+  -moz-transition: color .4s;
+  -o-transition: color .4s;
+  transition: color .4s;
+}
 .rating label:hover ~ label,
 .rating input:focus ~ label,
 .rating label:hover,
-		.rating a:hover,
-		.rating a:hover ~ a,
-		.rating a:focus,
-		.rating a:focus ~ a		{
-			color: #655234;
-			cursor: pointer;
-		}
+.rating a:hover,
+.rating a:hover ~ a,
+.rating a:focus,
+.rating a:focus ~ a		{
+  color: #655234;
+  cursor: pointer;
+}
 
-    #signup {
-      transform: translateY(-50%);
-    }
+#signup {
+  transform: translateY(-50%);
+}

@@ -13,7 +13,7 @@ TaskPirates.Views.Dashboard = Backbone.CompositeView.extend({
 
     this.voyages.each(function (voyage) {
       this.addVoyage(voyage);
-    });
+    }.bind(this));
 
     this.addTasks();
   },
@@ -32,7 +32,7 @@ TaskPirates.Views.Dashboard = Backbone.CompositeView.extend({
   },
 
   removeVoyage: function (voyage) {
-    this.subviews('.voyages').forEach( function (voyageIndexView) {
+    this.subviews('.current-voyages').forEach( function (voyageIndexView) {
       if(voyage.get('id') === voyageIndexView.model.get('id')) {
         this.removeSubview('.voyages', voyageIndexView);
       }

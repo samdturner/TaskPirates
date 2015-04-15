@@ -19,7 +19,6 @@ TaskPirates.Views.VoyageHire = Backbone.CompositeView.extend({
       model: sailor,
       parentView: this
     });
-    debugger;
     this.addSubview('.sailors-available', sailorPanelView);
   },
 
@@ -36,6 +35,11 @@ TaskPirates.Views.VoyageHire = Backbone.CompositeView.extend({
   hireSailor: function (sailor) {
     var sailorId = sailor.get('id');
     this.model.set({ sailor_id: sailorId })
-    this.model.save();
+    this.model.save({}, {
+      success: function () {
+        this.model.fetch();
+      }.bind(this)
+    });
+    Backbone.history.navigate("", { trigger: true });
   }
 });

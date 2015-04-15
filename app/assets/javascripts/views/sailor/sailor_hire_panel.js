@@ -4,7 +4,7 @@ TaskPirates.Views.SailorHirePanel = Backbone.View.extend({
   },
 
   events: {
-    'click .hire-btn' : 'hireSailor'
+    'click .tasker-hire-btn' : 'hireSailor'
   },
 
   tagName: 'div',

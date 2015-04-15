@@ -133,7 +133,7 @@ TaskPirates.Views.VoyageNewForm = Backbone.View.extend({
     event.preventDefault();
     var attrs = this.$(':input').serializeJSON();
 
-    this.model.set(attrs);
+    this.model.set(attrs.voyage);
     this.model.save();
   },
 

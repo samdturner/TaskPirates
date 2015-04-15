@@ -29,12 +29,27 @@
 <div id="signup" style="top: 0px">
   <div class="rating">
 
-    <span>How was ye experience wit' th' scurvy pirate?</span>
+    <h3 class="voyages-text">
+      How was ye experience wit' th' scurvy pirate?
+    </h3>
 
-    <input name="stars" id="e5" type="radio"></a><label for="e5">☆</label>
-    <input name="stars" id="e4" type="radio"></a><label for="e4">☆</label>
-    <input name="stars" id="e3" type="radio"></a><label for="e3">☆</label>
-    <input name="stars" id="e2" type="radio"></a><label for="e2">☆</label>
-    <input name="stars" id="e1" type="radio"></a><label for="e1">☆</label>
+    <form>
+      <div class="stars-container">
+        <input name="stars" id="e5" type="radio"></a><label for="e5">☆</label>
+        <input name="stars" id="e4" type="radio"></a><label for="e4">☆</label>
+        <input name="stars" id="e3" type="radio"></a><label for="e3">☆</label>
+        <input name="stars" id="e2" type="radio"></a><label for="e2">☆</label>
+        <input name="stars" id="e1" type="radio"></a><label for="e1">☆</label>
+      </div>
+
+      <textarea class="field-textarea form--block-input"
+                name="voyage[task_description]"
+                placeholder="EXAMPLE: There’s a restaurant on 3rd St."
+                rows="4">
+      </textarea>
+
+      <button class="btn-fld btn-primary btn">Submit</button>
+    </form>
+
   </div>
 </div>

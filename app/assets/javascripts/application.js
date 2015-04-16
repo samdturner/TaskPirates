@@ -15,7 +15,6 @@
 //= require jquery.serializejson.min
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require turbolinks
 //= require underscore
 //= require backbone
 //= require task_pirates

@@ -44,6 +44,6 @@ class Api::VoyagesController < ApplicationController
   def voyage_params
     params.require(:voyage).permit(:sailor_id, :task_requirement,
                                   :task_description, :start_date, :end_date,
-                                  :task_type)
+                                  :task_type, :completed, :rating, :comment)
   end
 end

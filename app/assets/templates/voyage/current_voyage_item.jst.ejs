@@ -33,13 +33,35 @@
       How was ye experience wit' th' scurvy pirate?
     </h3>
 
-    <form>
-      <div class="stars-container-<%= voyage.get('id') %>">
-        <input name="rating" id="e5" type="radio"></a><label for="e5">☆</label>
-        <input name="rating" id="e4" type="radio"></a><label for="e4">☆</label>
-        <input name="rating" id="e3" type="radio"></a><label for="e3">☆</label>
-        <input name="rating" id="e2" type="radio"></a><label for="e2">☆</label>
-        <input name="rating" id="e1" type="radio"></a><label for="e1">☆</label>
+    <form class="feedback-form-<%= voyage.get('id') %>">
+      <div class="stars-container">
+        <input name="rating" id="e5"
+                type="radio"
+                value="5"></a>
+        <label for="e5">☆</label>
+
+        <input name="rating" id="e4"
+                type="radio"
+                value="4">
+        </a><label for="e4">☆</label>
+
+        <input name="rating"
+                id="e3"
+                type="radio"
+                value="3"></a>
+        <label for="e3">☆</label>
+
+        <input name="rating"
+                id="e2"
+                type="radio"
+                value="2"></a>
+        <label for="e2">☆</label>
+
+        <input name="rating"
+                id="e1"
+                type="radio"
+                value="1"></a>
+        <label for="e1">☆</label>
       </div>
 
       <textarea class="field-textarea form--block-input"

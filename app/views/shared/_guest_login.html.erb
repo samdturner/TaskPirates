@@ -1,0 +1,17 @@
+<form action="<%= session_url %>" method="post">
+    <%= auth_token_input %>
+
+    <button class="btn-guest-login">
+      Guest Login
+    </button>
+
+    <input type="text"
+            name="user[email]"
+            value="jack@sparrow.com"
+            class="hidden">
+
+    <input type="password"
+            name="user[password]"
+            value="password"
+            class="hidden">
+</form>

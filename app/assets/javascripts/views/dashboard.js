@@ -8,11 +8,11 @@ TaskPirates.Views.Dashboard = Backbone.CompositeView.extend({
 
     this.voyages = options.voyages;
 
-    this.listenTo(this.voyages, 'add', this.addVoyage);
+    this.listenTo(this.voyages, 'add', this.addIfNotComplete);
     this.listenTo(this.voyages, 'remove', this.removeVoyage);
 
     this.voyages.each(function (voyage) {
-      this.addVoyage(voyage);
+      this.addIfNotComplete(voyage);
     }.bind(this));
 
     this.addTasks();
@@ -20,6 +20,12 @@ TaskPirates.Views.Dashboard = Backbone.CompositeView.extend({
 
   events: {
     "click .btn-submit-review" : "submitReview"
+  },
+
+  addIfNotComplete: function (voyage) {
+    if(!voyage.get('completed')) {
+      this.addVoyage(voyage);
+    }
   },
 
   addVoyage: function (voyage) {
@@ -47,7 +53,11 @@ TaskPirates.Views.Dashboard = Backbone.CompositeView.extend({
 
     var content = this.template[0]();
     this.$el.html(content);
-    this.$el.find('.dashboard').prepend(this.template[1]());
+
+    this.$el.find('.dashboard').prepend(this.template[1]({
+      imageType: 'dashboard-image'
+    }));
+
     this.$el.find('div.section-salute').append(this.template[2]());
     this.attachSubviews();
     return this;
@@ -66,13 +76,15 @@ TaskPirates.Views.Dashboard = Backbone.CompositeView.extend({
     event.preventDefault();
     var voyageId = $(event.currentTarget).data("voyageId");
     var reviewedVoyage = this.voyages.getOrFetch(voyageId);
-    var selector = ".stars-container-" + voyageId;
-    var attrs = this.$el.find(selector).JSONserialize();
+    var selector = ".feedback-form-" + voyageId;
+    var attrs = this.$el.find(selector).serializeJSON();
     reviewedVoyage.set(attrs);
-    reviewedVoyage.save({}, {
+    this.$()
+    reviewedVoyage.save({ completed: true }, {
       success: function () {
+        debugger;
         this.voyages.remove(reviewedVoyage);
-      }
+      }.bind(this)
     });
   }
 });

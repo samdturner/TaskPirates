@@ -17,29 +17,42 @@
               <fieldset class="margin-bottom js-error-target" data-key="email">
                 <label for="email">Email Address</label>
                 <input class="u-full-width" id="email" name="user[email]" type="text">
-              </fieldset><fieldset class="margin-bottom js-error-target" data-key="password">
+              </fieldset>
+
+              <fieldset class="margin-bottom js-error-target" data-key="password">
                 <label for="password">Password</label>
                 <input class="u-full-width" id="password" name="user[password]" type="password">
               </fieldset>
+
               <fieldset class="margin-bottom">
                 <button class="btn btn-primary u-full-width"
-                        type="submit">Log in</button>
-                <button class="btn btn-primary u-full-width btn-guest-login"
-                        type="submit">Guest log in</button>
-              </fieldset>
-              <a class="u-pull-right" href="/password/reset">Forgot password?</a>
-            </form>
+                type="submit">Log in</button>
+
+              </form>
+
+              <form action="<%= session_url %>" method="post">
+                <%= auth_token_input %>
+
+                <button class="btn-guest-login btn btn-primary u-full-width">
+                  Guest Login
+                </button>
+
+                <input type="text"
+                name="user[email]"
+                value="jack@sparrow.com"
+                class="hidden">
+
+                <input type="password"
+                name="user[password]"
+                value="password"
+                class="hidden">
+              </form>
+
+            </fieldset>
+            <a class="u-pull-right" href="/password/reset">Forgot password?</a>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<script>
-  $('.btn-guest-login').click(function(){
-    event.preventDefault();
-    $("input[name='user[email]']").val('jack@sparrow.com');
-    $("input[name='user[password]']").val('password');
-  })
-</script>

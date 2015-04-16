@@ -19,7 +19,10 @@ TaskPirates.Views.CurrentVoyageItem = Backbone.View.extend({
     });
 
     this.$el.html(content);
-    this.$(".voyage-complete-btn").leanModal({ top : 200, overlay : 0.4, closeButton: ".modal_close" });
+    this.$(".voyage-complete-btn").leanModal({
+      top : 200, overlay : 0.4,
+      closeButton: ".modal_close"
+      });
     return this;
   },
 

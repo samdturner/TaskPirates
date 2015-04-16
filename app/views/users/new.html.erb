@@ -1,17 +1,62 @@
-<h1>Sign Up</h1>
+<div class="layout--container js-layout-container">
+  <div class="main--container js-main-container">
+    <div class="main--content">
+      <div class="background-image"></div>
+      <div class="panel panel--spaced is-focused ls-main-content">
+        <div class="logo-container">
+          <img class="pirate-logo login" src="http://i.imgur.com/C61Kkv4.png">
+          <div class="pirate-logo-text-wrapper-login">
+            <img class"pirate-logo-text"
+                  src="http://fontmeme.com/embed.php?text=TaskPirates&name=Caribbean.ttf&size=45&style_color=4A462C"
+                  alt="Pirates of the Caribbean Font">
+          </div>
+        </div>
+        <div class="js-child-container">
+          <div class="view-in">
+            <form novalidate="" action="<%= users_url %>" method="post">
+              <%= auth_token_input %>
 
-<form action="<%= users_url %>" method="post">
-    <%= auth_token_input %>
+              <fieldset class="margin-bottom js-error-target" data-key="email">
+                <label for="email">Email Address</label>
+                <input class="u-full-width" id="email" name="user[email]"
+                        type="text">
+              </fieldset>
 
-    <label>
-      Email
-      <input type="text" name="user[email]" value="<%= @user.email %>">
-    </label>
+              <fieldset class="margin-bottom js-error-target"
+                        data-key="password">
+                <label for="password">Password</label>
+                <input class="u-full-width" id="password" name="user[password]"
+                      type="password">
+              </fieldset>
 
-    <label>
-      Password
-      <input type="password" name="user[password]">
-    </label>
+              <fieldset class="margin-bottom">
+                <button class="btn btn-primary u-full-width"
+                type="submit">Create account</button>
 
-    <input type="submit" value="Create Account">
-</form>
+              </form>
+
+              <form action="<%= session_url %>" method="post">
+                <%= auth_token_input %>
+
+                <button class="btn-guest-login btn btn-primary u-full-width">
+                  Guest Login
+                </button>
+
+                <input type="text"
+                name="user[email]"
+                value="jack@sparrow.com"
+                class="hidden">
+
+                <input type="password"
+                name="user[password]"
+                value="password"
+                class="hidden">
+              </form>
+
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -34,7 +34,9 @@ class Voyage < ActiveRecord::Base
           OR
           :voyage_start_date > voyages.end_date
           OR
-          :voyage_id = voyages.id)
+          :voyage_id = voyages.id
+          OR
+          voyages.completed = true)
         )
     SQL
   end

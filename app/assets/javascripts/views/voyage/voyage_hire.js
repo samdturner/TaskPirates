@@ -23,7 +23,9 @@ TaskPirates.Views.VoyageHire = Backbone.CompositeView.extend({
   },
 
   render: function () {
-    var header_image = this.template[0]();
+    var header_image = this.template[0]({
+      imageType: 'select-sailor-image'
+    });
     this.$el.html(header_image);
 
     var sailorHirePanelCont = this.template[1]();

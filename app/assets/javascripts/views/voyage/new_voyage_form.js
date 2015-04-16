@@ -16,7 +16,9 @@ TaskPirates.Views.VoyageNewForm = Backbone.View.extend({
             JST['new_voyage_form/date_picker_container']],
 
   render: function () {
-    this.$el.html(this.template[1]());
+    this.$el.html(this.template[1]({
+      imageType: 'voyage-form-image'
+    }));
     var content = this.template[0]();
     this.$el.append(content);
 

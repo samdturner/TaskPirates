@@ -538,6 +538,11 @@ div.profile-view {
   position: relative;
 }
 
+div.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-weight: 600;
   margin-bottom: 0.754ex;
@@ -1690,4 +1695,68 @@ a[href*="intent"] {
 
 input.hidden {
   display: none;
+}
+
+.dashboard-sidebar {
+  position: relative;
+  top: -150px;
+  left: 800px;
+}
+
+@media (max-width: 1024px) and (min-width: 801px), (min-width: 1025px) {
+  .row .col-lg-8 {
+    width: 66.66667%;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 801px), (min-width: 1025px) {
+  .row [class^='col-lg-'], .row [class*=' col-lg-'] {
+    text-align: left;
+  }
+}
+
+.dashboard .dashboard-section {
+  margin-bottom: 2em;
+}
+
+.dashboard .section-title {
+  font-weight: 300;
+  margin: 1em 0 0.25em;
+}
+
+@media (min-width: 501px) {
+  h2, .h2 {
+    font-size: 2rem;
+  }
+}
+
+.dashboard li.completed-task, .dashboard li.first-task {
+  border: 1px solid #cfd2d3;
+  margin-bottom: 1em;
+}
+
+.dashboard .first-task {
+  padding: 1em;
+}
+
+.dashboard li, .dashboard .selector, .dashboard .wrapper, .dashboard .tow-container {
+  background: white;
+}
+
+.dashboard .first-task h3 {
+  margin-top: 0;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.dashboard .first-task p {
+  margin-bottom: 0;
+}
+
+.row [class^='col-'].righty, .row [class*=' col-'].righty {
+  text-align: right;
+}
+
+li.first-task {
+  height: 100%;
 }

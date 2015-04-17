@@ -1,6 +1,6 @@
 class Api::VoyagesController < ApplicationController
   def index
-    @voyages = current_user.voyages
+    @voyages = current_user.voyages.includes(:sailor)
     render json: @voyages, include: :sailor
   end
 

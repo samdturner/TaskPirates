@@ -42,6 +42,6 @@ TaskPirates.Views.VoyageHire = Backbone.CompositeView.extend({
         this.model.fetch();
       }.bind(this)
     });
-    Backbone.history.navigate("", { trigger: true });
+    Backbone.history.navigate("dashboard", { trigger: true });
   }
 });

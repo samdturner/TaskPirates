@@ -7,6 +7,8 @@ class ApplicationController < ActionController::Base
 
   private
   def current_user
+    return nil if session[:session_token].nil?
+
     @current_user ||= User.find_by_session_token(session[:session_token])
   end
 
@@ -25,10 +27,10 @@ class ApplicationController < ActionController::Base
   end
 
   def require_signed_in!
-    redirect_to new_session_url unless signed_in?
+    redirect_to '/home' unless signed_in?
   end
 
   def redirect_if_signed_in
-    redirect_to '/root' if signed_in?
+    redirect_to '/#/dashboard' if signed_in?
   end
 end

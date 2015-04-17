@@ -6,7 +6,7 @@ TaskPirates.Routers.Router = Backbone.Router.extend({
   },
 
   routes: {
-    '' : 'dashboard',
+    'dashboard' : 'dashboard',
     'voyages/:id/edit' : 'voyageForm',
     'voyages/:id/hire' : 'voyageHire',
     'sailors/:id' :'sailorProfile'

@@ -1,38 +1,23 @@
 <div class="dashboard" cid="7">
 
-  <div class="container tasks-container" style="top: 40px">
+  <div class="container tasks-container" style="top: 24px">
     <div class="row row-gutter">
       <div class="col-12 col-lg-8 sections-container">
-      <div class="section-top dashboard-section"><div>
-        <div class="row">
-        <div class="col-12">
-          <h2 class="section-title">Current Voyages</h2>
-          Feest your eyes captain.  All of them faithful hands before the mast.
-            Every man worth his salt.
-        </div>
-      </div>
-      <div class="first-tasks-container">
-        <ul>
-          <li class="first-task">
-            <div class="row">
-              <div class="col-12 col-lg-8">
-                <h3>Cleaning</h3>
-                <p>Let us mop your floors, clean your bathroom or scrub your refrigerator.</p>
-              </div>
-              <div class="col-4 col-lg-4 righty">
-                <a class="btn btn-primary btn-find">Voyage complete</a>
-              </div>
-              <div class="col-4 col-lg-4 righty">
-                <a class="btn btn-secondary btn-find">Cancel voyage</a>
-              </div>
+        <div class="section-top dashboard-section"><div>
+          <div class="row">
+            <div class="col-12">
+              <h2 class="section-title">Current Voyages</h2>
+              Feest your eyes captain.  All of them faithful hands before the mast.
+              Every man worth his salt.
             </div>
-          </li>
-        </ul>
-      </div>
-      </div></div>
+          </div>
+        </div></div>
       </div>
       <div class="col-4 sm-hide md-hide dashboard-sidebar sidebar-tasks">
       </div>
     </div>
   </div>
+
+  <%= JST['voyage/voyage_review_form']() %>
+
 </div>

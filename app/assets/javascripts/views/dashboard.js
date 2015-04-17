@@ -1,7 +1,7 @@
 TaskPirates.Views.Dashboard = Backbone.CompositeView.extend({
   template: [JST["dashboard/dashboard_container"],
-            JST["layouts/header_image"],
-            JST["layouts/header_dashboard_text"]],
+  JST["layouts/header_image"],
+  JST["layouts/header_dashboard_text"]],
 
   initialize: function (options) {
     var view = this;
@@ -33,7 +33,7 @@ TaskPirates.Views.Dashboard = Backbone.CompositeView.extend({
       model: voyage,
       parentView: this
     });
-    this.addSubview('.current-voyages', currentVoyageItemView);
+    this.addSubview('.dashboard-section', currentVoyageItemView);
   },
 
   addTasks: function () {
@@ -42,7 +42,7 @@ TaskPirates.Views.Dashboard = Backbone.CompositeView.extend({
   },
 
   removeVoyage: function (voyage) {
-    this.subviews('.current-voyages').forEach( function (voyageIndexView) {
+    this.subviews('.dashboard-section').forEach( function (voyageIndexView) {
       if(voyage.get('id') === voyageIndexView.model.get('id')) {
         this.removeSubview('.voyages', voyageIndexView);
       }
@@ -50,7 +50,6 @@ TaskPirates.Views.Dashboard = Backbone.CompositeView.extend({
   },
 
   render: function () {
-
     var content = this.template[0]();
     this.$el.html(content);
 
@@ -72,17 +71,17 @@ TaskPirates.Views.Dashboard = Backbone.CompositeView.extend({
   },
 
   submitReview: function (event) {
-    debugger;
     event.preventDefault();
-    var voyageId = $(event.currentTarget).data("voyageId");
+    var voyageId = $(event.currentTarget).data("voyage");
     var reviewedVoyage = this.voyages.getOrFetch(voyageId);
-    var selector = ".feedback-form-" + voyageId;
-    var attrs = this.$el.find(selector).serializeJSON();
+    var attrs = this.$el.find('.feedback-form').serializeJSON();
+
+    $('.review-textarea').val("")
+    $('.feedback-form').find("input:radio:checked").prop('checked',false);
+
     reviewedVoyage.set(attrs);
-    this.$()
     reviewedVoyage.save({ completed: true }, {
       success: function () {
-        debugger;
         this.voyages.remove(reviewedVoyage);
       }.bind(this)
     });

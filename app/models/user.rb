@@ -13,6 +13,8 @@ class User < ActiveRecord::Base
 
   has_many :voyages
 
+  has_many :sailors, through: :voyages, source: :sailor
+
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
     return nil unless user && user.valid_password?(password)

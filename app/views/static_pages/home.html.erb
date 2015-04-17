@@ -1,51 +1,19 @@
-<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">TASK PIRATES</a>
-            </div>
+<%= render 'shared/navbar' %>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="/users/new">Sign Up</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="/session/new">Log in</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+<header class="home-page">
+  <div class="background-image"></div>
+  <div class="header-content">
+    <div class="header-content-inner">
+      <div class="home-page-logo-container">
+        <img class="pirate-logo login" src="http://i.imgur.com/C61Kkv4.png">
+        <div class="pirate-logo-text-wrapper-login">
+          <img class"pirate-logo-text" src="http://fontmeme.com/embed.php?text=TaskPirates&name=Caribbean.ttf&size=45&style_color=4A462C" alt="Pirates of the Caribbean Font">
         </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-    <header class="home-page">
-        <div class="background-image"></div>
-        <div class="header-content">
-            <div class="header-content-inner">
-                <h1>Task Pirates</h1>
-                <hr>
-                <p>Starting your next voyage and could use some extra hands at deck?
-                    There's bound to be some pirates on this rock as crazy as you.</p>
-                <p class="black-blur">Starting your next voyage and could use some extra hands at deck?
-                    There's bound to be some pirates on this rock as crazy as you.</p>
-                <a href="/session/new" class="btn btn-primary btn-xl page-scroll">Take a Tour</a>
-            </div>
+      </div>
+      <hr>
+      <p>Starting your next voyage and could use some extra hands at deck?
+        There's bound to be some pirates on this rock as crazy as you.</p>
+        <a href="/session/new" class="btn btn-primary btn-xl page-scroll">Take a Tour</a>
         </div>
+      </div>
     </header>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/jquery.fittext.js"></script>
-    <script src="js/wow.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/creative.js"></script>

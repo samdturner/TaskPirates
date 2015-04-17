@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery.leanModal.min
+//= require jquery.transit.min
 //= require jquery.serializejson.min
 //= require jquery_ujs
 //= require bootstrap-sprockets

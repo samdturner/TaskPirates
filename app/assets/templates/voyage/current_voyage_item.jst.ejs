@@ -1,80 +1,28 @@
-<div class="panel tasker-card-item u-align-center tasker-card-panel" cid="55" data-invitee-id="809628">
-  <div class="tasker-avatar-container box-break">
-    <img class="tasker-avatar" src="http://placekitten.com/g/144/144">
-
-  </div>
-  <h3 class="tasker-display-name">
-    <%= voyage.sailor().escape('name') %>
-  </h3>
-  <div class="tasker-section-details">
-    <div class="tasker-section-details__detail">
-      <span class="voyage-description">
-        Hired for... <%= voyage.escape('name') %>
-      </span>
-    </div>
-  </div>
-  <div class="tasker-card__actions">
-    <a href="#signup" class="btn btn-primary btn-block tasker-hire-btn
-              voyage-complete-btn js-btn--next">
-      <span class="u-regular">Voyage Complete</span>
-    </a>
-    <span class="link js-reviews-link-809628 cancel-voyage" cid="57">
-      Cancel voyage
-    </span>
-  </div>
-
-  <div class="tasker-experience-bar"></div>
-</div>
-
-<div id="signup" style="top: 0px">
-  <div class="rating">
-
-    <h3 class="voyages-text">
-      How was ye experience wit' th' scurvy pirate?
-    </h3>
-
-    <form class="feedback-form-<%= voyage.get('id') %>">
-      <div class="stars-container">
-        <input name="rating" id="e5"
-                type="radio"
-                value="5"></a>
-        <label for="e5">☆</label>
-
-        <input name="rating" id="e4"
-                type="radio"
-                value="4">
-        </a><label for="e4">☆</label>
-
-        <input name="rating"
-                id="e3"
-                type="radio"
-                value="3"></a>
-        <label for="e3">☆</label>
-
-        <input name="rating"
-                id="e2"
-                type="radio"
-                value="2"></a>
-        <label for="e2">☆</label>
-
-        <input name="rating"
-                id="e1"
-                type="radio"
-                value="1"></a>
-        <label for="e1">☆</label>
+<div class="first-tasks-container">
+  <ul>
+    <li class="first-task">
+      <div class="row">
+        <div class="col-12 col-lg-8">
+          <h3><%= voyage.sailor().escape('name') %></h3>
+          <p><%= voyage.escape('task_description') %></p>
+          <p><%= voyage.escape('start_date') %></p>
+          <p><%= voyage.escape('end_date') %></p>
+        </div>
+        <div class="col-4 col-lg-4 righty">
+          <a class="btn btn-primary btn-find voyage-complete-btn"
+            href="#signup">
+            <span>
+              Voyage complete
+            </span>
+          </a>
+        </div>
+        <div class="col-4 col-lg-4 righty"
+              style="float: right">
+          <a class="btn btn-secondary btn-find cancel-voyage">
+            Cancel voyage
+          </a>
+        </div>
       </div>
-
-      <textarea class="field-textarea form--block-input"
-                name="comment"
-                placeholder="EXAMPLE: There’s a restaurant on 3rd St."
-                rows="4">
-      </textarea>
-
-      <button class="btn-fld btn-primary btn btn-submit-review"
-              data-voyage-id="<%= voyage.get('id') %>">
-              Submit
-      </button>
-    </form>
-
-  </div>
+    </li>
+  </ul>
 </div>

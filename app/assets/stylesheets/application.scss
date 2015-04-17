@@ -884,9 +884,10 @@ p {
 }
 
 .page-header-html .page-header-navigation {
-  position: absolute;
+  position: relative;
   top: 7px;
   right: 0;
+  float: right;
 }
 
 .page-header-html .page-header-navigation {
@@ -924,8 +925,11 @@ ul li {
 }
 
 a:hover, a:focus, .link:hover, .link:focus {
-  color: #6A441A;
   text-decoration: none;
+}
+
+a:focus, .link:focus {
+  color: #A35D11;
 }
 
 .voyages-text {
@@ -963,7 +967,7 @@ a.tasker-hire-btn {
 }
 
 .dashboard .section-salute .avatar-container {
-  margin-left: -4px;
+  margin-left: 0px;
   position: relative;
   top: 1em;
 }
@@ -974,7 +978,7 @@ a.tasker-hire-btn {
   width: 72px;
   height: 72px;
   border-radius: 50%;
-  border: 2px solid #158aa2;
+  border: 2px solid #6A441A;
   background-color: white;
   text-align: left;
   position: relative;
@@ -1028,8 +1032,7 @@ a {
   transition: all .35s;
 }
 
-a:hover,
-a:focus {
+a:hover {
   color: #fff;
 }
 
@@ -1184,22 +1187,18 @@ header .header-content {
       font-weight: 700;
     }
 
-    .black-blur {
-      z-index: 1;
-      -webkit-filter: blur(3px);
-      color: black;
-      position: absolute;
-    }
-
     a {
-      margin-top: 107px;
+      margin-top: 30px;
     }
 
   }
 }
 
 header .header-content .header-content-inner hr {
-  margin: 30px auto;
+  margin: 30px ;
+  position: relative;
+  top: 220px;
+  left: -249px;
 }
 
 header .header-content .header-content-inner p {
@@ -1207,10 +1206,9 @@ header .header-content .header-content-inner p {
   margin-bottom: 50px;
   font-size: 16px;
   font-weight: 300;
-  color: rgba(255,255,255,.8);
   display: block;
   width: 600px;
-  position: absolute;
+  position: relative;
   text-align: center;
 }
 
@@ -1233,9 +1231,9 @@ header .header-content .header-content-inner p {
   }
 
   header .header-content .header-content-inner p {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 60%;
+    margin-right: 0;
+    margin-left: 0;
+    max-width: 100%;
     font-size: 18px;
   }
 }
@@ -1430,7 +1428,7 @@ header.page-header {
 }
 
 div.header-content {
-  top: 350px;
+  top: 315px;
 }
 
 .header-image {
@@ -1461,9 +1459,9 @@ div.header-content {
 }
 
 .header-text-container {
-  position: absolute;
-  top: 225px;
-  left: 220px;
+  position: relative;
+  top: -130px;
+  left: 0px;
   color: white;
 }
 
@@ -1551,47 +1549,6 @@ RESET, BODY
 
 -----------------------------------------*/
 
-
-html { height: 100%;
-  background: fixed url(../img/bg.png)
-  repeat;
-}
-
-body {
-  background: url(../img/grad.png)
-  fixed center top no-repeat;
-  font-size: 62.5%
-}
-
-#banner {
-  position: fixed;
-  top: 0px; left: 0px;
-  width: 100%; background: #052739;
-  -webkit-box-shadow: 0 2px 1px rgba(0,0,0,.4);
-  -moz-box-shadow: 0 2px 1px rgba(0,0,0,.4);
-  box-shadow: 0 2px 1px rgba(0,0,0,.4);
-  z-index: 100;
-  overflow: hidden;
-}
-
-#banner-left {
-  float: left;
-  width: 120px;
-}
-
-#banner-right {
-  float: right;
-  width: 900px;
-}
-
-#banner p {
-  text-align: center;
-  font-size: 1.2em;
-  margin: 0;
-  line-height: 140%;
-  padding: 20px 20px 18px 20px;
-}
-
 #lean_overlay {
   position: fixed;
   z-index: 10000;
@@ -1602,7 +1559,6 @@ body {
   background: #000;
   display: none;
 }
-
 
 /*---------------------------------------
 
@@ -1615,8 +1571,6 @@ EXAMPLES
   width: 520px;
   padding-bottom: 2px;
 
-  display:none;
-
   background: #FFF;
   border-radius: 5px;
   -moz-border-radius: 5px;
@@ -1624,7 +1578,11 @@ EXAMPLES
   box-shadow: 0px 0px 4px rgba(0,0,0,0.7);
   -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.7);
   -moz-box-shadow: 0 0px 4px rgba(0,0,0,0.7);
+  transform: translateY(-50%);
+  position: fixed;
+  display: none;
 
+  top: 50%;
 }
 
 
@@ -1689,18 +1647,8 @@ a[href*="intent"] {
   cursor: pointer;
 }
 
-#signup {
-  transform: translateY(-50%);
-}
-
 input.hidden {
   display: none;
-}
-
-.dashboard-sidebar {
-  position: relative;
-  top: -150px;
-  left: 800px;
 }
 
 @media (max-width: 1024px) and (min-width: 801px), (min-width: 1025px) {
@@ -1759,4 +1707,48 @@ input.hidden {
 
 li.first-task {
   height: 100%;
+}
+
+@media (max-width: 1024px) and (min-width: 801px), (min-width: 1025px) {
+  .row .col-lg-4 {
+    width: 33.33333%;
+  }
+}
+
+.voyage-complete-btn {
+  width: 100%
+}
+
+@media (max-width: 1024px) and (min-width: 801px), (min-width: 1025px) {
+  .row [class^='col-lg-'], .row [class*=' col-lg-'] {
+    text-align: left;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 801px), (min-width: 1025px) {
+  .row .col-lg-1 {
+    width: 8.33333%;
+  }
+}
+
+.body {
+  background-color: rgba(210, 198, 186, 0.65);
+}
+
+.header-text-container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header-content-inner  {
+  color: black;
+}
+
+a.navbar-link {
+  color: black;
+}
+
+.home-page-log-container {
+  top: -100px;
+  left: 40px;
 }

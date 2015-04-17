@@ -34,9 +34,6 @@ html {
 body {
   margin: 0;
 }
-a:focus {
-  outline: thin dotted;
-}
 a:active,
 a:hover {
   outline: 0;
@@ -254,7 +251,7 @@ body {
   font-size: 14px;
   line-height: 1.428571429;
   color: #4e3b21;
-  background-color: #d2c6ba;
+  background-color: rgba(210, 198, 186, 0.3);;
 }
 input,
 button,
@@ -278,11 +275,6 @@ a:hover,
 a:focus {
   color: #2d1d0b;
   text-decoration: underline;
-}
-a:focus {
-  outline: thin dotted #333;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
 }
 img {
   vertical-align: middle;

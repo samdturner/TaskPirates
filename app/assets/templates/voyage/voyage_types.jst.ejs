@@ -3,88 +3,28 @@
   <div class="vertical-picker-container js-dash-sidebar-vp" cid="10"><div class="vertical-picker">
     <div class="row row-thin">
       <div class="col-12 centy">
-        <h3>Start Living Smarter</h3>
+        <h3>Start Sailing Smarter</h3>
         <p class="instructions">What do you need help with?</p>
       </div>
     </div>
-    <div class="row row-gutter">
-      <div class="col-6 centy">
-        <a class="selector-button js-link-marketing-group" data-ignore="" data-marketing-group-id="15" data-marketing-group-name="Featured Tasks" href="/m/featured">
-          <span class="task-type-label">
-            <div class="task-type-inner">
-              <div class="icon">
-                <i class="ss-icon ss-pushpin" data-icon="pushpin"></i>
-              </div>
-              <div class="category">Featured Tasks</div>
-            </div>
-          </span>
-        </a>
+    <% _.each(tasksArr, function (tasks) { %>
+      <div class="row row-gutter">
+        <% _.each(tasks, function (task) { %>
+          <div class="col-6 centy">
+            <a class="selector-button new-voyage" data-task-type="<%= task %>">
+              <span class="task-type-label">
+                <div class="task-type-inner">
+                  <div class="icon">
+                    <i class="ss-icon ss-pushpin" data-icon="pushpin"></i>
+                  </div>
+                  <div class="category"><%= task %></div>
+                </div>
+              </span>
+            </a>
+          </div>
+        <% }) %>
       </div>
-      <div class="col-6 centy">
-        <a class="selector-button js-link-marketing-group" data-ignore="" data-marketing-group-id="9" data-marketing-group-name="Shopping + Delivery" href="/m/shopping-delivery">
-          <span class="task-type-label">
-            <div class="task-type-inner">
-              <div class="icon">
-                <i class="ss-bag ss-icon" data-icon="bag"></i>
-              </div>
-              <div class="category">Shopping + Delivery</div>
-            </div>
-          </span>
-        </a>
-      </div>
-    </div>
-    <div class="row row-gutter">
-      <div class="col-6 centy">
-        <a class="selector-button js-link-marketing-group" data-ignore="" data-marketing-group-id="10" data-marketing-group-name="Cleaning" href="/m/cleaning">
-          <span class="task-type-label">
-            <div class="task-type-inner">
-              <div class="icon">
-                <i class="ss-icon ss-spray" data-icon="spray"></i>
-              </div>
-              <div class="category">Cleaning</div>
-            </div>
-          </span>
-        </a>
-      </div>
-      <div class="col-6 centy">
-        <a class="selector-button js-link-marketing-group" data-ignore="" data-marketing-group-id="12" data-marketing-group-name="Handyman" href="/m/handyman">
-          <span class="task-type-label">
-            <div class="task-type-inner">
-              <div class="icon">
-                <i class="ss-icon ss-screwdriver" data-icon="screwdriver"></i>
-              </div>
-              <div class="category">Handyman</div>
-            </div>
-          </span>
-        </a>
-      </div>
-    </div>
-    <div class="row row-gutter">
-      <div class="col-6 centy">
-        <a class="selector-button js-link-marketing-group" data-ignore="" data-marketing-group-id="13" data-marketing-group-name="Moving Help" href="/m/moving-help">
-          <span class="task-type-label">
-            <div class="task-type-inner">
-              <div class="icon">
-                <i class="ss-furniture ss-icon" data-icon="furniture"></i>
-              </div>
-              <div class="category">Moving Help</div>
-            </div>
-          </span>
-        </a>
-      </div>
-      <div class="col-6 centy">
-        <a class="selector-button js-link-marketing-group" data-ignore="" data-marketing-group-id="14" data-marketing-group-name="Parties + Events" href="/m/parties-events">
-          <span class="task-type-label">
-            <div class="task-type-inner">
-              <div class="icon">
-                <i class="ss-balloon ss-icon" data-icon="balloon"></i>
-              </div>
-              <div class="category">Parties + Events</div>
-            </div>
-          </span>
-        </a>
-      </div>
-    </div>
+    <% }) %>
     <div class="row">
       <div class="col-12 centy">
         <a class="link-other" href="/tasks/a/form?source=dashboard&amp;vertical=other">Looking for something else?</a>

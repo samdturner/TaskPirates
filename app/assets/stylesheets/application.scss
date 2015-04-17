@@ -15,7 +15,7 @@
 @import "bootstrap-sprockets";
 @font-face {
   font-family: "Delitsch";
-  src: url(/assets/DelitschAntiqua.ttf) format("truetype");
+  src: asset-url('DelitschAntiqua.ttf') format("truetype");
 };
 
 html, body, div, span, object,

@@ -107,7 +107,17 @@ TaskPirates.Views.VoyageNewForm = Backbone.View.extend({
   },
 
   addDatePicker: function (dateObj, typeName, className, containerName) {
-    var fullDate = dateObj.fullLongDate();
+    var days = ['Sunday','Monday','Tuesday','Wednesday',
+                'Thursday','Friday','Saturday'];
+    var months = ['January','February','March','April','May','June',
+                  'July','August','September','October','November','December'];
+
+    var dayNum = dateObj.getDate();
+    var dayName = days[ dateObj.getDay() ];
+    var monthNum = dateObj.getMonth();
+    var monthName = months[ monthNum ];
+    var yearNum = dateObj.getFullYear();
+    var fullDate = yearNum + "-" + (monthNum + 1) + "-" + dayNum;
 
     var content = this.template[2]({
       containerName: containerName,

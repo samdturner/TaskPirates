@@ -4,9 +4,10 @@
       <div class="row">
         <div class="col-12 col-lg-8">
           <h3><%= voyage.sailor().escape('name') %></h3>
+          <p>Start date: <%= voyage.escape('start_date') %></p>
+          <p>End date: <%= voyage.escape('end_date') %></p>
+          <br>
           <p><%= voyage.escape('task_description') %></p>
-          <p><%= voyage.escape('start_date') %></p>
-          <p><%= voyage.escape('end_date') %></p>
         </div>
         <div class="col-4 col-lg-4 righty">
           <a class="btn btn-primary btn-find voyage-complete-btn"

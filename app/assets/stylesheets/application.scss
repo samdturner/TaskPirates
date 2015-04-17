@@ -1428,7 +1428,7 @@ header.page-header {
 }
 
 div.header-content {
-  top: 315px;
+  top: 240px;
 }
 
 .header-image {
@@ -1447,7 +1447,7 @@ div.header-content {
 }
 
 .header-image.voyage-form-image {
-  background-image: url(http://i.imgur.com/TLtykgm.jpg);
+  background-image: url(http://i.imgur.com/UehRES1.jpg);
 }
 
 .header-image.select-sailor-image {
@@ -1751,4 +1751,23 @@ a.navbar-link {
 .home-page-log-container {
   top: -100px;
   left: 40px;
+}
+
+.date-item__dow span {
+  font-size: 0.8em;
+}
+
+.take-tour {
+  position: relative;
+  left: 137px;
+}
+
+p.welcome-msg {
+  text-align: center;
+}
+
+.pirate-logo-home {
+  width: 337px;
+  margin-top: 13px;
+  margin-bottom: 31px;
 }

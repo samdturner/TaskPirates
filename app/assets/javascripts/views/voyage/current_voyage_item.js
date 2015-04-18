@@ -45,7 +45,6 @@ TaskPirates.Views.CurrentVoyageItem = Backbone.View.extend({
         "margin": "-15px 0"
       }, 400, function () {
         $(cancelBtn).hide();
-        debugger;
         that.parentView.cancelVoyage(that.model);
       });
     });

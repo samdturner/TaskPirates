@@ -2,12 +2,18 @@
   <ul>
     <li class="first-task">
       <div class="row">
-        <div class="col-12 col-lg-8">
+        <div class="col-2 col-lg-2"
+              style="padding-right: 8%; width: 12%;">
+          <div class="avatar-container avatar-container-72">
+            <img class="avatar-72" src="http://placekitten.com/68/68">
+          </div>
+        </div>
+        <div class="col-6 col-lg-6" style="width: 54%">
           <h3><%= voyage.sailor().escape('name') %></h3>
-          <p>Start date: <%= voyage.escape('start_date') %></p>
-          <p>End date: <%= voyage.escape('end_date') %></p>
+          <p class="date-text">Start date: <%= voyage.escape('start_date') %></p>
+          <p class="date-text">Return date: <%= voyage.escape('end_date') %></p>
           <br>
-          <p><%= voyage.escape('task_description') %></p>
+          <p class="voyage-description"><%= voyage.escape('task_description') %></p>
         </div>
         <div class="col-4 col-lg-4 righty">
           <a class="btn btn-primary btn-find voyage-complete-btn"

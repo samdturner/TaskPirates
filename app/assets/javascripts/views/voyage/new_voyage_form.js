@@ -7,7 +7,8 @@ TaskPirates.Views.VoyageNewForm = Backbone.View.extend({
     'click a.js-move-left.start' : 'shiftStDtLeft',
     'click a.js-move-right.start' : 'shiftStDtRight',
     'click a.js-move-left.end' : 'shiftEdDtLeft',
-    'click a.js-move-right.end' : 'shiftEdDtRight'
+    'click a.js-move-right.end' : 'shiftEdDtRight',
+    'click label.date-picker-item.start_date' : 'isStartDateGreaterFirstEndDate'
   },
 
   template: [JST['new_voyage_form/questions'],
@@ -62,7 +63,7 @@ TaskPirates.Views.VoyageNewForm = Backbone.View.extend({
       } else {
         this.addEdDatePickers(4);
       }
-      return leftVal - 400;
+      return leftVal - 560;
     }.bind(this));
   },
 
@@ -76,8 +77,11 @@ TaskPirates.Views.VoyageNewForm = Backbone.View.extend({
 
   shiftRight: function (className) {
     this.shift(className, function (leftVal) {
-      if(leftVal < 0) {
-        return leftVal + 400;
+      debugger
+      if(className === '.end-date-picker' && leftVal < this.endDateStop()){
+        return leftVal + 560;
+      } else if(leftVal < 0) {
+        return leftVal + 560;
       }
 
       return leftVal;
@@ -149,5 +153,40 @@ TaskPirates.Views.VoyageNewForm = Backbone.View.extend({
   addStDatePickers: function (num) {
     this.addDatePickers(num, 'start_date', '.start-date-picker',
                         'start-date-container')
+  },
+
+  isStartDateGreaterFirstEndDate: function (event) {
+    var radioId = $(event.currentTarget).attr('id');
+    var radioSelector = "#" + radioId;
+    $(radioSelector).prop("checked", true);
+    var diff = this.selectedStartIdx() - this.firstEndDateIdx();
+
+    if(diff >= 0) {
+      this.shiftEndDateIdx(diff);
+    }
+
+    return false;
+  },
+
+  selectedStartIdx: function () {
+    var radioButtons = $('input[name="voyage[start_date]"]');
+    debugger;
+    return radioButtons.index(radioButtons.find(':checked'));
+  },
+
+  endDateStop: function () {
+    return Math.abs(160 * this.selectedStartIdx());
+  },
+
+  shiftEndDateIdx: function (diff) {
+    this.shift('.end-date-picker', function (leftVal) {
+      return leftVal - (112 * (diff + 1));
+    }.bind(this));
+  },
+
+  firstEndDateIdx: function () {
+    var leftValPix = $('.date-picker__date-list.end-date-picker').css('left');
+    var leftVal = parseInt(leftValPix.slice(0, -2));
+    return Math.abs(leftVal / 112 );
   }
 });

@@ -9,7 +9,7 @@ TaskPirates.Views.SailorProfile = Backbone.View.extend({
 
   tagName: 'ul',
 
-  template: JST['sailor/sailor_profile'],
+  template: [JST['sailor/sailor_profile'], JST['layouts/header_image']],
 
   render: function () {
     var content = this.template({

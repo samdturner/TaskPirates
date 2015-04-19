@@ -8,7 +8,7 @@ TaskPirates.Views.VoyageNewForm = Backbone.View.extend({
     'click a.js-move-right.start' : 'shiftStDtRight',
     'click a.js-move-left.end' : 'shiftEdDtLeft',
     'click a.js-move-right.end' : 'shiftEdDtRight',
-    'click label.date-picker-item.start_date' : 'isStartDateGreaterFirstEndDate'
+    'click label.date-picker-item.start_date' : 'adjustForNewStartDate'
   },
 
   template: [JST['new_voyage_form/questions'],
@@ -35,7 +35,7 @@ TaskPirates.Views.VoyageNewForm = Backbone.View.extend({
       className: 'end-date-picker'
     });
     this.$el.find('.job-form-fields').append(endDateCont);
-    this.addEdDatePickers(15);
+    this.addEdDatePickers(25);
 
     return this;
   },
@@ -60,6 +60,7 @@ TaskPirates.Views.VoyageNewForm = Backbone.View.extend({
     this.shift(className, function (leftVal) {
       if(className === '.start-date-picker'){
         this.addStDatePickers(4);
+        this.addEdDatePickers(4);
       } else {
         this.addEdDatePickers(4);
       }
@@ -77,15 +78,24 @@ TaskPirates.Views.VoyageNewForm = Backbone.View.extend({
 
   shiftRight: function (className) {
     this.shift(className, function (leftVal) {
-      debugger
       if(className === '.end-date-picker' && leftVal < this.endDateStop()){
-        return leftVal + 560;
-      } else if(leftVal < 0) {
+        return leftVal + this.leftShiftVal(leftVal);
+      } else if(className === '.start-date-picker' && leftVal < 0) {
         return leftVal + 560;
       }
 
       return leftVal;
-    });
+    }.bind(this));
+  },
+
+  leftShiftVal: function (leftVal) {
+    var val = 560;
+    var diff = this.endDateStop() - leftVal;
+    if(diff < val){
+      val = diff;
+    }
+
+    return val;
   },
 
   addEdDatePickers: function (num) {
@@ -155,27 +165,47 @@ TaskPirates.Views.VoyageNewForm = Backbone.View.extend({
                         'start-date-container')
   },
 
-  isStartDateGreaterFirstEndDate: function (event) {
+  adjustForNewStartDate: function (event) {
     var radioId = $(event.currentTarget).attr('id');
     var radioSelector = "#" + radioId;
     $(radioSelector).prop("checked", true);
-    var diff = this.selectedStartIdx() - this.firstEndDateIdx();
+
+    this.isStartDateGreaterFirstEndDate();
+    this.isSelectStDateGreaterSelectEndDate();
+  },
+
+  isStartDateGreaterFirstEndDate: function () {
+    var diff = this.selectedIdx('start_date') - this.firstEndDateIdx();
 
     if(diff >= 0) {
       this.shiftEndDateIdx(diff);
     }
-
-    return false;
   },
 
-  selectedStartIdx: function () {
-    var radioButtons = $('input[name="voyage[start_date]"]');
-    debugger;
-    return radioButtons.index(radioButtons.find(':checked'));
+  isSelectStDateGreaterSelectEndDate: function () {
+    var selectedStartIdx = this.selectedIdx('start_date');
+    var selectedEndIdx = this.selectedIdx('end_date');
+    if(selectedStartIdx >= this.selectedIdx('end_date')
+        && selectedEndIdx !== -1) {
+        var newEndDateIdx = this.selectedIdx('start_date') + 1;
+        this.setCheckedDate(newEndDateIdx);
+    }
+  },
+
+  setCheckedDate: function (idx) {
+    var radioButtons = $('input[name="voyage[end_date]"]');
+    var newEl = radioButtons.get(idx);
+    $(newEl).prop("checked", true);
+  },
+
+  selectedIdx: function (dateType) {
+    var selector = 'input[name="voyage[' + dateType + ']"]';
+    var radioButtons = $(selector);
+    return radioButtons.index(radioButtons.filter(':checked'));
   },
 
   endDateStop: function () {
-    return Math.abs(160 * this.selectedStartIdx());
+    return (-112 * this.selectedIdx('start_date')) - 112;
   },
 
   shiftEndDateIdx: function (diff) {

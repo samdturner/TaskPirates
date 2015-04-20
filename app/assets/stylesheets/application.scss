@@ -450,7 +450,7 @@ a, .link {
 }
 
 .profile-view .header-container .elite-banner {
-  background-color: #ff7c50;
+  background-color: #B9995B;
   color: white;
   text-transform: uppercase;
   text-align: center;
@@ -1780,4 +1780,106 @@ p.voyage-description {
   width: 100%;
   height: 48px;
   overflow: hidden;
+}
+
+div.profile-header-container {
+  top: 78px;
+  background-color: transparent;
+}
+
+div.profile-background-image {
+  height: 322px;
+  width: 100%;
+  position: absolute;
+  background-image: url(http://vignette2.wikia.nocookie.net/pirates/images/1/1e/P3Standoff.jpg/revision/latest?cb=20120520124119);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.shared-review {
+  margin-bottom: 2.125em;
+  position: relative;
+}
+
+.shared-review .review-avatar, .shared-review .review-content {
+  display: inline-block;
+}
+
+.shared-review .review-avatar {
+  vertical-align: top;
+  position: absolute;
+}
+
+.avatar-container-86.no-border {
+  border: none;
+}
+
+.avatar-container-86 {
+  z-index: 10;
+  overflow: hidden;
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  border: 2px solid #158aa2;
+  background-color: white;
+  text-align: left;
+  position: relative;
+}
+
+.avatar-container-86 img {
+  width: 100%;
+  height: 100%;
+}
+
+.shared-review .review-rate.positive {
+  background-color: #00964b;
+}
+
+.shared-review .review-rate {
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  font-size: 1em;
+  position: absolute;
+  right: -2px;
+  bottom: 2px;
+  z-index: 50;
+}
+
+.shared-review .review-content {
+  margin-left: 100px;
+  padding-bottom: 1em;
+  min-height: 86px;
+}
+
+.shared-review .review-avatar, .shared-review .review-content {
+  display: inline-block;
+}
+
+.muted, a.muted {
+  color: #b4b9b9;
+}
+
+.main-container .reviews {
+  position: relative;
+  top: 50px;
 }

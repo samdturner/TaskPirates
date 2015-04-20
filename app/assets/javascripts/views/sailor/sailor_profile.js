@@ -1,18 +1,18 @@
-TaskPirates.Views.SailorProfile = Backbone.View.extend({
+TaskPirates.Views.SailorProfile = Backbone.CompositeView.extend({
   initialize: function () {
-    this.listenTo(this.model, 'sync', this.render);
+    this.voyages = options.voyages;
+
+    this.listenTo(this.voyages, 'add', this.addVoyage);
+
+    this.voyages.each(function (voyage) {
+      this.addVoyage(voyage);
+    }.bind(this));
   },
 
-  events: {
-    'click .hire-btn' : 'hireSailor'
-  },
-
-  tagName: 'ul',
-
-  template: [JST['sailor/sailor_profile'], JST['layouts/header_image']],
+  template: [JST['sailor/sailor_profile_container']],
 
   render: function () {
-    var content = this.template({
+    var content = this.template[0]({
       sailor: this.model
     });
 
@@ -20,8 +20,11 @@ TaskPirates.Views.SailorProfile = Backbone.View.extend({
     return this;
   },
 
-  hireSailor: function (event) {
-    event.preventDefault();
-    this.parentView.hireSailor(this.model);
+  addVoyage: function (voyage) {
+    var voyageReviewItem = new TaskPirates.Views.VoyageReviewItem({
+      model: voyage,
+      parentView: this
+    });
+    this.addSubview('.rabbit-reviews', voyageReviewItem);
   }
 });

@@ -5,7 +5,7 @@ class Api::SailorsController < ApplicationController
   end
 
   def show
-    sailor = Sailor.find(params[:id])
-    render :json => sailor
+    @sailor = Sailor.find(params[:id])
+    render :show
   end
 end

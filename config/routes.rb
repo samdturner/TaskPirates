@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resource :session, only: [:new, :create, :destroy]
 
   namespace :api do
-    resources :sailors, only: [:index, :show]
+    resources :sailors, only: [:index, :show], defaults: {format: 'json'}
     resources :voyages, only: [:index, :create, :destroy, :update,
                               :show]
     get 'voyages/:id/matching_sailors' => 'voyages#matching_sailors'

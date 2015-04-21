@@ -1,5 +1,5 @@
 TaskPirates.Views.SailorProfile = Backbone.CompositeView.extend({
-  initialize: function () {
+  initialize: function (options) {
     this.voyages = options.voyages;
 
     this.listenTo(this.voyages, 'add', this.addVoyage);

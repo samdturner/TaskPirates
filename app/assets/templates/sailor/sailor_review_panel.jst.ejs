@@ -12,15 +12,15 @@
           style="background: transparent; margin: 0px; font-size: 30px;
                 width: 224px">
       <div class="stars-container">
-        <% for(var i = 5; i >= voyage.get('rating'); i--) { %>
+        <% for(var i = 0; i < voyage.get('rating'); i++) { %>
           <label style="color: #655234; float: left">☆</label>
         <% } %>
     </div>
   </div>
     <div class="review-body"><%= voyage.get('comment') %></div>
     <small class="muted review-meta">
-      <%= voyage.user().get('fname') %>,
-      <%= voyoage.get('created_at') %>
+      <%= voyage.get('user').fname %>,
+      <%= voyage.get('created_at') %>
     </small>
   </div>
 </li>

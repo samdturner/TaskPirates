@@ -13,7 +13,6 @@ TaskPirates.Routers.Router = Backbone.Router.extend({
   },
 
   sailorProfile: function (id) {
-    var voyages = this.voyages.fetch();
     var sailor = this.sailors.getOrFetch(id);
     var sailorProfileView = new TaskPirates.Views.SailorProfile ({
       model: sailor

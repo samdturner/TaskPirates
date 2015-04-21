@@ -1,6 +1,6 @@
 TaskPirates.Views.VoyageReviewItem = Backbone.View.extend({
   initialize: function () {
-    this.listenTo(this.model, 'sync', this.addVoyage);
+    this.listenTo(this.model, 'add', this.render);
   },
 
   template: JST['sailor/sailor_review_panel'],

@@ -7,7 +7,9 @@ TaskPirates.Views.CurrentVoyageItem = Backbone.View.extend({
 
   events: {
     'click .cancel-voyage' : 'cancelVoyage',
-    "click .btn-submit-review" : "submitReview"
+    "click .btn-submit-review" : "submitReview",
+    "click .sailor-name-link" : "navigateSailorProfile",
+    "click .avatar-container-72" : "navigateSailorProfile"
   },
 
   tagName: 'div',
@@ -48,5 +50,11 @@ TaskPirates.Views.CurrentVoyageItem = Backbone.View.extend({
         that.parentView.cancelVoyage(that.model);
       });
     });
+  },
+
+  navigateSailorProfile: function () {
+    var sailorId = this.model.sailor().get('id')
+    var fragment = 'sailors/' + sailorId;
+    Backbone.history.navigate(fragment, { trigger: true });
   }
 });

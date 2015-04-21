@@ -1,11 +1,12 @@
 TaskPirates.Views.SailorProfile = Backbone.CompositeView.extend({
   initialize: function (options) {
-    this.voyages = options.voyages;
+    this.sailorVoyages = options.model.voyages();
 
-    this.listenTo(this.voyages, 'add', this.addVoyage);
+    this.listenTo(this.sailorVoyages, 'add', this.addIfComplete);
+    this.listenTo(this.model, 'sync', this.render);
 
-    this.voyages.each(function (voyage) {
-      this.addVoyage(voyage);
+    _.each(this.sailorVoyages.models, function (voyage) {
+      this.addIfComplete(voyage);
     }.bind(this));
   },
 
@@ -17,7 +18,14 @@ TaskPirates.Views.SailorProfile = Backbone.CompositeView.extend({
     });
 
     this.$el.html(content);
+    this.attachSubviews();
     return this;
+  },
+
+  addIfComplete: function (voyage) {
+    if(!voyage.get('complete')) {
+      this.addVoyage(voyage);
+    }
   },
 
   addVoyage: function (voyage) {

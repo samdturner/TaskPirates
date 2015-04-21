@@ -2,7 +2,6 @@ TaskPirates.Models.Sailor = Backbone.Model.extend({
   urlRoot: 'api/sailors',
 
   parse: function (response) {
-    debugger
     if (response.voyages) {
       this.voyages().set(response.voyages);
       delete response.voyages;
@@ -17,5 +16,13 @@ TaskPirates.Models.Sailor = Backbone.Model.extend({
     }
 
     return this._voyages;
+  },
+
+  user: function (voyage) {
+    if (!voyage._user) {
+      voyage._user = new TaskPirates.Models.User();
+    }
+
+    return voyage._user;
   }
 });

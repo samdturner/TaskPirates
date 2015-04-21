@@ -9,7 +9,9 @@
           </div>
         </div>
         <div class="col-6 col-lg-6" style="width: 54%">
-          <h3><%= voyage.sailor().escape('name') %></h3>
+          <h3 class="sailor-name-link">
+            <%= voyage.sailor().escape('name') %>
+          </h3>
           <p class="date-text">Start date: <%= voyage.escape('start_date') %></p>
           <p class="date-text">Return date: <%= voyage.escape('end_date') %></p>
           <br>

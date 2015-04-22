@@ -2,7 +2,7 @@ TaskPirates.Views.CurrentVoyageItem = Backbone.View.extend({
   initialize: function (options) {
     this.parentView = options.parentView
 
-    this.listenTo(this.model, 'add', this.render);
+    this.listenTo(this.model, 'sync', this.render);
   },
 
   events: {

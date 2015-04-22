@@ -21,6 +21,7 @@ TaskPirates.Routers.Router = Backbone.Router.extend({
   },
 
   dashboard: function (id) {
+    debugger
     this.voyages.fetch();
     var dashboardView = new TaskPirates.Views.Dashboard({
       voyages: this.voyages

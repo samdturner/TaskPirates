@@ -1,7 +1,7 @@
 TaskPirates.Views.Dashboard = Backbone.CompositeView.extend({
   template: [JST["dashboard/dashboard_container"],
-  JST["layouts/header_image"],
-  JST["layouts/header_dashboard_text"]],
+              JST["layouts/header_image"],
+              JST["layouts/header_dashboard_text"]],
 
   initialize: function (options) {
     var view = this;

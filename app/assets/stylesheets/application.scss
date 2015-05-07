@@ -1451,7 +1451,7 @@ div.header-content {
 }
 
 .header-image.dashboard-image {
-  background-image: url(http://i.imgur.com/iQWTRTI.png);
+  background-image: url(http://i.imgur.com/xVNUobp.jpg);
 }
 
 .header-image.voyage-form-image {
@@ -1803,12 +1803,13 @@ div.profile-background-image {
   height: 322px;
   width: 100%;
   position: absolute;
-  background-image: url(http://vignette2.wikia.nocookie.net/pirates/images/1/1e/P3Standoff.jpg/revision/latest?cb=20120520124119);
+  background-image: url(http://i.imgur.com/OYr7vfI.png);
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
   -o-filter: blur(5px);
   -ms-filter: blur(5px);
   filter: blur(5px);
+  background-size: cover;
 }
 
 .shared-review {

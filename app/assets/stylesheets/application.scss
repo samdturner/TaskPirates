@@ -599,6 +599,14 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   max-height: 100%;
 }
 
+.tasker-avatar:hover {
+  cursor:pointer
+}
+
+.tasker-display-name:hover {
+  cursor:pointer
+}
+
 .view--recommendations .tasker-display-name {
   width: 100%;
   margin-top: 0.75rem;
@@ -1566,7 +1574,7 @@ EXAMPLES
 
 -----------------------------------------*/
 
-#signup {
+#signup, #confirmation {
 
   width: 520px;
   padding-bottom: 2px;
@@ -1583,6 +1591,10 @@ EXAMPLES
   display: none;
 
   top: 50%;
+}
+
+#signup {
+  height: 388px;
 }
 
 

@@ -14,6 +14,10 @@ TaskPirates.Views.VoyageHire = Backbone.CompositeView.extend({
     });
   },
 
+  events: {
+    'click .btn-submit-review' : 'navigateToDashboard'
+  },
+
   addSailor: function (sailor) {
     var sailorPanelView = new TaskPirates.Views.SailorHirePanel({
       model: sailor,
@@ -27,8 +31,9 @@ TaskPirates.Views.VoyageHire = Backbone.CompositeView.extend({
       imageType: 'select-sailor-image'
     });
     this.$el.html(header_image);
-
-    var sailorHirePanelCont = this.template[1]();
+    var sailorHirePanelCont = this.template[1]({
+      voyage: this.model
+    });
     this.$el.append(sailorHirePanelCont);
     this.attachSubviews();
     return this;
@@ -40,8 +45,13 @@ TaskPirates.Views.VoyageHire = Backbone.CompositeView.extend({
     this.model.save({}, {
       success: function () {
         this.model.fetch();
+        
       }.bind(this)
     });
+  },
+
+  navigateToDashboard: function (event) {
+    event.preventDefault();
     Backbone.history.navigate("dashboard", { trigger: true });
   }
 });

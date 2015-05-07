@@ -1,7 +1,11 @@
 TaskPirates.Views.Dashboard = Backbone.CompositeView.extend({
-  template: [JST["dashboard/dashboard_container"],
+  template: [
+              JST["dashboard/dashboard_container"],
               JST["layouts/header_image"],
-              JST["layouts/header_dashboard_text"]],
+              JST["layouts/header_dashboard_text"],
+              JST["voyage/voyage_review_confirmation"],
+              JST['voyage/voyage_review_form_content']
+            ],
 
   initialize: function (options) {
     var view = this;
@@ -19,7 +23,7 @@ TaskPirates.Views.Dashboard = Backbone.CompositeView.extend({
   },
 
   events: {
-    "click .btn-submit-review" : "submitReview"
+    "click .submit-review-btn" : "submitReview"
   },
 
   addIfNotComplete: function (voyage) {
@@ -85,5 +89,24 @@ TaskPirates.Views.Dashboard = Backbone.CompositeView.extend({
         this.voyages.remove(reviewedVoyage);
       }.bind(this)
     });
+
+    this.modalToThanks();
+  },
+
+  closeModal: function () {
+    $("#lean_overlay").fadeOut(200);
+    $('#signup').css({ "display" : "none" })
+    this.modalToForm();
+  },
+
+  modalToThanks: function () {
+    var content = this.template[3]();
+    $('#signup').html(content);
+    $('.btn-close-modal').click(this.closeModal.bind(this));
+  },
+
+  modalToForm: function () {
+    var content = this.template[4]();
+    $('#signup').html(content);
   }
 });

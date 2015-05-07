@@ -1,13 +1,12 @@
 TaskPirates.Views.CurrentVoyageItem = Backbone.View.extend({
   initialize: function (options) {
     this.parentView = options.parentView
-
-    this.listenTo(this.model, 'sync', this.render);
+    this.listenTo(this.model, 'change sync', this.render);
   },
 
   events: {
     'click .cancel-voyage' : 'cancelVoyage',
-    "click .btn-submit-review" : "submitReview",
+    "click .submit-review-btn" : "submitReview",
     "click .sailor-name-link" : "navigateSailorProfile",
     "click .avatar-container-72" : "navigateSailorProfile"
   },
@@ -17,17 +16,18 @@ TaskPirates.Views.CurrentVoyageItem = Backbone.View.extend({
   template: JST['voyage/current_voyage_item'],
 
   render: function () {
-
+    debugger
     var content = this.template({
       voyage: this.model
     });
 
     this.$el.html(content);
     this.$(".voyage-complete-btn").leanModal({
-      top : 200, overlay : 0.4,
+      top : 200,
+      overlay : 0.4,
       closeButton: ".modal_close",
       voyage: this.model
-      });
+    });
     return this;
   },
 

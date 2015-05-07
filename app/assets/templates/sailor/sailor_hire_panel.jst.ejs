@@ -4,9 +4,11 @@
          src="<%= sailor.get('image_url') %>">
 
   </div>
+
   <h3 class="tasker-display-name">
     <%= sailor.escape('name') %>
   </h3>
+
   <div class="tasker-hire-section-details">
     <div class="tasker-hire-details__detail">
 
@@ -19,12 +21,13 @@
       <div class="tasker-stat-title tasker-category-type">Tasks</div>
     </div>
   </div>
+
   <div class="tasker-card__actions">
-    <a class="btn btn-primary btn-block tasker-hire-btn js-btn--next">
+    <a class="btn btn-primary btn-block tasker-hire-btn js-btn--next" href="#confirmation">
       <span class="u-regular hire-me">Hire me!</span>
       <span class="tasker-hourly-rate u-light">5% plunder</span>
     </a>
-    <span class="link js-reviews-link-809628" cid="57">See reviews &amp; profile</span>
+    <span class="link js-reviews-link-809628 reviews-link" cid="57">See reviews &amp; profile</span>
   </div>
 
   <div class="tasker-experience-bar"></div>

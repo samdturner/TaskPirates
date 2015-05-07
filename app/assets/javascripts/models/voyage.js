@@ -5,6 +5,7 @@ TaskPirates.Models.Voyage = Backbone.Model.extend({
     if (response.sailor) {
       this.sailor().set(response.sailor);
       delete response.sailor;
+      this.trigger('sync');
     } else if (response.matching_sailors) {
       this.matchingSailors().set(response.matching_sailors);
       delete response.matching_sailor;

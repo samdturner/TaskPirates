@@ -6,6 +6,7 @@ TaskPirates.Routers.Router = Backbone.Router.extend({
   },
 
   routes: {
+    '' : 'dashboard',
     'dashboard' : 'dashboard',
     'voyages/:id/edit' : 'voyageForm',
     'voyages/:id/hire' : 'voyageHire',
@@ -14,7 +15,9 @@ TaskPirates.Routers.Router = Backbone.Router.extend({
 
   sailorProfile: function (id) {
     var voyageId = getParameterByName('voyageid');
-    var voyage = this.voyages.getOrFetch(voyageId);
+    if(voyageId !== ""){
+      var voyage = this.voyages.getOrFetch(voyageId);
+    }
     var sailor = this.sailors.getOrFetch(id);
     var sailorProfileView = new TaskPirates.Views.SailorProfile ({
       model: sailor,
@@ -41,7 +44,7 @@ TaskPirates.Routers.Router = Backbone.Router.extend({
   },
 
   voyageHire: function (id) {
-    debugger
+
     var hireVoyage = this.voyages.getOrFetch(id);
     hireVoyage.matchingSailors().fetch();
     var hireVoyageView = new TaskPirates.Views.VoyageHire({

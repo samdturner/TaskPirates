@@ -20,7 +20,8 @@ TaskPirates.Views.SailorProfile = Backbone.CompositeView.extend({
 
   render: function () {
     var content = this.template[0]({
-      sailor: this.model
+      sailor: this.model,
+      voyage: this.voyage
     });
 
     this.$el.html(content);
@@ -48,7 +49,6 @@ TaskPirates.Views.SailorProfile = Backbone.CompositeView.extend({
   },
 
   hireSailor: function (sailor) {
-    debugger
     var sailorId = this.model.get('id');
     this.voyage.set({ sailor_id: sailorId })
     this.voyage.save({});

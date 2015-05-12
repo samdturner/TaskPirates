@@ -8,15 +8,16 @@ TaskPirates.Views.Dashboard = Backbone.CompositeView.extend({
             ],
 
   initialize: function (options) {
+
     var view = this;
 
     this.voyages = options.voyages;
 
-    this.listenTo(this.voyages, 'add', this.addIfNotComplete);
+    this.listenTo(this.voyages, 'add', this.maybeAdd);
     this.listenTo(this.voyages, 'remove', this.removeVoyage);
 
     this.voyages.each(function (voyage) {
-      this.addIfNotComplete(voyage);
+      this.maybeAdd(voyage);
     }.bind(this));
 
     this.addTasks();
@@ -26,8 +27,25 @@ TaskPirates.Views.Dashboard = Backbone.CompositeView.extend({
     "click .submit-review-btn" : "submitReview"
   },
 
-  addIfNotComplete: function (voyage) {
+  isIncomplete: function (voyage) {
     if(!voyage.get('completed')) {
+      return true;
+    }
+
+    return false;
+  },
+
+  hasSailor: function (voyage) {
+    if(voyage.get('sailor_id')) {
+      return true;
+    }
+
+    return false;
+  },
+
+  maybeAdd: function (voyage) {
+
+    if(this.hasSailor(voyage) && this.isIncomplete(voyage)) {
       this.addVoyage(voyage);
     }
   },

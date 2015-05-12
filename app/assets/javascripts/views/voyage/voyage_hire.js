@@ -10,8 +10,8 @@ TaskPirates.Views.VoyageHire = Backbone.CompositeView.extend({
     this.listenTo(this.matchingSailors, 'add', this.addSailor);
 
     this.matchingSailors.each(function (sailor) {
-      this.maybeAddSailor(sailor);
-    });
+      this.addSailor(sailor)
+    }.bind(this));
   },
 
   events: {
@@ -45,7 +45,7 @@ TaskPirates.Views.VoyageHire = Backbone.CompositeView.extend({
     this.model.save({}, {
       success: function () {
         this.model.fetch();
-        
+
       }.bind(this)
     });
   },

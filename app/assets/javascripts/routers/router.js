@@ -13,9 +13,12 @@ TaskPirates.Routers.Router = Backbone.Router.extend({
   },
 
   sailorProfile: function (id) {
+    var voyageId = getParameterByName('voyageid');
+    var voyage = this.voyages.getOrFetch(voyageId);
     var sailor = this.sailors.getOrFetch(id);
     var sailorProfileView = new TaskPirates.Views.SailorProfile ({
-      model: sailor
+      model: sailor,
+      voyage: voyage
     });
     this._swapViews(sailorProfileView);
   },
@@ -38,6 +41,7 @@ TaskPirates.Routers.Router = Backbone.Router.extend({
   },
 
   voyageHire: function (id) {
+    debugger
     var hireVoyage = this.voyages.getOrFetch(id);
     hireVoyage.matchingSailors().fetch();
     var hireVoyageView = new TaskPirates.Views.VoyageHire({

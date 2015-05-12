@@ -16,7 +16,6 @@ TaskPirates.Views.CurrentVoyageItem = Backbone.View.extend({
   template: JST['voyage/current_voyage_item'],
 
   render: function () {
-    debugger
     var content = this.template({
       voyage: this.model
     });

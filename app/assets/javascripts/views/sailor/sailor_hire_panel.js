@@ -33,7 +33,8 @@ TaskPirates.Views.SailorHirePanel = Backbone.View.extend({
   },
 
   viewProfile: function () {
-    var fragment = 'sailors/' + this.model.get('id');
+    var fragment = 'sailors/' + this.model.get('id') +
+                    "?voyageid=" + this.parentView.model.get('id');
     Backbone.history.navigate(fragment, { trigger: true });
   }
 });

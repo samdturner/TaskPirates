@@ -15,6 +15,11 @@
       <div class="rabbit-title">
         <h1>Ahoy there! <strong>I’m <%= sailor.escape('name') %></strong></h1>
       </div>
+      <a class="btn btn-primary btn-block tasker-hire-btn js-btn--next" href="#confirmation"
+          style='margin-right: auto; margin-left: auto; width: 19%'>
+        <span class="u-regular hire-me">Hire me!</span>
+        <span class="tasker-hourly-rate u-light">5% plunder</span>
+      </a>
     </div>
   </div>
 </div>
@@ -27,3 +32,7 @@
   </div>
 </div>
 </div>
+
+<div id="lean_overlay"></div>
+
+<%= JST['sailor/sailor_hire_confirmation']() %>

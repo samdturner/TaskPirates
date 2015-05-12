@@ -1,6 +1,7 @@
 TaskPirates.Views.SailorProfile = Backbone.CompositeView.extend({
   initialize: function (options) {
     this.sailorVoyages = options.model.voyages();
+    this.voyage = options.voyage;
 
     this.listenTo(this.sailorVoyages, 'add', this.addIfComplete);
     this.listenTo(this.model, 'sync', this.render);
@@ -12,6 +13,11 @@ TaskPirates.Views.SailorProfile = Backbone.CompositeView.extend({
 
   template: [JST['sailor/sailor_profile_container']],
 
+  events: {
+    'click .tasker-hire-btn' : 'hireSailor',
+    'click .btn-submit-review' : 'navigateToDashboard'
+  },
+
   render: function () {
     var content = this.template[0]({
       sailor: this.model
@@ -19,6 +25,11 @@ TaskPirates.Views.SailorProfile = Backbone.CompositeView.extend({
 
     this.$el.html(content);
     this.attachSubviews();
+    this.$(".tasker-hire-btn").leanModal({
+      top : 200,
+      overlay : 0.4,
+      closeButton : ".modal_close"
+    });
     return this;
   },
 
@@ -34,5 +45,17 @@ TaskPirates.Views.SailorProfile = Backbone.CompositeView.extend({
       parentView: this
     });
     this.addSubview('.rabbit-reviews', voyageReviewItem);
+  },
+
+  hireSailor: function (sailor) {
+    debugger
+    var sailorId = this.model.get('id');
+    this.voyage.set({ sailor_id: sailorId })
+    this.voyage.save({});
+  },
+
+  navigateToDashboard: function (event) {
+    event.preventDefault();
+    Backbone.history.navigate("dashboard", { trigger: true });
   }
 });

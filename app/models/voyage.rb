@@ -16,7 +16,7 @@ class Voyage < ActiveRecord::Base
       FROM
         sailors
       WHERE
-        sailors.task_requirement = :voyage_task_requirement
+        sailors.task_requirement <> :voyage_task_requirement
         AND
         sailors.id NOT IN
         (

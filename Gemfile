@@ -31,6 +31,7 @@ gem 'backbone-on-rails'
 gem 'underscore-rails'
 gem 'json'
 gem 'nokogiri', '1.6.0'
+gem 'faker'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

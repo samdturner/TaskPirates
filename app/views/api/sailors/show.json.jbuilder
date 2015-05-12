@@ -12,6 +12,7 @@ json.voyages @sailor.voyages do |voyage|
 
    json.user voyage.user, :id
    json.user voyage.user, :fname
+   json.user voyage.user, :image_url
  end
 
 end

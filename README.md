@@ -1,6 +1,6 @@
 TaskPirates is built on a Rails backend with Backbone serving as the responsive front end.  Inspired by TaskRabbit, users can search for pirates for their next voyage by answering simple questions.  Users can hire pirates and leave reviews and comments following the completion of the voyage.
 
-###Main Functionality:
+###Technical Challenges:
 Increased the backend efficiency by implementing a custom SQL query which eliminated an n + 1 query.  The query returns the sailors that match the criteria that the user specifies (task requirement and availability).
 
 ```

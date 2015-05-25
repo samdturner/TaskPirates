@@ -1,80 +1,67 @@
-# TaskPirates
+TaskPirates is built on a Rails backend with Backbone serving as the responsive front end.  Inspired by TaskRabbit, users can search for pirates for their next voyage by answering simple questions.  Users can hire pirates and leave reviews and comments following the completion of the voyage.
 
-[Heroku link][heroku]
+###Main Functionality:
+Increased the backend efficiency by implementing a custom SQL query which eliminated an n + 1 query.  The query returns the sailors that match the criteria that the user specifies (task requirement and availability).
 
-[heroku]: https://polar-springs-4473.herokuapp.com/
+```
+# app/models/voyage.rb
 
-## Minimum Viable Product
-TaskPirates is a clone of TaskRabbit built on Rails and Backbone. Users can:
+  def matching_sailors
+    binds = { voyage_id: self.id,
+              voyage_task_requirement: self.task_requirement,
+              voyage_start_date: self.start_date,
+              voyage_end_date: self.end_date }
+    Sailor.find_by_sql([<<-SQL, binds])
+      SELECT DISTINCT
+        sailors.*
+      FROM
+        sailors
+      WHERE
+        sailors.task_requirement <> :voyage_task_requirement
+        AND
+        sailors.id NOT IN
+        (
+        SELECT DISTINCT
+          sailors.id
+        FROM
+          sailors
+        JOIN
+          voyages ON voyages.sailor_id = sailors.id
+        WHERE
+          NOT
+          (:voyage_end_date < voyages.start_date
+          OR
+          :voyage_start_date > voyages.end_date
+          OR
+          :voyage_id = voyages.id
+          OR
+          voyages.completed = true)
+        )
+    SQL
+```
 
-<!-- This is a Markdown checklist. Use it to keep track of your progress! -->
+Implemented a custom Backbone.js model#parse method to retrieve data nested in a JSON object.  The voyage JSON object is returned by the API with a nested sailor object.  The parse method uses the nested sailor object to create a backbone model object on the top level of the voyage JSON object, and then deletes the nested sailor object.
+```
+# app/assets/javascripts/models/voyage.js
 
-- [x] Create accounts
-- [x] Create sessions (log in)
-- [x] Book a crew member
-- [x] See which crew members they have booked
-- [x] User can fill out a form to describe the voyage
-- [x] Recommend crew members based on skills match
-- [ ] See the profile of each crew member
-- [ ] Rate the voyage
+parse: function (response) {
+  if (response.sailor) {
+    this.sailor().set(response.sailor);
+    delete response.sailor;
+    this.trigger('sync');
+  } else if (response.matching_sailors) {
+    this.matchingSailors().set(response.matching_sailors);
+    delete response.matching_sailor;
+  }
 
-## Design Docs
-* [View Wireframes][views]
-* [DB schema][schema]
+  return response;
+},
 
-[views]: ./docs/wireframes
-[schema]: ./docs/schema
+sailor: function () {
+  if (!this._sailor) {
+    this._sailor = new TaskPirates.Models.Sailor();
+  }
 
-## Implementation Timeline
-
-### Phase 1: User Authentication (~0.5 days)
-I will implement user authentication in Rails based on the practices learned at App Academy. By the end of this phase, users will be able to create blogs using a simple text form in a Rails view.
-
-The most important part of this phase will be pushing the app to Heroku and ensuring that everything works before moving on
-to phase 2.
-
-[Details][phase-one]
-
-### Phase 2: Booking Crew Members (~2 days)
-I will add API routes to serve crew member data as JSON, then add Backbone
-models and collections that fetch data from those routes. By the end of this
-phase, users will be able to see all potential crew members, book new crew members for voyages, and see the crew members that they have hired.
-
-We will also validate that a sailor does not overlap with two voyages.
-
-Users will also be able to mark voyages as complete which will remove the sailor.
-
-
-[Details][phase-two]
-
-### Phase 3: Users Can Use a Form to Describe the Voyage (~2 days)
-Users will be guided through a simple form to describe the work need on the voyage (swabbing the decks, manning the helm, loading the cannons).  We will then recommend crew members for that task based on a skill-match.  I will add skill attributes to each potential crew member and build an equation to assign a “match-score” to each crew member based on the answers to the users questions.  The form will be implemented using backbone and html.
-
-[Details][phase-three]
-
-### Phase 4: Viewing Crew Member Profiles (~1 day)
-I’ll add a feature so that user’s can click on any crew member’s picture and be taken to their full profile.  The profile will include name and skills.  
-
-It will also include an aggregate rating and comments from previous voyages.
-
-[Details][phase-four]
-
-### Phase 5: Rate the Crew Members Post Voyage (~2 days)
-Following the “conclusion” of the voyage, users will be guided through a simple form to give a rating to each of their crew members.  They will also be able to close the rating form at any time.  This form will be implemented using html and backbone.  It will also update the database.
-
-
-[Details][phase-five]
-
-### Phase 6: Polishing the User Interface (~1.5 days)
-I will use bootstrap and existing CSS templates to make the user interface beautiful and responsive.  I will also need to spend time creating seed data for crew members, reviews, etc.
-
-### Bonus Features (TBD)
-- [ ] Crew members respond immediately when they have been requested to join a crew
-- [ ] Can search through a list of all crew members and hire directly
-- [ ] History of old voyages
-
-[phase-one]: ./docs/phases/phase1.md
-[phase-two]: ./docs/phases/phase2.md
-[phase-three]: ./docs/phases/phase3.md
-[phase-four]: ./docs/phases/phase4.md
-[phase-five]: ./docs/phases/phase5.md
+  return this._sailor;
+}
+```
